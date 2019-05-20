@@ -1,6 +1,8 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
+
+import ReduxPOL from './redux-pol'
 
 const Header = ({ siteTitle }) => (
   <header
@@ -27,6 +29,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <ReduxPOL />
     </div>
   </header>
 )

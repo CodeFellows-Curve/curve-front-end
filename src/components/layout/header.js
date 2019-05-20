@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import ReduxPOL from './redux-pol'
+import ReduxPOL from '../redux-pol'
 
 const Header = ({ siteTitle }) => (
   <header

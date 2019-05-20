@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { tracks, milestones, categoryColorScale } from './constants'
+import { milestones, categoryColorScale } from './constants'
+import tracks from './tracks.js'
 
 const TrackDiv = styled.div`
   margin: 0 0 20px 0;

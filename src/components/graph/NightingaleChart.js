@@ -1,7 +1,8 @@
 import React from 'react'
 import * as d3 from 'd3'
 import styled from 'styled-components'
-import { trackIds, milestones, tracks, categoryColorScale } from './constants'
+import { trackIds, milestones, categoryColorScale } from './constants'
+import tracks from './tracks.js'
 
 const width = 400
 // "milestones" is an array of each level; [0, 1, 2, 3, 4, 5]

@@ -15,6 +15,8 @@ import NightingaleChart from './NightingaleChart'
 import TrackSelector from './TrackSelector'
 import KeyboardListener from './KeyboardListener'
 import Track from './Track'
+import { connect } from 'react-redux';
+
 
 /*
   <>
@@ -28,69 +30,70 @@ import Track from './Track'
 class Graph extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      name: 'Daenerys Targaryen',
-      title: 'Staff Engineer',
-      milestoneByTrack: {
-        // BUSINESS ACUMEN COMPETENCY --------------------
-        MISSION_AND_VISION: 4,
-        CUSTOMER_ORIENTATION: 3,
+    this.state = this.props.graph
+    
+    //   name: 'Daenerys Targaryen',
+    //   title: 'Staff Engineer',
+    //   milestoneByTrack: {
+    //     // BUSINESS ACUMEN COMPETENCY --------------------
+    //     MISSION_AND_VISION: 4,
+    //     CUSTOMER_ORIENTATION: 3,
 
-        // GROWTH MINDSET COMPETENCY --------------------
-        ADAPTABILITY: 4,
-        CURIOSITY: 3,
-        CONSTANT_IMPROVEMENT: 2,
-        HANDLING_AMBIGUITY: 1,
-        INCLUSIVITY: 0,
-        OPENNESS: 4,
-        AMBITION_AND_INITIATIVE: 3,
+    //     // GROWTH MINDSET COMPETENCY --------------------
+    //     ADAPTABILITY: 4,
+    //     CURIOSITY: 3,
+    //     CONSTANT_IMPROVEMENT: 2,
+    //     HANDLING_AMBIGUITY: 1,
+    //     INCLUSIVITY: 0,
+    //     OPENNESS: 4,
+    //     AMBITION_AND_INITIATIVE: 3,
 
-        // LEADERSHIP COMPETENCY --------------------
-        ACCOUNTABILITY: 4,
-        INTEGRITY: 3,
-        OWNERSHIP: 2,
-        MENTORSHIP: 1,
-        NETWORKING: 0,
-        SUCCESSION: 4,
-        HEALTH_AND_SAFETY: 3,
-        CONFIDENCE: 2,
-        CREDIBILITY: 1,
+    //     // LEADERSHIP COMPETENCY --------------------
+    //     ACCOUNTABILITY: 4,
+    //     INTEGRITY: 3,
+    //     OWNERSHIP: 2,
+    //     MENTORSHIP: 1,
+    //     NETWORKING: 0,
+    //     SUCCESSION: 4,
+    //     HEALTH_AND_SAFETY: 3,
+    //     CONFIDENCE: 2,
+    //     CREDIBILITY: 1,
 
-        // CRAFT COMPETENCY --------------------
-        TECHNICAL: 1,
-        PROCESS: 2,
-        INNOVATION: 3,
-        TOOL_PROFICIENCY: 4,
+    //     // CRAFT COMPETENCY --------------------
+    //     TECHNICAL: 1,
+    //     PROCESS: 2,
+    //     INNOVATION: 3,
+    //     TOOL_PROFICIENCY: 4,
 
-        // QUALITY COMPETENCY --------------------
-        JUDGEMENT: 1,
-        ROOT_CAUSE_RESOLUTION: 2,
+    //     // QUALITY COMPETENCY --------------------
+    //     JUDGEMENT: 1,
+    //     ROOT_CAUSE_RESOLUTION: 2,
 
-        // COMMUNICATION COMPETENCY --------------------
-        WRITING: 1,
-        READING: 2,
-        SPEAKING: 3,
-        LISTENING: 4,
+    //     // COMMUNICATION COMPETENCY --------------------
+    //     WRITING: 1,
+    //     READING: 2,
+    //     SPEAKING: 3,
+    //     LISTENING: 4,
 
-        // TEAMWORK COMPETENCY --------------------
-        COLLABORATION: 4,
+    //     // TEAMWORK COMPETENCY --------------------
+    //     COLLABORATION: 4,
 
-        // RESULTS COMPETENCY --------------------
-        AGILE: 0,
-        ORGANIZATIONAL: 1,
-        CREATIVE: 2,
-        PROJECT_EXECUTION: 3,
-        ANALYTICAL_THINKING: 4,
-        PRIORITIZATION: 3,
-        PROBLEM_SOLVING: 2,
-        INCREMENTAL_DELIVERY: 1,
-        DECISION_MAKING: 0,
-        APPROPRIATE_AUTONOMY: 1,
-        PLANNING_AND_ESTIMATING: 2,
-        DEPENDABILITY_AND_RELIABILITY: 3,
-      },
-      focusedTrackId: 'MISSION_AND_VISION',
-    }
+    //     // RESULTS COMPETENCY --------------------
+    //     AGILE: 0,
+    //     ORGANIZATIONAL: 1,
+    //     CREATIVE: 2,
+    //     PROJECT_EXECUTION: 3,
+    //     ANALYTICAL_THINKING: 4,
+    //     PRIORITIZATION: 3,
+    //     PROBLEM_SOLVING: 2,
+    //     INCREMENTAL_DELIVERY: 1,
+    //     DECISION_MAKING: 0,
+    //     APPROPRIATE_AUTONOMY: 1,
+    //     PLANNING_AND_ESTIMATING: 2,
+    //     DEPENDABILITY_AND_RELIABILITY: 3,
+    //   },
+    //   focusedTrackId: 'MISSION_AND_VISION',
+    // }
   }
 
   setTitle(title) {
@@ -136,9 +139,12 @@ class Graph extends React.Component {
       <>
         <div style={{ display: 'flex' }}>
           <div style={{ flex: 1 }}>
-            <form>
+            <div>User: {getUser().name}</div>
+            <div>Postion/Email:{getUser().email}</div>
+            {/* <form>
               <NameInput
-                name={this.state.name}
+                // name={this.state.name}
+                name={getUser().name}
                 handleNameInputChange={e =>
                   this.setState({ name: e.target.value })
                 }
@@ -148,7 +154,7 @@ class Graph extends React.Component {
                 currentTitle={this.state.title}
                 setTitleFn={title => this.setTitle(title)}
               />
-            </form>
+            </form> */}
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
@@ -193,4 +199,10 @@ class Graph extends React.Component {
   }
 }
 
-export default Graph
+const mapStateToProps = state => ({
+  graph: state.graph,
+})
+
+
+// export default Graph
+export default connect(mapStateToProps)(Graph)

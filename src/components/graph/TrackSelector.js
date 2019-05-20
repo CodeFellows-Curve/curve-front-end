@@ -1,6 +1,7 @@
 import React from 'react'
-import { trackIds, tracks, categoryColorScale } from './constants'
+import { trackIds, categoryColorScale } from './constants'
 import styled from 'styled-components'
+import tracks from './tracks.js'
 
 const TrackSelectorTable = styled.table`
   width: 100%;

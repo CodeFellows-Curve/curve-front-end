@@ -16,6 +16,7 @@ import TrackSelector from './TrackSelector'
 import KeyboardListener from './KeyboardListener'
 import Track from './Track'
 import { connect } from 'react-redux';
+import * as actions from '../../actions/graph-actions.js'
 
 
 /*
@@ -95,12 +96,13 @@ class Graph extends React.Component {
     //   focusedTrackId: 'MISSION_AND_VISION',
     // }
   }
-
-  setTitle(title) {
-    let titles = eligibleTitles(this.state.milestoneByTrack)
-    title = titles.indexOf(title) == -1 ? titles[0] : title
-    this.setState({ title })
-  }
+  
+  // title will be passed
+  // setTitle(title) {
+  //   let titles = eligibleTitles(this.state.milestoneByTrack)
+  //   title = titles.indexOf(title) == -1 ? titles[0] : title
+  //   this.setState({ title })
+  // }
 
   handleTrackMilestoneChange(trackId, milestone) {
     const milestoneByTrack = this.state.milestoneByTrack
@@ -173,7 +175,7 @@ class Graph extends React.Component {
         <TrackSelector
           milestoneByTrack={this.state.milestoneByTrack}
           focusedTrackId={this.state.focusedTrackId}
-          setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)}
+          setFocusedTrackIdFn={this.props.setFocused.bind(this)}
         />
         <KeyboardListener
           selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
@@ -199,10 +201,14 @@ class Graph extends React.Component {
   }
 }
 
+
 const mapStateToProps = state => ({
   graph: state.graph,
 })
 
+const mapDispatchToProps = (dispatch, getState) => ({
+  setFocused: (payload) => dispatch(actions.setFocusedTrackId(payload) )
+})
 
 // export default Graph
-export default connect(mapStateToProps)(Graph)
+export default connect(mapStateToProps, mapDispatchToProps)(Graph)

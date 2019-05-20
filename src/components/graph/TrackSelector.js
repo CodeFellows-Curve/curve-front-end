@@ -71,12 +71,12 @@ class TrackSelector extends React.Component {
             ))}
           </tr>
           <tr>
-            {console.log(
+            {/* {console.log(
               'LINE 73',
               trackIds.map(trackId =>
                 categoryColorScale(tracks[trackId].category)
               )
-            )}
+            )} */}
 
             {trackIds.map(trackId => (
               <td

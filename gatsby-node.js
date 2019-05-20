@@ -39,6 +39,6 @@ exports.createPages = async ({ page, graphql, actions }) => {
         },
       })
     })
-    console.log(JSON.stringify(result, null, 4))
+    // console.log(JSON.stringify(result, null, 4))
   })
 }

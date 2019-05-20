@@ -29,6 +29,22 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <nav
+        style={{
+          display: 'flex',
+          width: '100%',
+        }}
+      >
+        <Link to="/" style={{ color: `white` }}>
+          Home
+        </Link>
+        <Link to="/about" style={{ color: `white` }}>
+          About
+        </Link>
+        <Link to="/rubric" style={{ color: `white` }}>
+          Rubric
+        </Link>
+      </nav>
       <ReduxPOL />
     </div>
   </header>

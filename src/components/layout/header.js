@@ -1,6 +1,8 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import If from 'react-ifs'
+import { isLoggedIn, logout } from '../../utils/auth'
 
 import ReduxPOL from '../redux-pol'
 
@@ -44,6 +46,11 @@ const Header = ({ siteTitle }) => (
         <Link to="/rubric" style={{ color: `white` }}>
           Rubric
         </Link>
+        <If condition={isLoggedIn()}>
+          <a href="#logout" onClick={logout} style={{ color: `white` }}>
+            Logout
+          </a>
+        </If>
       </nav>
       <ReduxPOL />
     </div>

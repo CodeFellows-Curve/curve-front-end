@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
+    "d3": "^5.9.2",
     "gatsby": "^2.5.5",
     "gatsby-image": "^2.1.0",
     "gatsby-plugin-create-client-paths": "^2.0.5",
@@ -13,6 +15,7 @@
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.0.37",
+    "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-source-filesystem": "^2.0.36",
     "gatsby-source-graphql": "^2.0.18",
     "gatsby-transformer-remark": "^2.3.12",
@@ -25,7 +28,8 @@
     "react-redux": "^7.0.3",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "prettier": "^1.17.1"

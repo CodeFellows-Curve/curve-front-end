@@ -34,12 +34,11 @@ class KeyboardListener extends React.Component {
   }
 }
 
-// export default KeyboardListener
-
 const mapStateToProps = state => ({
   name: state.graph.name,
 })
 
+// TODO: get commented-out action dispatches working with the Redux store
 const mapDispatchToProps = (dispatch, getState) => ({
   selectNextTrackFn: payload => dispatch(actions.selectNextTrack(payload)),
   selectPrevTrackFn: payload => dispatch(actions.selectPrevTrack(payload)),

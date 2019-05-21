@@ -183,5 +183,3 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps)(LevelThermometer)
-
-// export default LevelThermometer

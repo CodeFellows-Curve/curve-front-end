@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import { milestones, categoryColorScale } from './constants'
 import tracks from './tracks.js'
 
+import { connect } from 'react-redux'
+import * as actions from '../../actions/graph-actions.js'
+
 const TrackDiv = styled.div`
   margin: 0 0 20px 0;
   padding-bottom: 20px;
@@ -37,8 +40,10 @@ const TrackDiv = styled.div`
 
 class Track extends React.Component {
   render() {
-    const track = tracks[this.props.trackId]
-    const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
+    const track = tracks[this.props.focusedTrackId]
+    const currentMilestoneId = this.props.milestoneByTrack[
+      this.props.focusedTrackId
+    ]
     const currentMilestone = track.milestones[currentMilestoneId - 1]
     return (
       <TrackDiv className="track">
@@ -57,7 +62,7 @@ class Track extends React.Component {
                       <td
                         onClick={() =>
                           this.props.handleTrackMilestoneChangeFn(
-                            this.props.trackId,
+                            this.props.focusedTrackId,
                             milestone
                           )
                         }
@@ -104,4 +109,18 @@ class Track extends React.Component {
   }
 }
 
-export default Track
+const mapStateToProps = state => ({
+  milestoneByTrack: state.graph.milestoneByTrack,
+  focusedTrackId: state.graph.focusedTrackId,
+})
+
+const mapDispatchToProps = (dispatch, getState) => ({
+  handleTrackMilestoneChangeFn: (...payload) =>
+    dispatch(actions.handleTrackMilestoneChange(payload)),
+})
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Track)
+
+// export default Track

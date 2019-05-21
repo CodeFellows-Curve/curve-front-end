@@ -150,6 +150,8 @@ let initialState = {
     'Breaker of Chains',
     'Protector of the Realm',
   ],
+  tracks,
+  trackIds,
 }
 
 // initialState.totalPoints = totalPointsFromMilestoneMap(

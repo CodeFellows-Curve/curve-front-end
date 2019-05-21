@@ -77,14 +77,14 @@ export const categoryColorScale = d3
   .scaleOrdinal()
   .domain(categoryIds)
   .range([
-    '#00abc2', // BUSINESS ACUMEN
-    '#428af6', // GROWTH MINDSET
-    '#e1439f', // LEADERSHIP
-    '#e54552', // CRAFT
-    '#ead456', // QUALITY
-    '56ea65', // COMMUNICATION
-    '8a56ea', // TEAMWORK
-    'ea6556', // RESULTS
+    '#FF5A5A', // BUSINESS ACUMEN
+    '#FE9959', // GROWTH MINDSET
+    '#FCD859', // LEADERSHIP
+    '#9EF657', // CRAFT
+    '#53EC86', // QUALITY
+    '#5ECDDD', // COMMUNICATION
+    '#4655C7', // TEAMWORK
+    '#883DAD', // RESULTS
   ])
 
 export const titles = [

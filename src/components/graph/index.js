@@ -1,23 +1,21 @@
 import React from 'react'
-import { getUser } from '../../utils/auth'
 
 import {
   eligibleTitles,
   trackIds,
-  milestones,
-  milestoneToPoints,
+  //  milestones,
+  //  milestoneToPoints,
 } from './constants'
-import NameInput from './NameInput'
-import TitleSelector from './TitleSelector'
+// import NameInput from './NameInput'
+// import TitleSelector from './TitleSelector'
 import PointSummaries from './PointSummaries'
 import LevelThermometer from './LevelThermometer'
 import NightingaleChart from './NightingaleChart'
 import TrackSelector from './TrackSelector'
 import KeyboardListener from './KeyboardListener'
 import Track from './Track'
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import * as actions from '../../actions/graph-actions.js'
-
 
 /*
   <>
@@ -32,7 +30,7 @@ class Graph extends React.Component {
   constructor(props) {
     super(props)
     this.state = this.props.graph
-    
+
     //   name: 'Daenerys Targaryen',
     //   title: 'Staff Engineer',
     //   milestoneByTrack: {
@@ -96,7 +94,7 @@ class Graph extends React.Component {
     //   focusedTrackId: 'MISSION_AND_VISION',
     // }
   }
-  
+
   // title will be passed
   // setTitle(title) {
   //   let titles = eligibleTitles(this.state.milestoneByTrack)
@@ -137,16 +135,18 @@ class Graph extends React.Component {
   }
 
   render() {
+    const { user } = this.props
+
     return (
       <>
         <div style={{ display: 'flex' }}>
           <div style={{ flex: 1 }}>
-            <div>User: {getUser().name}</div>
-            <div>Postion/Email:{getUser().email}</div>
+            <div>User: {user.name}</div>
+            <div>Postion/Email: {user.email}</div>
             {/* <form>
               <NameInput
                 // name={this.state.name}
-                name={getUser().name}
+                name={user.name}
                 handleNameInputChange={e =>
                   this.setState({ name: e.target.value })
                 }
@@ -201,14 +201,17 @@ class Graph extends React.Component {
   }
 }
 
-
 const mapStateToProps = state => ({
+  user: state.auth.user,
   graph: state.graph,
 })
 
 const mapDispatchToProps = (dispatch, getState) => ({
-  setFocused: (payload) => dispatch(actions.setFocusedTrackId(payload) )
+  setFocused: payload => dispatch(actions.setFocusedTrackId(payload)),
 })
 
 // export default Graph
-export default connect(mapStateToProps, mapDispatchToProps)(Graph)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Graph)

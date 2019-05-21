@@ -1,9 +1,14 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { navigate } from 'gatsby'
-import { isLoggedIn } from '../utils/auth'
 
-const PrivateRoute = ({ component: Component, location, ...rest }) => {
-  if (!isLoggedIn() && location.pathname !== `/app/login`) {
+const PrivateRoute = ({
+  component: Component,
+  location,
+  loggedIn,
+  ...rest
+}) => {
+  if (!loggedIn && location.pathname !== `/app/login`) {
     // If the user is not logged in, redirect to the login page
     navigate(`/app/login`)
     return null
@@ -12,4 +17,9 @@ const PrivateRoute = ({ component: Component, location, ...rest }) => {
   return <Component {...rest} />
 }
 
-export default PrivateRoute
+const mapStateToProps = ({ auth }) => ({ loggedIn: auth.loggedIn })
+
+export default connect(
+  mapStateToProps,
+  null
+)(PrivateRoute)

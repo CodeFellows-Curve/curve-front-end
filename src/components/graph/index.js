@@ -140,8 +140,8 @@ class Graph extends React.Component {
       <>
         <div style={{ display: 'flex' }}>
           <div style={{ flex: 1 }}>
-            <div>User: {getUser().name}</div>
-            <div>Postion/Email:{getUser().email}</div>
+            {/* <div>User: {getUser().name}</div>
+            <div>Postion/Email:{getUser().email}</div> */}
             <form>
               <NameInput
               // name={this.state.name}
@@ -181,8 +181,8 @@ class Graph extends React.Component {
         // setFocusedTrackIdFn={this.props.setFocused.bind(this)}
         />
         <KeyboardListener
-          selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
-          selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
+          // selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
+          // selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
           increaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(
             this,
             1

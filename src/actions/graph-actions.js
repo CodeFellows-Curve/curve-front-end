@@ -36,3 +36,22 @@ export const NameInputChange = payload => {
     payload: payload,
   }
 }
+
+// selectNextTrack
+export const selectNextTrack = payload => {
+  // console.log('PAYLOAD in graph-actions.js: ', payload)
+  console.log('select NEXT track --------------------')
+  return {
+    type: 'shiftFocusedTrack',
+    payload: 1,
+  }
+}
+
+// selectPrevTrack
+export const selectPrevTrack = payload => {
+  // console.log('PAYLOAD in graph-actions.js: ', payload)
+  return {
+    type: 'shiftFocusedTrack',
+    payload: -1,
+  }
+}

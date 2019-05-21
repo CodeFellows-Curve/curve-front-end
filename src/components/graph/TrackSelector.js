@@ -1,6 +1,7 @@
 import React from 'react'
-import { trackIds, tracks, categoryColorScale } from './constants'
+import { trackIds, categoryColorScale } from './constants'
 import styled from 'styled-components'
+import tracks from './tracks.js'
 
 const TrackSelectorTable = styled.table`
   width: 100%;
@@ -70,12 +71,12 @@ class TrackSelector extends React.Component {
             ))}
           </tr>
           <tr>
-            {console.log(
+            {/* {console.log(
               'LINE 73',
               trackIds.map(trackId =>
                 categoryColorScale(tracks[trackId].category)
               )
-            )}
+            )} */}
 
             {trackIds.map(trackId => (
               <td

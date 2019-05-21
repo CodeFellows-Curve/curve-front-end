@@ -24,6 +24,11 @@ class Login extends Component {
       () => console.log(this.state)
     )
   }
+  componentDidMount() {
+    if (!!this.props.loggedIn) {
+      navigate(`/app/graph`)
+    }
+  }
   componentDidUpdate(prevProps) {
     if (!!this.props.loggedIn && !prevProps.loggedIn) {
       navigate(`/app/graph`)

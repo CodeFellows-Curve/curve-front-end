@@ -162,19 +162,19 @@ class Graph extends React.Component {
 
           <div style={{ flex: 0 }}>
             <NightingaleChart
-              milestoneByTrack={this.state.milestoneByTrack}
-              focusedTrackId={this.state.focusedTrackId}
-              handleTrackMilestoneChangeFn={(track, milestone) =>
-                this.handleTrackMilestoneChange(track, milestone)
-              }
+            // milestoneByTrack={this.state.milestoneByTrack}
+            // focusedTrackId={this.state.focusedTrackId}
+            // handleTrackMilestoneChangeFn={(track, milestone) =>
+            //   this.handleTrackMilestoneChange(track, milestone)
+            // }
             />
           </div>
         </div>
 
         <TrackSelector
-          milestoneByTrack={this.state.milestoneByTrack}
-          // focusedTrackId={this.state.focusedTrackId}
-          // setFocusedTrackIdFn={this.props.setFocused.bind(this)}
+        // milestoneByTrack={this.state.milestoneByTrack}
+        // focusedTrackId={this.state.focusedTrackId}
+        // setFocusedTrackIdFn={this.props.setFocused.bind(this)}
         />
         <KeyboardListener
           selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}

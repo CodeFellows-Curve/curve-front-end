@@ -12,3 +12,11 @@ export const setFocusedTrackId = payload => {
     payload: payload,
   }
 }
+
+export const handleTrackMilestoneChange = payload => {
+  console.log('PAYLOAD in graph-actions.js: ', payload)
+  return {
+    type: 'handleTrackMilestoneChange',
+    payload: payload,
+  }
+}

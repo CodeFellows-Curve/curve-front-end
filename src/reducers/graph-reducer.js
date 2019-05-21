@@ -1,6 +1,55 @@
+// CONSTANTS ----------------------------------------------------------------
 import tracks from '../components/graph/tracks.js'
 const trackIds = Object.keys(tracks)
+const titles = [
+  { label: 'Engineer I', minPoints: 0, maxPoints: 16 },
+  { label: 'Engineer II', minPoints: 17, maxPoints: 35 },
+  { label: 'Senior Engineer', minPoints: 36, maxPoints: 57 },
+  { label: 'Group Lead', minPoints: 36, maxPoints: 57 },
+  { label: 'Staff Engineer', minPoints: 58, maxPoints: 89 },
+  { label: 'Senior Group Lead', minPoints: 58, maxPoints: 89 },
+  { label: 'Principal Engineer', minPoints: 90 },
+  { label: 'Director of Engineering', minPoints: 90 },
+]
 
+// HELPER FUNCTIONS ------------------------------------------------------------
+const milestoneToPoints = milestone => {
+  switch (milestone) {
+    case 0:
+      return 0
+    case 1:
+      return 1
+    case 2:
+      return 3
+    case 3:
+      return 6
+    case 4:
+      return 12
+    // case 5:
+    //   return 20
+    default:
+      return 0
+  }
+}
+
+const totalPointsFromMilestoneMap = milestoneMap =>
+  trackIds
+    .map(trackId => milestoneToPoints(milestoneMap[trackId]))
+    .reduce((sum, addend) => sum + addend, 0)
+
+const eligibleTitles = milestoneMap => {
+  const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
+
+  return titles
+    .filter(
+      title =>
+        (title.minPoints === undefined || totalPoints >= title.minPoints) &&
+        (title.maxPoints === undefined || totalPoints <= title.maxPoints)
+    )
+    .map(title => title.label)
+}
+
+// INITIAL STATE -----------------------------------------------------------------
 let initialState = {
   name: 'Daenerys Targaryen',
   title: 'Staff Engineer',
@@ -65,25 +114,25 @@ let initialState = {
   focusedTrackId: 'MISSION_AND_VISION',
 }
 
+// REDUCER FUNCTION -----------------------------------------------------------------
 export default (state = initialState, action) => {
   let { type, payload } = action
 
   switch (type) {
     case 'setFocusedTrackId':
-      /*
-    setFocusedTrackId(trackId) {
-      let index = trackIds.indexOf(trackId)
-      const focusedTrackId = trackIds[index]
-      this.setState({ focusedTrackId })
-    }
-  */
-      console.log('setFocusedTrackId REDUCER payload:--------', payload)
-      //  console.log(payload)
-
-      let trackId = payload
-      let index = trackIds.indexOf(trackId)
+      let index = trackIds.indexOf(payload)
       const focusedTrackId = trackIds[index]
       return { ...state, focusedTrackId }
+
+    case 'handleTrackMilestoneChange':
+      let [trackId, milestone] = payload
+      const milestoneByTrack = state.milestoneByTrack
+      milestoneByTrack[trackId] = milestone
+
+      const titles = eligibleTitles(milestoneByTrack)
+      const title = titles.indexOf(state.title) === -1 ? titles[0] : state.title
+
+      return { ...state, focusedTrackId: trackId, title }
 
     case 'shiftFocusedTrackId':
       // shiftFocusedTrack(delta) {

@@ -32,6 +32,28 @@ const milestoneToPoints = milestone => {
   }
 }
 
+const categoryIds = trackIds.reduce((set, trackId) => {
+  set.add(tracks[trackId].category)
+  return set
+}, new Set())
+
+const categoryPointsFromMilestoneMap = milestoneMap => {
+  let pointsByCategory = new Map()
+  trackIds.forEach(trackId => {
+    const milestone = milestoneMap[trackId]
+    const categoryId = tracks[trackId].category
+    let currentPoints = pointsByCategory.get(categoryId) || 0
+    pointsByCategory.set(
+      categoryId,
+      currentPoints + milestoneToPoints(milestone)
+    )
+  })
+  return Array.from(categoryIds.values()).map(categoryId => {
+    const points = pointsByCategory.get(categoryId)
+    return { categoryId, points: pointsByCategory.get(categoryId) || 0 }
+  })
+}
+
 const totalPointsFromMilestoneMap = milestoneMap =>
   trackIds
     .map(trackId => milestoneToPoints(milestoneMap[trackId]))
@@ -55,65 +77,76 @@ let initialState = {
   title: 'Staff Engineer',
   milestoneByTrack: {
     // BUSINESS ACUMEN COMPETENCY --------------------
-    MISSION_AND_VISION: 4,
-    CUSTOMER_ORIENTATION: 3,
+    MISSION_AND_VISION: 1,
+    CUSTOMER_ORIENTATION: 1,
 
     // GROWTH MINDSET COMPETENCY --------------------
-    ADAPTABILITY: 4,
-    CURIOSITY: 3,
-    CONSTANT_IMPROVEMENT: 2,
+    ADAPTABILITY: 1,
+    CURIOSITY: 1,
+    CONSTANT_IMPROVEMENT: 1,
     HANDLING_AMBIGUITY: 1,
-    INCLUSIVITY: 0,
-    OPENNESS: 4,
-    AMBITION_AND_INITIATIVE: 3,
+    INCLUSIVITY: 1,
+    OPENNESS: 1,
+    AMBITION_AND_INITIATIVE: 1,
 
     // LEADERSHIP COMPETENCY --------------------
-    ACCOUNTABILITY: 4,
-    INTEGRITY: 3,
-    OWNERSHIP: 2,
+    ACCOUNTABILITY: 1,
+    INTEGRITY: 1,
+    OWNERSHIP: 1,
     MENTORSHIP: 1,
-    NETWORKING: 0,
-    SUCCESSION: 4,
-    HEALTH_AND_SAFETY: 3,
-    CONFIDENCE: 2,
+    NETWORKING: 1,
+    SUCCESSION: 1,
+    HEALTH_AND_SAFETY: 1,
+    CONFIDENCE: 1,
     CREDIBILITY: 1,
 
     // CRAFT COMPETENCY --------------------
     TECHNICAL: 1,
-    PROCESS: 2,
-    INNOVATION: 3,
-    TOOL_PROFICIENCY: 4,
+    PROCESS: 1,
+    INNOVATION: 1,
+    TOOL_PROFICIENCY: 1,
 
     // QUALITY COMPETENCY --------------------
     JUDGEMENT: 1,
-    ROOT_CAUSE_RESOLUTION: 2,
+    ROOT_CAUSE_RESOLUTION: 1,
 
     // COMMUNICATION COMPETENCY --------------------
     WRITING: 1,
-    READING: 2,
-    SPEAKING: 3,
-    LISTENING: 4,
+    READING: 1,
+    SPEAKING: 1,
+    LISTENING: 1,
 
     // TEAMWORK COMPETENCY --------------------
-    COLLABORATION: 4,
+    COLLABORATION: 1,
 
     // RESULTS COMPETENCY --------------------
-    AGILE: 0,
+    AGILE: 1,
     ORGANIZATIONAL: 1,
-    CREATIVE: 2,
-    PROJECT_EXECUTION: 3,
-    ANALYTICAL_THINKING: 4,
-    PRIORITIZATION: 3,
-    PROBLEM_SOLVING: 2,
+    CREATIVE: 1,
+    PROJECT_EXECUTION: 1,
+    ANALYTICAL_THINKING: 1,
+    PRIORITIZATION: 1,
+    PROBLEM_SOLVING: 1,
     INCREMENTAL_DELIVERY: 1,
-    DECISION_MAKING: 0,
+    DECISION_MAKING: 1,
     APPROPRIATE_AUTONOMY: 1,
-    PLANNING_AND_ESTIMATING: 2,
-    DEPENDABILITY_AND_RELIABILITY: 3,
+    PLANNING_AND_ESTIMATING: 1,
+    DEPENDABILITY_AND_RELIABILITY: 1,
   },
   focusedTrackId: 'MISSION_AND_VISION',
-  totalPoints: 111,
+  totalPoints: 41,
+  categoryPoints: [
+    { categoryId: 'A', points: 2 },
+    { categoryId: 'B', points: 7 },
+    { categoryId: 'C', points: 9 },
+    { categoryId: 'D', points: 4 },
+    { categoryId: 'E', points: 2 },
+    { categoryId: 'F', points: 4 },
+    { categoryId: 'G', points: 1 },
+    { categoryId: 'H', points: 12 },
+  ],
 }
+
 // initialState.totalPoints = totalPointsFromMilestoneMap(
 //   initialState.focusedTrackId
 // )
@@ -139,7 +172,18 @@ export default (state = initialState, action) => {
       // Update total points
       const totalPoints = totalPointsFromMilestoneMap(state.milestoneByTrack)
 
-      return { ...state, focusedTrackId: trackId, title, totalPoints }
+      // Update category points
+      const categoryPoints = categoryPointsFromMilestoneMap(
+        state.milestoneByTrack
+      )
+
+      return {
+        ...state,
+        focusedTrackId: trackId,
+        title,
+        totalPoints,
+        categoryPoints,
+      }
 
     case 'shiftFocusedTrackId':
       // shiftFocusedTrack(delta) {

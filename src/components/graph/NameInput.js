@@ -1,5 +1,8 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
+
+import { connect } from 'react-redux'
+import * as actions from '../../actions/graph-actions.js'
 
 const Input = styled.input`
   border: none;
@@ -27,11 +30,22 @@ class NameInput extends React.Component {
         type="text"
         className="name-input"
         value={this.props.name}
-        onChange={this.props.handleNameInputChange}
+        onChange={e => this.props.handleNameInputChange(e.target.value)}
         placeholder="Name"
       />
     )
   }
 }
 
-export default NameInput
+const mapStateToProps = state => ({
+  name: state.graph.name,
+})
+
+const mapDispatchToProps = (dispatch, getState) => ({
+  handleNameInputChange: payload => dispatch(actions.NameInputChange(payload)),
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NameInput)

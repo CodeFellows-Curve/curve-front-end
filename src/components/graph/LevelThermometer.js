@@ -8,6 +8,8 @@ import {
   categoryIds,
 } from './constants'
 
+import { connect } from 'react-redux'
+
 const margins = {
   top: 30,
   right: 20,
@@ -100,9 +102,12 @@ class LevelThermometer extends React.Component {
     )
   }
   render() {
-    let categoryPoints = categoryPointsFromMilestoneMap(
-      this.props.milestoneByTrack
-    )
+    // let categoryPoints = categoryPointsFromMilestoneMap(
+    //   this.props.milestoneByTrack
+    // )
+    let categoryPoints = this.props.categoryPoints
+    console.log('categoryPoints--------------------------', categoryPoints)
+
     let lastCategoryIndex = 0
     categoryPoints.forEach((categoryPoint, i) => {
       if (categoryPoint.points) lastCategoryIndex = i
@@ -172,4 +177,9 @@ class LevelThermometer extends React.Component {
   }
 }
 
-export default LevelThermometer
+const mapStateToProps = state => ({
+  milestoneByTrack: state.graph.milestoneByTrack,
+  categoryPoints: state.graph.categoryPoints,
+})
+
+export default connect(mapStateToProps)(LevelThermometer)

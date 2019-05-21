@@ -1,16 +1,19 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { navigate } from 'gatsby'
-import { handleLogin, isLoggedIn } from '../utils/auth'
-
 import If from 'react-ifs'
 
+import * as a from '../actions/auth-actions'
+
 class Login extends Component {
-  state = { username: ``, password: `` }
+  constructor(props) {
+    super(props)
+    this.state = { username: ``, password: `` }
+  }
 
   handleSubmit = e => {
     e.preventDefault()
-    handleLogin(this.state)
-    navigate(`/app/graph`)
+    this.props.login(this.state)
   }
 
   handleUpdate = e => {
@@ -18,51 +21,57 @@ class Login extends Component {
       {
         [e.target.name]: e.target.value,
       },
-      // () => console.log(this.state)
+      () => console.log(this.state)
     )
+  }
+  componentDidUpdate(prevProps) {
+    if (!!this.props.loggedIn && !prevProps.loggedIn) {
+      navigate(`/app/graph`)
+    }
   }
 
   render() {
-    if (isLoggedIn()) {
-      navigate(`/app/graph`)
-    }
-
-    const Logged = <h1>You are logged in.</h1>
-
     return (
-      <>
-        <If condition={!isLoggedIn()} else={Logged}>
-          <h1>Log In*</h1>
-          <form method="post" onSubmit={this.handleSubmit}>
-            <label>
-              Username
-              <input type="text" name="username" onChange={this.handleUpdate} />
-            </label>
+      <If condition={!this.props.loggedIn}>
+        <h1>Log In*</h1>
+        <form method="post" onSubmit={this.handleSubmit}>
+          <label>
+            Username
+            <input type="text" name="username" onChange={this.handleUpdate} />
+          </label>
+          <br />
+          <label>
+            Password
+            <input
+              type="password"
+              name="password"
+              onChange={this.handleUpdate}
+            />
+          </label>
+          <br />
+          <input type="submit" value="Log in" />
+          <br />
+          <br />
+          <small>
+            *Pssst.... hardcoded login only:
             <br />
-            <label>
-              Password
-              <input
-                type="password"
-                name="password"
-                onChange={this.handleUpdate}
-              />
-            </label>
+            username: john
             <br />
-            <input type="submit" value="Log in" />
-            <br />
-            <br />
-            <small>
-              *Pssst.... hardcoded login only:
-              <br />
-              username: john
-              <br />
-              password: johnny
-            </small>
-          </form>
-        </If>
-      </>
+            password: johnny
+          </small>
+        </form>
+      </If>
     )
   }
 }
 
-export default Login
+const mapStateToProps = ({ auth }) => ({ loggedIn: auth.loggedIn })
+
+const mapDispatchToProps = dispatch => ({
+  login: credentials => dispatch(a.login(credentials)),
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login)

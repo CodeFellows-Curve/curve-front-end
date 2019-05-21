@@ -71,87 +71,220 @@ const eligibleTitles = milestoneMap => {
     .map(title => title.label)
 }
 
-// INITIAL STATE -----------------------------------------------------------------
 let initialState = {
-  name: 'Daenerys Targaryen',
-  title: 'Mother of Dragons',
-  milestoneByTrack: {
-    // BUSINESS ACUMEN COMPETENCY --------------------
-    MISSION_AND_VISION: 1,
-    CUSTOMER_ORIENTATION: 1,
+  userData:{
+    name: 'Hannah Ingham',
+    email: 'HannahTA@cf.com',
+    date: 20190521,
+    title: 'TA',
 
-    // GROWTH MINDSET COMPETENCY --------------------
-    ADAPTABILITY: 1,
-    CURIOSITY: 1,
-    CONSTANT_IMPROVEMENT: 1,
-    HANDLING_AMBIGUITY: 1,
-    INCLUSIVITY: 1,
-    OPENNESS: 1,
-    AMBITION_AND_INITIATIVE: 1,
-
-    // LEADERSHIP COMPETENCY --------------------
-    ACCOUNTABILITY: 1,
-    INTEGRITY: 1,
-    OWNERSHIP: 1,
-    MENTORSHIP: 1,
-    NETWORKING: 1,
-    SUCCESSION: 1,
-    HEALTH_AND_SAFETY: 1,
-    CONFIDENCE: 1,
-    CREDIBILITY: 1,
-
-    // CRAFT COMPETENCY --------------------
-    TECHNICAL: 1,
-    PROCESS: 1,
-    INNOVATION: 1,
-    TOOL_PROFICIENCY: 1,
-
-    // QUALITY COMPETENCY --------------------
-    JUDGEMENT: 1,
-    ROOT_CAUSE_RESOLUTION: 1,
-
-    // COMMUNICATION COMPETENCY --------------------
-    WRITING: 1,
-    READING: 1,
-    SPEAKING: 1,
-    LISTENING: 1,
-
-    // TEAMWORK COMPETENCY --------------------
-    COLLABORATION: 1,
-
-    // RESULTS COMPETENCY --------------------
-    AGILE: 1,
-    ORGANIZATIONAL: 1,
-    CREATIVE: 1,
-    PROJECT_EXECUTION: 1,
-    ANALYTICAL_THINKING: 1,
-    PRIORITIZATION: 1,
-    PROBLEM_SOLVING: 1,
-    INCREMENTAL_DELIVERY: 1,
-    DECISION_MAKING: 1,
-    APPROPRIATE_AUTONOMY: 1,
-    PLANNING_AND_ESTIMATING: 1,
-    DEPENDABILITY_AND_RELIABILITY: 1,
-  },
-  focusedTrackId: 'MISSION_AND_VISION',
-  totalPoints: 41,
-  categoryPoints: [
-    { categoryId: 'A', points: 2 },
-    { categoryId: 'B', points: 7 },
-    { categoryId: 'C', points: 9 },
-    { categoryId: 'D', points: 4 },
-    { categoryId: 'E', points: 2 },
-    { categoryId: 'F', points: 4 },
-    { categoryId: 'G', points: 1 },
-    { categoryId: 'H', points: 12 },
-  ],
-  eligibleTitles: [
-    'Mother of Dragons',
-    'Breaker of Chains',
-    'Protector of the Realm',
-  ],
-  tracks,
-  trackIds,
+    coreCompetencies: {
+      BUSINESS_ACUMEN: {
+        title: 'Business Acumen',
+        proficiencies: {
+          MISSION_AND_VISION:{
+            title: 'Mission and Vision Alignment',
+            score: 4,
+          },
+          CUSTOMER_ORIENTATION:{
+            title: 'Customer Orientation',
+            score: 4,
+          }
+        }
+      },
+      GROWTH_MINDSET:{
+        title: 'Growth Mindset',
+        proficiencies: {
+          ADAPTABILITY: {
+            title: 'Adaptability',
+            score: 4,
+          },
+          CURIOSITY: {
+            title: 'Curiosity',
+            score: 4,
+          },
+          CONSTANT_IMPROVEMENT: {
+            title: 'Constant Improvement',
+            score: 4,
+          },
+          HANDLING_AMBIGUITY: {
+            title: 'Handling Ambiguity',
+            score: 4,
+          },
+          INCLUSIVITY: {
+            title: 'Inclusivity',
+            score: 4,
+          },
+          OPENNESS: {
+            title: 'Adaptability',
+            score: 4,
+          },
+          AMBITION_AND_INITIATIVE: {
+            title: 'Ambition and Initiative',
+            score: 4,
+          },
+        }
+      },
+      LEADERSHIP:{
+        title: 'Leadership',
+        proficiencies: {
+          ACCOUNTABILITY: {
+            title: 'Accountability',
+            score: 4,
+          },
+          INTEGRITY: {
+            title: 'Integrity',
+            score: 4,
+          },
+          OWNERSHIP: {
+            title: 'Ownership',
+            score: 4,
+          },
+          MENTORSHIP: {
+            title: 'Mentorship',
+            score: 4,
+          },
+          NETWORKING: {
+            title: 'Networking',
+            score: 4,
+          },
+          SUCCESSION: {
+            title: 'Succession',
+            score: 4,
+          },
+          HEALTH_AND_SAFETY: {
+            title: 'Health and Safety',
+            score: 4,
+          },
+          CONFIDENCE: {
+            title: 'Confidence',
+            score: 4,
+          },
+          CREDIBILITY: {
+            title: 'Credibility',
+            score: 4,
+          },
+        },
+      },
+      CRAFT:{
+        title: 'Craft',
+        proficiencies: {
+          TECHNICAL: {
+            title: 'Technical',
+            score: 4,
+          },
+          PROCESS: {
+            title: 'Process',
+            score: 4,
+          },
+          INNOVATION: {
+            title: 'Innovation',
+            score: 4,
+          },
+          TOOL_PROFICIENCY: {
+            title: 'Tool Proficiency',
+            score: 4,
+          },
+        },
+      },
+      QUALITY:{
+        title: 'Quality',
+        proficiencies: {
+          JUDGEMENT: {
+            title: 'Judgement',
+            score: 4,
+          },
+          ROOT_CAUSE_RESOLUTION: {
+            title: 'Root Cause Resolution',
+            score: 4,
+          },
+        },
+      },
+      COMMUNICATION:{
+        title: 'Communication',
+        proficiencies: {
+          WRITING: {
+            title: 'Writing',
+            score: 4,
+          },
+          READING: {
+            title: 'Reading',
+            score: 4,
+          },
+          SPEAKING: {
+            title: 'Speaking',
+            score: 4,
+          },
+          LISTENING: {
+            title: 'Listening',
+            score: 4,
+          },
+        },
+      },
+      TEAMWORK:{
+        title: 'Teamwork',
+        proficiencies: {
+          COLLABORATION: {
+            title: 'Collaboration',
+            score: 4,
+          },
+        },
+      },
+      RESULTS:{
+        title: 'Results',
+        proficiencies: {
+          AGILE: {
+            title: 'Agile',
+            score: 4,
+          },
+          ORGANIZATIONAL: {
+            title: 'Organizational',
+            score: 4,
+          },
+          CREATIVE: {
+            title: 'Creative',
+            score: 4,
+          },
+          PROJECT_EXECUTION: {
+            title: 'Project Execution',
+            score: 4,
+          },
+          ANALYTICAL_THINKING: {
+            title: 'Analytical Thinking',
+            score: 4,
+          },
+          PRIORITIZATION: {
+            title: 'Prioritization',
+            score: 4,
+          },
+          PROBLEM_SOLVING: {
+            title: 'Problem Solving',
+            score: 4,
+          },
+          INCREMENTAL_DELIVERY: {
+            title: 'Incremental Delivery',
+            score: 4,
+          },
+          DECISION_MAKING: {
+            title: 'Decision Making',
+            score: 4,
+          },
+          APPROPRIATE_AUTONOMY: {
+            title: 'Appropriate Autonomy',
+            score: 4,
+          },
+          PLANNING_AND_ESTIMATING: {
+            title: 'Planning and Estimating',
+            score: 4,
+          },
+          DEPENDABILITY_AND_RELIABILITY: {
+            title: 'Dependability and Reliability',
+            score: 4,
+          },
+        },
+      },
+    }
+  }
 }
 
 // initialState.totalPoints = totalPointsFromMilestoneMap(

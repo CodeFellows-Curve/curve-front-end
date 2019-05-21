@@ -56,7 +56,7 @@ const HeaderEl = styled.div`
 
   header {
     align-items: stretch;
-    background: #e0e0e0;
+    ${'' /* background: #e0e0e0; */}
     box-sizing: border-box;
     display: flex;
     flex-flow: row nowrap;
@@ -78,7 +78,7 @@ const HeaderEl = styled.div`
     /* logo and title container */
     > div {
       align-items: center;
-      background: lightblue;
+      ${'' /* background: lightblue; */}
       display: flex;
       flex-flow: row nowrap;
       justify-content: center;
@@ -184,13 +184,20 @@ const HeaderEl = styled.div`
 
   /* Desktop-width styles ---------------------------------------*/
   @media (min-width: 768px) {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-bottom: 1.45rem;
+
     /* checkbox */
     > input {
       display: none;
     }
 
     > header {
-      /* checkbox label*/
+      margin: 0;
+      max-width: 960px;
       > label.menu-toggle {
         display: none;
         > span {
@@ -200,6 +207,8 @@ const HeaderEl = styled.div`
 
       /* logo and title container */
       > div {
+        padding: 0;
+        width: 100%;
         > svg {
         }
         > h1 {
@@ -207,10 +216,12 @@ const HeaderEl = styled.div`
       }
 
       > nav {
+        ${'' /* background: red; */}
         position: relative;
         left: auto;
         top: auto;
-        height: auto;
+        height: 50px;
+        width: 100%;
         ${'' /* for MS Edge scrollbar issue  */}
         overflow-y: auto;
 
@@ -224,19 +235,27 @@ const HeaderEl = styled.div`
 
         /* list of nav links */
         > ul {
-          display: flex;
-          box-shadow: none;
-          height: auto;
-          width: auto;
           background: none;
+          box-shadow: none;
+          display: flex;
+          height: 50px;
           padding: 0;
+          width: auto;
           > li {
+            align-items: center;
+            display: flex;
+            flex-flow: column nowrap;
+            height: inherit;
+            justify-content: center;
             > a {
+              border: none;
               &:hover,
               &:focus {
-                ${'' /* Remove background from off-canvas styling  */}
-                background: none;
-                color: #c00;
+              }
+            }
+            &:last-child {
+              > a {
+                border-bottom: none;
               }
             }
           }

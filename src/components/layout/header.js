@@ -12,8 +12,9 @@ const navLink = { color: 'white', marginRight: 6 }
 const Header = ({ loggedIn, logout, siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#E0E0E0`,
       marginBottom: `1.45rem`,
+      
     }}
   >
     <div
@@ -27,7 +28,7 @@ const Header = ({ loggedIn, logout, siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `#000000`,
             textDecoration: `none`,
           }}
         >

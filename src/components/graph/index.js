@@ -1,8 +1,16 @@
 import React from 'react'
-import { getUser } from '../../utils/auth'
+
 
 import NameInput from './NameInput'
 import TitleSelector from './TitleSelector'
+
+import {
+  eligibleTitles,
+  trackIds,
+  //  milestones,
+  //  milestoneToPoints,
+} from './constants'
+
 import PointSummaries from './PointSummaries'
 import LevelThermometer from './LevelThermometer'
 import NightingaleChart from './NightingaleChart'
@@ -15,7 +23,9 @@ import * as actions from '../../actions/graph-actions.js'
 class Graph extends React.Component {
   constructor(props) {
     super(props)
-  }
+    this.state = this.props.graph
+
+
 
   // handleTrackMilestoneChange(trackId, milestone) {
   //   const milestoneByTrack = this.state.milestoneByTrack
@@ -50,20 +60,18 @@ class Graph extends React.Component {
   // }
 
   render() {
+    const { user } = this.props
+
     return (
       <>
         <div style={{ display: 'flex' }}>
           <div style={{ flex: 1 }}>
-            {/* <div>User: {getUser().name}</div>
-            <div>Postion/Email:{getUser().email}</div> */}
             <form>
               <NameInput />
               <TitleSelector />
             </form>
             <PointSummaries />
             <LevelThermometer />
-          </div>
-
           <div style={{ flex: 0 }}>
             <NightingaleChart />
           </div>
@@ -93,6 +101,7 @@ class Graph extends React.Component {
 }
 
 const mapStateToProps = state => ({
+  user: state.auth.user,
   graph: state.graph,
 })
 

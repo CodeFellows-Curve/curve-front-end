@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux'
-import pol from './pol'
+import auth from './auth-reducer'
 import graph from './graph-reducer'
 
-const reducers = combineReducers({ graph })
+const reducers = combineReducers({ graph, auth })
+
 
 export default reducers

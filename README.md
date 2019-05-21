@@ -1,5 +1,5 @@
 # Curve
-![Curve Logo](https://raw.githubusercontent.com/CodeFellows-Curve/project-resources/master/adobe/CurveFullSize-01.png)
+<img src='https://raw.githubusercontent.com/CodeFellows-Curve/project-resources/master/adobe/CurveFullSize-01.png'  width="100"> 
 
 ## Front End for the Curve employee proficiency scale.
 
@@ -9,6 +9,7 @@ Authors:
 * Project Manager: Erin Trainor
 
 ### Summary:
+This is the front end for the Codefellows employee proficiency scale. Users can log in and view their current [professional competency](https://codefellows.github.io/common_curriculum/career_coaching/Professional_Competencies) ratings. As an Admin, you will be able to set the score for a specific user across all of their competencies. 
 
 ### Links:
 

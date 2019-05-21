@@ -51,8 +51,8 @@ const Header = ({ loggedIn, logout, siteTitle }) => (
           Rubric
         </Link>
         <If condition={loggedIn}>
-          <Link to="/app/secret-swapi/" style={navLink}>
-            Remote GraphQL Query
+          <Link to="/app/list/" style={navLink}>
+            All Users
           </Link>
 
           <a href="#logout" onClick={logout} style={navLink}>

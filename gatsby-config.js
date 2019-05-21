@@ -4,6 +4,7 @@ module.exports = {
     description: `Competency visualization`,
     author: `Code Fellows JavaScript 401d29`,
   },
+  __experimentalThemes: [`gatsby-theme-docz`],
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,

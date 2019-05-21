@@ -1,12 +1,15 @@
+import React from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import React from 'react'
 import If from 'react-ifs'
-import { isLoggedIn, logout } from '../../utils/auth'
 
+import * as a from '../../actions/auth-actions'
 import ReduxPOL from '../redux-pol'
 
-const Header = ({ siteTitle }) => (
+const navLink = { color: 'white', marginRight: 6 }
+
+const Header = ({ loggedIn, logout, siteTitle }) => (
   <header
     style={{
       background: `rebeccapurple`,
@@ -34,20 +37,25 @@ const Header = ({ siteTitle }) => (
       <nav
         style={{
           display: 'flex',
-          width: '100%',
+          marginBottom: 5,
+          width: '50%',
         }}
       >
-        <Link to="/" style={{ color: `white` }}>
+        <Link to="/" style={navLink}>
           Home
         </Link>
-        <Link to="/about" style={{ color: `white` }}>
+        <Link to="/about" style={navLink}>
           About
         </Link>
-        <Link to="/rubric" style={{ color: `white` }}>
+        <Link to="/rubric" style={navLink}>
           Rubric
         </Link>
-        <If condition={isLoggedIn()}>
-          <a href="#logout" onClick={logout} style={{ color: `white` }}>
+        <If condition={loggedIn}>
+          <Link to="/app/secret-swapi/" style={navLink}>
+            Remote GraphQL Query
+          </Link>
+
+          <a href="#logout" onClick={logout} style={navLink}>
             Logout
           </a>
         </If>
@@ -65,4 +73,13 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+const mapStateToProps = ({ auth }) => ({ loggedIn: auth.loggedIn })
+
+const mapDispatchToProps = dispatch => ({
+  logout: callback => dispatch(a.logout(callback)),
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Header)

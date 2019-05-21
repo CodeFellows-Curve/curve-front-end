@@ -144,11 +144,11 @@ class Graph extends React.Component {
             <div>Postion/Email:{getUser().email}</div>
             <form>
               <NameInput
-                // name={this.state.name}
-                name={getUser().name}
-                handleNameInputChange={e =>
-                  this.setState({ name: e.target.value })
-                }
+              // name={this.state.name}
+              // name={getUser().name}
+              // handleNameInputChange={e =>
+              //   this.setState({ name: e.target.value })
+              // }
               />
               <TitleSelector
               // milestoneByTrack={this.props.graph.milestoneByTrack}

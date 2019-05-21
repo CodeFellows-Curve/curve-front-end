@@ -14,7 +14,7 @@ export const setFocusedTrackId = payload => {
 }
 
 export const handleTrackMilestoneChange = payload => {
-  console.log('PAYLOAD in graph-actions.js: ', payload)
+  // console.log('PAYLOAD in graph-actions.js: ', payload)
   return {
     type: 'handleTrackMilestoneChange',
     payload: payload,
@@ -22,9 +22,17 @@ export const handleTrackMilestoneChange = payload => {
 }
 
 export const setTitle = payload => {
-  console.log('PAYLOAD in graph-actions.js: ', payload)
+  // console.log('PAYLOAD in graph-actions.js: ', payload)
   return {
     type: 'setTitle',
+    payload: payload,
+  }
+}
+
+export const NameInputChange = payload => {
+  // console.log('PAYLOAD in graph-actions.js: ', payload)
+  return {
+    type: 'NameInputChange',
     payload: payload,
   }
 }

@@ -190,6 +190,9 @@ export default (state = initialState, action) => {
         categoryPoints,
       }
 
+    case 'NameInputChange':
+      return { ...state, name: payload }
+
     case 'setTitle':
       /*
       setTitle(title) {

@@ -57,7 +57,7 @@ class Graph extends React.Component {
   //   if (milestone < 0) milestone = 0
   //   if (milestone > 5) milestone = 5
   //   this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
-  // }
+   }
 
   render() {
     const { user } = this.props
@@ -75,6 +75,7 @@ class Graph extends React.Component {
           <div style={{ flex: 0 }}>
             <NightingaleChart />
           </div>
+        </div>
         </div>
 
         <TrackSelector />

@@ -156,7 +156,9 @@ class Graph extends React.Component {
                 setTitleFn={title => this.setTitle(title)}
               />
             </form> */}
-            <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
+            <PointSummaries
+            // milestoneByTrack={this.state.milestoneByTrack}
+            />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
 

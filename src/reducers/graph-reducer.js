@@ -112,7 +112,11 @@ let initialState = {
     DEPENDABILITY_AND_RELIABILITY: 3,
   },
   focusedTrackId: 'MISSION_AND_VISION',
+  totalPoints: 111,
 }
+// initialState.totalPoints = totalPointsFromMilestoneMap(
+//   initialState.focusedTrackId
+// )
 
 // REDUCER FUNCTION -----------------------------------------------------------------
 export default (state = initialState, action) => {
@@ -132,7 +136,10 @@ export default (state = initialState, action) => {
       const titles = eligibleTitles(milestoneByTrack)
       const title = titles.indexOf(state.title) === -1 ? titles[0] : state.title
 
-      return { ...state, focusedTrackId: trackId, title }
+      // Update total points
+      const totalPoints = totalPointsFromMilestoneMap(state.milestoneByTrack)
+
+      return { ...state, focusedTrackId: trackId, title, totalPoints }
 
     case 'shiftFocusedTrackId':
       // shiftFocusedTrack(delta) {
@@ -142,7 +149,7 @@ export default (state = initialState, action) => {
       //   this.setState({ focusedTrackId })
       // }
 
-      return stuff
+      return {}
 
     case 'shiftFocusedTrackMilestoneByDelta':
     //     (delta) {

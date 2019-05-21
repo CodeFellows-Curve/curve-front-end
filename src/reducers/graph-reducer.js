@@ -74,7 +74,7 @@ const eligibleTitles = milestoneMap => {
 // INITIAL STATE -----------------------------------------------------------------
 let initialState = {
   name: 'Daenerys Targaryen',
-  title: 'Staff Engineer',
+  title: 'Mother of Dragons',
   milestoneByTrack: {
     // BUSINESS ACUMEN COMPETENCY --------------------
     MISSION_AND_VISION: 1,
@@ -145,6 +145,11 @@ let initialState = {
     { categoryId: 'G', points: 1 },
     { categoryId: 'H', points: 12 },
   ],
+  eligibleTitles: [
+    'Mother of Dragons',
+    'Breaker of Chains',
+    'Protector of the Realm',
+  ],
 }
 
 // initialState.totalPoints = totalPointsFromMilestoneMap(
@@ -184,6 +189,20 @@ export default (state = initialState, action) => {
         totalPoints,
         categoryPoints,
       }
+
+    case 'setTitle':
+      /*
+      setTitle(title) {
+        let titles = eligibleTitles(this.state.milestoneByTrack)
+        title = titles.indexOf(title) == -1 ? titles[0] : title
+        this.setState({ title })
+      */
+      let newTitle = payload
+      let availableTitles = eligibleTitles(state.milestoneByTrack)
+      newTitle =
+        availableTitles.indexOf(newTitle) == -1 ? availableTitles[0] : newTitle
+
+      return { ...state, title: newTitle }
 
     case 'shiftFocusedTrackId':
       // shiftFocusedTrack(delta) {

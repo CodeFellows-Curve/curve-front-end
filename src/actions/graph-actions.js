@@ -20,3 +20,11 @@ export const handleTrackMilestoneChange = payload => {
     payload: payload,
   }
 }
+
+export const setTitle = payload => {
+  console.log('PAYLOAD in graph-actions.js: ', payload)
+  return {
+    type: 'setTitle',
+    payload: payload,
+  }
+}

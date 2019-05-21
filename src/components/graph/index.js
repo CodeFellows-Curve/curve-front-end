@@ -142,7 +142,7 @@ class Graph extends React.Component {
           <div style={{ flex: 1 }}>
             <div>User: {getUser().name}</div>
             <div>Postion/Email:{getUser().email}</div>
-            {/* <form>
+            <form>
               <NameInput
                 // name={this.state.name}
                 name={getUser().name}
@@ -151,15 +151,17 @@ class Graph extends React.Component {
                 }
               />
               <TitleSelector
-                milestoneByTrack={this.state.milestoneByTrack}
-                currentTitle={this.state.title}
-                setTitleFn={title => this.setTitle(title)}
+              // milestoneByTrack={this.props.graph.milestoneByTrack}
+              // currentTitle={this.props.graph.title}
+              // setTitleFn={title => this.setTitle(title)}
               />
-            </form> */}
+            </form>
             <PointSummaries
             // milestoneByTrack={this.state.milestoneByTrack}
             />
-            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
+            <LevelThermometer
+            // milestoneByTrack={this.state.milestoneByTrack}
+            />
           </div>
 
           <div style={{ flex: 0 }}>

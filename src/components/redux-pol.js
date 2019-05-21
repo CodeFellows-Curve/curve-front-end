@@ -6,7 +6,8 @@ class ReduxPOL extends Component {
   render() {
     return (
       <div>
-        Redux Proof of Life: {this.props.pol}{' '}
+        Redux Proof of Life:{' '}
+        <span style={{ color: 'orange' }}>{this.props.pol}</span>{' '}
         <button onClick={this.props.doPol}>Dispatch</button>
       </div>
     )

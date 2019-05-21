@@ -7,14 +7,14 @@ import If from 'react-ifs'
 import * as a from '../../actions/auth-actions'
 import ReduxPOL from '../redux-pol'
 
-const navLink = { color: 'white', marginRight: 6 }
+const black = '#000000'
+const navLink = { color: black, marginRight: 6, textDecoration: `none` }
 
 const Header = ({ loggedIn, logout, siteTitle }) => (
   <header
     style={{
       background: `#E0E0E0`,
       marginBottom: `1.45rem`,
-      
     }}
   >
     <div
@@ -28,7 +28,7 @@ const Header = ({ loggedIn, logout, siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `#000000`,
+            color: black,
             textDecoration: `none`,
           }}
         >

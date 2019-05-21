@@ -143,20 +143,6 @@ class Graph extends React.Component {
           <div style={{ flex: 1 }}>
             <div>User: {user.name}</div>
             <div>Postion/Email: {user.email}</div>
-            {/* <form>
-              <NameInput
-                // name={this.state.name}
-                name={user.name}
-                handleNameInputChange={e =>
-                  this.setState({ name: e.target.value })
-                }
-              />
-              <TitleSelector
-                milestoneByTrack={this.state.milestoneByTrack}
-                currentTitle={this.state.title}
-                setTitleFn={title => this.setTitle(title)}
-              />
-            </form> */}
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>

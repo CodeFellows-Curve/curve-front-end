@@ -10,6 +10,7 @@ import Logo from './logo'
 import * as a from '../../actions/auth-actions'
 import ReduxPOL from '../redux-pol'
 
+// TODO: Move all this styling for the header and mobile site-menu into a separate file. Consider using something else besides styled components for this piece. It's already in a scss format below;
 const HeaderEl = styled.div`
   * {
     box-sizing: inherit;

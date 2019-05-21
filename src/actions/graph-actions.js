@@ -6,10 +6,9 @@
 //
 
 export const setFocusedTrackId = payload => {
-console.log('PAYLOAD in graph-actions.js: ', payload)
+  // console.log('PAYLOAD in graph-actions.js: ', payload)
   return {
     type: 'setFocusedTrackId',
-    payload: payload
+    payload: payload,
   }
 }
-

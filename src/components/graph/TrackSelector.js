@@ -3,6 +3,9 @@ import { trackIds, categoryColorScale } from './constants'
 import styled from 'styled-components'
 import tracks from './tracks.js'
 
+import { connect } from 'react-redux'
+import * as actions from '../../actions/graph-actions.js'
+
 const TrackSelectorTable = styled.table`
   width: 100%;
   border-spacing: 3px;
@@ -64,7 +67,7 @@ class TrackSelector extends React.Component {
               <td
                 key={trackId}
                 className="track-selector-label"
-                onClick={() => this.props.setFocusedTrackIdFn(trackId)}
+                onClick={() => this.props.setFocused(trackId)}
               >
                 {tracks[trackId].displayName}
               </td>
@@ -85,14 +88,14 @@ class TrackSelector extends React.Component {
                 style={{
                   border:
                     '4px solid ' +
-                    (trackId == this.props.focusedTrackId
+                    (trackId == this.props.graph.focusedTrackId
                       ? '#000'
                       : categoryColorScale(tracks[trackId].category)),
                   background: categoryColorScale(tracks[trackId].category),
                 }}
-                onClick={() => this.props.setFocusedTrackIdFn(trackId)}
+                onClick={() => this.props.setFocused(trackId)}
               >
-                {this.props.milestoneByTrack[trackId]}
+                {this.props.graph.milestoneByTrack[trackId]}
               </td>
             ))}
           </tr>
@@ -102,4 +105,16 @@ class TrackSelector extends React.Component {
   }
 }
 
-export default TrackSelector
+// export default TrackSelector
+
+const mapStateToProps = state => ({
+  graph: state.graph,
+})
+
+const mapDispatchToProps = (dispatch, getState) => ({
+  setFocused: payload => dispatch(actions.setFocusedTrackId(payload)),
+})
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TrackSelector)

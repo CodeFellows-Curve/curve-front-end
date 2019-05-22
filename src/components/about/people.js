@@ -181,6 +181,32 @@ const people = {
         },
 
       ]
+    },
+    {
+      name: 'TA Project Manager',
+      members: [
+        {
+          name:'Caity Heath ',
+          logo: 'js',
+          picture: '../filepath',
+          github: 'caityheath', 
+          linkedin: 'https://www.linkedin.com/in/billybunn/',
+        },
+        {
+          name:'Hannah Ingham',
+          logo: 'js',
+          picture: '../filepath',
+          github: 'hingham', 
+          linkedin: 'https://www.linkedin.com/in/hannah-ingham',
+        },
+        {
+          name:'Nate Tibbals',
+          logo: 'c',
+          picture: '../filepath',
+          github: 'ntibbals', 
+          linkedin: 'https://www.linkedin.com/in/ntibbals/',
+        }
+      ]
     }
    
   ]

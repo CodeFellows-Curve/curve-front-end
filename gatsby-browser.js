@@ -21,10 +21,10 @@ import store from "./src/store/"
 //   cache: new InMemoryCache(),
 // })
 
-const GITHUB_BASE_URL = "https://graphql.org/swapi-graphql/";
+const URL = "https://graphql-wrap-rest.herokuapp.com/";
 
 const httpLink = new HttpLink({
-  uri: GITHUB_BASE_URL,
+  uri: URL,
 });
 
 const errorLink = onError(({ graphQLErrors, networkError }) => {
@@ -45,7 +45,7 @@ const cache = new InMemoryCache();
 const client = new ApolloClient({
   link,
   cache,
-  fetchOptions:{mode:'no-cors'}
+  // fetchOptions:{mode:'no-cors'}
 });
 
 

@@ -3,23 +3,12 @@ import { StaticQuery, graphql } from 'gatsby'
 import gql from 'graphql-tag'
 import { Query, ApolloConsumer } from 'react-apollo'
 
-// const INDIVIDUALS = gql`
-// query {
-//   individuals{
-//     name
-//   }
-// }`
-
-const SWAPI = gql`
-query {
-  allPeople {
-    edges {
-      node {
-        name
-      }
-    }
+const INDIVIDUALS = gql`
+query{
+  parks{
+    name
   }
-}`
+ }`
 
 class List extends React.Component {
   constructor(props){
@@ -43,7 +32,7 @@ class List extends React.Component {
             <button
               onClick={async () => {
                 const { data } = await client.query({
-                  query: SWAPI,
+                  query: INDIVIDUALS,
                 });
                 this.updateData(data);
               }}

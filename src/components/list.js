@@ -4,19 +4,27 @@ import { StaticQuery, graphql } from 'gatsby'
 const List = () => (
   <StaticQuery
     query={graphql`
-      query {
-        swapi {
-          allPersons {
-            id
+      {
+        curve_users {
+          individuals {
             name
+            review {
+              id
+              overallScore
+            }
           }
         }
       }
     `}
     render={data => {
-      const content = data.swapi.allPersons.map(num => (
-        <li key={num.id}>{num.name}</li>
-      ))
+      const content =
+        (data &&
+          data.curve_users &&
+          data.curve_users.individuals &&
+          data.curve_users.individuals.map(user => (
+            <li key={user.id}>{user.name}</li>
+          ))) ||
+        null
       return (
         <>
           <h1>All Users</h1>

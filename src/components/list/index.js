@@ -28,7 +28,28 @@ class List extends React.Component {
   render() {
     return (
       <>
-        <ApolloConsumer>
+        <Query query={INDIVIDUALS}>
+          {({ loading, error, data }) => {
+            if (loading) return 'Loading users...'
+            if (error) return `Error! ${error.message}`
+            console.log('DATA', data)
+            return (
+              <>
+                <h2>All Users</h2>
+                <p>
+                  Click a user's name to make a graphQL query for their data and
+                  set that data to state (in the Redux store).
+                </p>
+                <ul>
+                  {data.individuals.map(person => (
+                    <PersonCard name={person.name} />
+                  ))}
+                </ul>
+              </>
+            )
+          }}
+        </Query>
+        {/* <ApolloConsumer>
           {client => (
             <div>
               <button
@@ -48,7 +69,7 @@ class List extends React.Component {
           {this.state.data.map(person => (
             <PersonCard name={person.name} />
           ))}
-        </ul>
+        </ul> */}
       </>
     )
   }

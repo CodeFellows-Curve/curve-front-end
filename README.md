@@ -1,2 +1,4 @@
-# curve-front-end
-made a change so I can push
+# Curve: JavaScript front end
+
+
+This is the repo containing 

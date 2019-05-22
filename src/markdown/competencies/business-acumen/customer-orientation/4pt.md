@@ -1,9 +1,9 @@
 ---
 category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+proficiency: 'Customer Orientation'
+summary: 'Seeks customer interaction opportunities, as a customer advocate, to anticipate and discover their needs. Uses detailed information and data about the customer to deliver high quality results and add value. Views features as part of an integrated customer experience.'
 milestone: 4
----     
+---         
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

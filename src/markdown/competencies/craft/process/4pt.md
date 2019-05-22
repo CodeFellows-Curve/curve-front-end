@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Craft'
+proficiency: 'Process'
+summary: 'Prioritizes and completes assigned tasks according to team's process. Consults with more senior teammates on how and when to ask for help. Aligns with team’s management style, best practices and processes. Addresses issues on-demand as a standard rule.'
 milestone: 4
----     
+---                
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

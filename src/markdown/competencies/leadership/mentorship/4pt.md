@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Leadership'
+proficiency: 'Mentorship'
+summary: 'Ability to mediate in or across teams. Models good judgement and business decisions to complete work. Willingness to give or receive guidance to improve overall skills and abilities, leaving a positive impact through leading by example.'
 milestone: 4
----     
+---                         
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

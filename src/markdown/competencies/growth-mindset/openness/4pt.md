@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Growth Mindset'
+proficiency: 'Openness'
+summary: 'Seeks and listens to feedback about their work, and takes appropriate action in response. Open to new ideas, processes, and ways of getting things done. Focuses on positive outcomes while taking responsibility for poor results.'
 milestone: 4
----     
+---                      
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

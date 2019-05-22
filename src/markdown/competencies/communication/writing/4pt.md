@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Communication'
+proficiency: 'Writing'
+summary: 'Ability to sum up complex ideas, problems, or solutions with effective style. Engages and influences the audience with clarity and persuasiveness.'
 milestone: 4
----     
+---                
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

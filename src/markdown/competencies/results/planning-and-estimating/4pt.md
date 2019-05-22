@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Results'
+proficiency: 'Planning and Estimating'
+summary: 'Understands product development roadmap scope to identify and suggest optimal resources, materials, and related documents. Develops and communicates sound plan by determining the time, complexity, and processes required to successfully achieve the final outcome.'
 milestone: 4
----     
+---                        
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

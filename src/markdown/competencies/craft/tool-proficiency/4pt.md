@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Craft'
+proficiency: 'Tool Proficiency'
+summary: 'Makes efficient use of internal tools for version control management, log analysis, CI/CD, bug tracking, exception reporting, and debugging tools to diagnose problems and inform decisions.'
 milestone: 4
----     
+---                  
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

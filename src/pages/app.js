@@ -12,10 +12,11 @@ import List from '../components/list'
 
 class App extends Component {
   componentDidMount() {
-    // Add competencies markdown to Redux store
-    const { data, pullMarkdown } = this.props
-
-    pullMarkdown(data)
+    const { data, loggedIn, pullMarkdown } = this.props
+    if (loggedIn) {
+      // Add competencies markdown to Redux store on login
+      pullMarkdown(data)
+    }
   }
 
   render() {
@@ -31,12 +32,14 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = ({ auth }) => ({ loggedIn: auth.loggedIn })
+
 const mapDispatchToProps = dispatch => ({
   pullMarkdown: data => dispatch(a.pullMarkdown(data)),
 })
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(App)
 

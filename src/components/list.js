@@ -7,6 +7,7 @@ const INDIVIDUALS = gql`
 query{
   parks{
     name
+    parkCode
   }
  }`
 

@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Teamwork'
+proficiency: 'Collaboration'
+summary: 'Actively works with others to produce or create something in a friendly and professional manner on behalf of the entire company, beyond own team or self. Seeks to ensure the team understands the business value of every story by sharing knowledge and expertise with other team members. Consistently tries to improve code quality by seeking pair programming opportunities.'
 milestone: 4
----     
+---                   
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

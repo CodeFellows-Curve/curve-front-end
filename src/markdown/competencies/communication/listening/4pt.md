@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Communication'
+proficiency: 'Listening'
+summary: 'Has patience to not interrupt, takes turns speaking, pays close attention to what is being shared, and maintains eye contact. Uses listening cues such as nodding to show engagement. Acknowledges concerns and different perspectives of others.'
 milestone: 4
----     
+---           
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

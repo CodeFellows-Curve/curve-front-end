@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Craft'
+proficiency: 'Innovation'
+summary: 'Generates new ideas for meeting customer needs by effectively using customer interaction and research. Proactively identifies and manages risks within scope and resolves issues via an established process or with coaching. Develops multiple options for fulfilling customer needs.'
 milestone: 4
----     
+---                
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

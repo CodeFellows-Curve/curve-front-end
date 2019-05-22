@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Growth Mindset'
+proficiency: 'Adaptability'
+summary: 'Ability to cope with change positively and constructively. Actively seeks information to tests assumptions. Shifts approach in response to the demands of a changing situation by demonstrating resilience.'
 milestone: 4
----     
+---                   
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

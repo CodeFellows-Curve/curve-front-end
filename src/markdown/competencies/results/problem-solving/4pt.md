@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Results'
+proficiency: 'Problem Solving'
+summary: 'Proactively foresees and mitigates potential blocking issues, while finding solutions to difficult problems by researching and collaborating with the team members. Remains solution focused but knows when to escalate.'
 milestone: 4
----     
+---                        
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

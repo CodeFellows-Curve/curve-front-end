@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Growth Mindset'
+proficiency: 'Curiosity'
+summary: 'Demonstrates a inquisitive and wondering nature that actively digs deep to explore options and solutions. Constantly asks questions to learn more about business alignment and prioritization.'
 milestone: 4
----     
+---                    
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

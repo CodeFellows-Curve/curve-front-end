@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Growth Mindset'
+proficiency: 'Constant Improvement'
+summary: 'Continuously invests in personal and professional growth. Stays technically relevant by being aware of new technologies and practices. Knows the latest industry trends by reading books, blogs, attending workshops, meetups, classes and conferences.'
 milestone: 4
----     
+---                    
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

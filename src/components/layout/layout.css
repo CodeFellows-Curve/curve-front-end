@@ -233,6 +233,10 @@ body {
   animation:         AL14 1.4s; /* IE 10+, Fx 29+ */
 }
 
+#logo-container{
+  width: 100px;
+}
+
 /* these tags will allow you to pull the font from fs to use by font-family name just as you would with any native typeface */
 
 @font-face {

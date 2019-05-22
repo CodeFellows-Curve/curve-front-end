@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Leadership'
+proficiency: 'Credibility'
+summary: 'Having earned reliability and trustworthiness to obtain collaboration and participation of others to accomplish goals. Consistently doing what you say you are going to do.'
 milestone: 4
----     
+---                      
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

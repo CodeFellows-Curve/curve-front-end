@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Leadership'
+proficiency: 'Ownership'
+summary: 'Focuses on taking the initiative and accepting responsibility for actions and outcomes. Persistent and tenacious in delivering quality work product and thinking long term and not sacrificing value in the short-term. Embraces leadership opportunities and work on higher level responsibilities.'
 milestone: 4
----     
+---                      
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

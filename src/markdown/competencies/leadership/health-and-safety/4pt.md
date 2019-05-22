@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Leadership'
+proficiency: 'Health and Safety'
+summary: 'Has discipline to manage self-care through diet, exercise, relaxation, and fulfilling activities while keeping one's self and others from harm.'
 milestone: 4
----     
+---                        
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Quality'
+proficiency: 'Judgement'
+summary: 'The ability to assess and research a problem to identify key issues, inputs, stakeholders, desired outcomes then come to a sensible logical conclusion.'
 milestone: 4
----     
+---                     
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Results'
+proficiency: 'Incremental Delivery'
+summary: 'Applies code management techniques that enable uninterrupted delivery in a series of gradual releases until the project is complete. Understands and advocates for the use and implementation of automation to reduce waste and errors in the process of delivering solutions.'
 milestone: 4
----     
+---                         
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

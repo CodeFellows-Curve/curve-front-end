@@ -1,9 +1,9 @@
 ---
-category: 'Business Acumen'
-proficiency: "Mission and Vision"
-summary: 'Makes decisions that align work to support the company’s and product’s vision and goals, along with the team KPIs.'
+category: 'Leadership'
+proficiency: 'Confidence'
+summary: 'Displays a positive sense of efficacy and readiness to handle stress, competitiveness, workload, instructional or orientation methods, and related associated complexities. States ideas with self-assurance and enthusiasm. Stands up for beliefs and views while preserving respect of others.Willingness to support final team decisions.'
 milestone: 4
----     
+---                    
 
 ### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 

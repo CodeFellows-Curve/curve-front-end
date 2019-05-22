@@ -3,12 +3,14 @@ import { connect } from 'react-redux'
 import { navigate } from 'gatsby'
 import If from 'react-ifs'
 
+import AuthService from '../utils/auth-service'
 import * as a from '../actions/auth-actions'
 
 class Login extends Component {
   constructor(props) {
     super(props)
     this.state = { username: ``, password: `` }
+    this.authService = new AuthService()
   }
 
   handleSubmit = e => {
@@ -36,6 +38,10 @@ class Login extends Component {
   }
 
   render() {
+    if (!this.props.loggedIn) {
+      this.authService.login()
+    }
+
     return (
       <If condition={!this.props.loggedIn}>
         <h1>Log In*</h1>

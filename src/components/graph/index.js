@@ -31,11 +31,11 @@ class Graph extends React.Component {
     return (
       <>
       <div>
-        <span>Is anybody out there? {this.props.graph.name}</span>
-        {/* {console.log('this is the review at 0:' , profs(this.props.graph.review))} */}
+        <span>Is anybody out there?</span>
+        {console.log('Line 35 in graph index', this.props.graph)}
       </div>
-      <NightingaleChart />
-      <CompetencySelector />
+      {/* <NightingaleChart /> */}
+      {/* <CompetencySelector /> */}
       </>
     )
   }
@@ -43,7 +43,7 @@ class Graph extends React.Component {
 
 const mapStateToProps = state => ({
   user: state.auth.user,
-  graph: state.graph.data.individual
+  graph: state.graph.state
 })
 
 const mapDispatchToProps = (dispatch, getState) => ({

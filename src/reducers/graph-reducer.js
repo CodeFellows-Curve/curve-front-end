@@ -1,5 +1,5 @@
 // CONSTANTS ----------------------------------------------------------------
-import initialState from './initial-state-change.js'
+// import initialState from './initial-state-change.js'
 import tracks from '../components/graph/tracks.js'
 const trackIds = Object.keys(tracks)
 const titles = [
@@ -76,11 +76,19 @@ const eligibleTitles = milestoneMap => {
 //   initialState.focusedTrackId
 // )
 
+let initialState = {
+}
+
 // REDUCER FUNCTION -----------------------------------------------------------------
 export default (state = initialState, action) => {
   let { type, payload } = action
 
   switch (type) {
+    // This case adds all the raw graphQL data for a single indidual to state
+    case 'setIndividualsData':
+      let graphQLRawData = payload
+      return { state: graphQLRawData }
+
     case 'setFocusedTrackId':
       let index = trackIds.indexOf(payload)
       const focusedTrackId = trackIds[index]

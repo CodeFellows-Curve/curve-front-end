@@ -11,27 +11,11 @@ import Graph from '../components/graph'
 import List from '../components/list'
 
 class App extends Component {
-  // set redux store to data
   componentDidMount() {
-    const competencies = {}
+    // Add competencies markdown to Redux store
+    const { data, pullMarkdown } = this.props
 
-    this.props.data.allMarkdownRemark.edges.forEach(num => {
-      const { category } = num.node.frontmatter
-      if (competencies[category]) {
-        const { proficiency } = num.node.frontmatter
-        if (competencies[category][proficiency]) {
-          competencies[category][proficiency].push(num.node)
-        } else {
-          competencies[category][proficiency] = [num.node]
-        }
-      } else {
-        competencies[category] = {}
-        const { proficiency } = num.node.frontmatter
-        competencies[category][proficiency] = [num.node]
-      }
-    })
-
-    this.props.pullMarkdown(competencies)
+    pullMarkdown(data)
   }
 
   render() {

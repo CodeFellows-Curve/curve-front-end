@@ -1,9 +1,7 @@
 import React from 'react'
 import * as d3 from 'd3'
 import styled from 'styled-components'
-import { categoryColorScale } from '../../constants'
-// import tracks from '../../tracks.js'
-import proficiencyArrayFn from '../../constants.js'
+import {proficiencyArrayFn, competencyArrayFn } from '../../constants.js'
 
 import { connect } from 'react-redux'
 import * as actions from '../../../../actions/graph-actions.js'
@@ -12,7 +10,6 @@ const milestones = [0, 1, 2, 3, 4]
 const width = 400
 // "milestones" is an array of each level; [0, 1, 2, 3, 4]
 const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a circle, not an arc.
-
 
 
 // Styles
@@ -64,6 +61,22 @@ class NightingaleChart extends React.Component {
 
   render() {
     let proficiencyIds = proficiencyArrayFn(this.props.proficiencies.review)
+    let competencyIds = competencyArrayFn(this.props.proficiencies.review)
+    
+    const categoryColorScale = d3
+      .scaleOrdinal()
+      .domain(competencyIds)
+      .range([
+        '#FF5A5A', // BUSINESS ACUMEN
+        '#FE9959', // GROWTH MINDSET
+        '#FCD859', // LEADERSHIP
+        '#9EF657', // CRAFT
+        '#53EC86', // QUALITY
+        '#5ECDDD', // COMMUNICATION
+        '#4655C7', // TEAMWORK
+        '#883DAD', // RESULTS
+      ])
+  
     
     const currentMilestoneId = proficiencyIds[
       this.props.focusedProficiencyId]
@@ -101,7 +114,7 @@ class NightingaleChart extends React.Component {
                         d={this.arcFn(milestone)}
                         style={{
                           fill: isMet
-                            ? categoryColorScale(proficiencyIds[proficiencyId])
+                            ? categoryColorScale(competencyIds[proficiencyId])
                             : undefined,
                         }}
                       />
@@ -112,7 +125,7 @@ class NightingaleChart extends React.Component {
                     cx="0"
                     cy="-50"
                     style={{
-                      fill: categoryColorScale(proficiencyIds[proficiencyId]),
+                      fill: categoryColorScale(competencyIds[0]),
                     }}
                     className={
                       'track-milestone ' +

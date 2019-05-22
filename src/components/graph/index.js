@@ -20,17 +20,6 @@ import Track from './Track'
 import { connect } from 'react-redux'
 import * as actions from '../../actions/graph-actions.js'
 
-// const profs = (arr) => {
-//   let res = [];
-//   let newArr = arr[0].category
-//   newArr.forEach(item => {
-//     item.subcategory.forEach(i => {
-//       res.push(i.subCategoryName)
-//     })
-//   })
-//   return res;
-// }
-
 class Graph extends React.Component {
   constructor(props) {
     super(props)

@@ -73,20 +73,6 @@ export const totalPointsFromMilestoneMap = milestoneMap =>
     .map(trackId => milestoneToPoints(milestoneMap[trackId]))
     .reduce((sum, addend) => sum + addend, 0)
 
-export const categoryColorScale = d3
-  .scaleOrdinal()
-  .domain(categoryIds)
-  .range([
-    '#FF5A5A', // BUSINESS ACUMEN
-    '#FE9959', // GROWTH MINDSET
-    '#FCD859', // LEADERSHIP
-    '#9EF657', // CRAFT
-    '#53EC86', // QUALITY
-    '#5ECDDD', // COMMUNICATION
-    '#4655C7', // TEAMWORK
-    '#883DAD', // RESULTS
-  ])
-
 export const titles = [
   { label: 'Engineer I', minPoints: 0, maxPoints: 16 },
   { label: 'Engineer II', minPoints: 17, maxPoints: 35 },
@@ -111,12 +97,8 @@ export const eligibleTitles = milestoneMap => {
 }
 
 
-// Exporting proficiencyId array
-// const proficiencyId = (obj) => {
-
-// }
 //ToDo: Refactor to have a better time and space efficiency
-const proficiencyArrayFn = (arr) => {
+export const proficiencyArrayFn = (arr) => {
   let res = [];
   let newArr = arr[0].category
   newArr.forEach(item => {
@@ -127,4 +109,12 @@ const proficiencyArrayFn = (arr) => {
   return res;
 }
 
-export default proficiencyArrayFn;
+// Competency Array
+export const competencyArrayFn = (arr) => {
+  let res = [];
+  let newArr = arr[0].category
+  newArr.forEach(competency => {
+    res.push(competency.categoryName)
+  })
+  return res;
+}

@@ -1,5 +1,7 @@
-import React from "react"
-import { Provider } from "react-redux"
+import React /*, { Component } */ from 'react'
+import { Provider } from 'react-redux'
+// import If from 'react-ifs'
+
 
 import fetch from 'node-fetch'
 import { InMemoryCache } from 'apollo-cache-inmemory'

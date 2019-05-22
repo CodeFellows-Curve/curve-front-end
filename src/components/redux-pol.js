@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 class ReduxPOL extends Component {
   render() {
     return (
-      <div style={{ color: 'white' }}>
+      <div>
         Logged In:{' '}
         <span style={{ color: 'orange' }}>
           {this.props.loggedIn ? 'true' : 'false'}

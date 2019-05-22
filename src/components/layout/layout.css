@@ -9,6 +9,246 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.cls-1 {
+  fill: #8742ab;
+}
+
+.cls-2 {
+  opacity: 0.66;
+}
+
+.cls-3 {
+  opacity: 0.33;
+}
+
+.cls-4 {
+  fill: #4758c4;
+}
+
+.cls-5 {
+  fill: #55cddc;
+}
+
+.cls-6 {
+  fill: #5bea8a;
+}
+
+.cls-7 {
+  fill: #a1f462;
+}
+
+.cls-8 {
+  fill: #fbd763;
+}
+
+.cls-9 {
+  fill: #fc9960;
+}
+
+.cls-10 {
+  fill: #fc5b5e;
+}
+
+@-webkit-keyframes AL1 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes AL2 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes AL3 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes AL4 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes AL5 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes AL6 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes AL7 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes AL8 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes AL9 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes AL10 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes AL11 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes AL12 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes AL13 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes AL14 {
+  0%   { opacity: 0; }
+  50%   { opacity: .25; }
+  100% { opacity: 1; }
+}
+
+
+#L1 {
+  -webkit-animation: AL1 .10s; /* Safari 4+ */
+  -moz-animation:    AL1 .10s; /* Fx 5+ */
+  -o-animation:      AL1 .10s; /* Opera 12+ */
+  animation:         AL1 .10s; /* IE 10+, Fx 29+ */
+}
+
+#L2 {
+  -webkit-animation: AL2 .20s; /* Safari 4+ */
+  -moz-animation:    AL2 .20s; /* Fx 5+ */
+  -o-animation:      AL2 .20s; /* Opera 12+ */
+  animation:         AL2 .20s; /* IE 10+, Fx 29+ */
+}
+
+#L3 {
+  -webkit-animation: AL3 .30s; /* Safari 4+ */
+  -moz-animation:    AL3 .30s; /* Fx 5+ */
+  -o-animation:      AL3 .30s; /* Opera 12+ */
+  animation:         AL3 .30s; /* IE 10+, Fx 29+ */
+}
+
+#L4 {
+  -webkit-animation: AL4 .40s; /* Safari 4+ */
+  -moz-animation:    AL4 .40s; /* Fx 5+ */
+  -o-animation:      AL4 .40s; /* Opera 12+ */
+  animation:         AL4 .40s; /* IE 10+, Fx 29+ */
+}
+
+#L5 {
+  -webkit-animation: AL5 .50s; /* Safari 4+ */
+  -moz-animation:    AL5 .50s; /* Fx 5+ */
+  -o-animation:      AL5 .50s; /* Opera 12+ */
+  animation:         AL5 .50s; /* IE 10+, Fx 29+ */
+}
+
+#L6 {
+  -webkit-animation: AL6 .60s; /* Safari 4+ */
+  -moz-animation:    AL6 .60s; /* Fx 5+ */
+  -o-animation:      AL6 .60s; /* Opera 12+ */
+  animation:         AL6 .60s; /* IE 10+, Fx 29+ */
+}
+
+#L7 {
+  -webkit-animation: AL7 .70s; /* Safari 4+ */
+  -moz-animation:    AL7 .70s; /* Fx 5+ */
+  -o-animation:      AL7 .70s; /* Opera 12+ */
+  animation:         AL7 .70s; /* IE 10+, Fx 29+ */
+}
+
+#L8 {
+  -webkit-animation: AL8 .80s; /* Safari 4+ */
+  -moz-animation:    AL8 .80s; /* Fx 5+ */
+  -o-animation:      AL8 .80s; /* Opera 12+ */
+  animation:         AL8 .80s; /* IE 10+, Fx 29+ */
+}
+
+#L9 {
+  -webkit-animation: AL9 .9s; /* Safari 4+ */
+  -moz-animation:    AL9 .9s; /* Fx 5+ */
+  -o-animation:      AL9 .9s; /* Opera 12+ */
+  animation:         AL9 .9s; /* IE 10+, Fx 29+ */
+}
+
+#L10 {
+  -webkit-animation: AL10 1s; /* Safari 4+ */
+  -moz-animation:    AL10 1s; /* Fx 5+ */
+  -o-animation:      AL10 1s; /* Opera 12+ */
+  animation:         AL10 1s; /* IE 10+, Fx 29+ */
+}
+
+#L11 {
+  -webkit-animation: AL11 1.1s; /* Safari 4+ */
+  -moz-animation:    AL11 1.1s; /* Fx 5+ */
+  -o-animation:      AL11 1.1s; /* Opera 12+ */
+  animation:         AL11 1.1s; /* IE 10+, Fx 29+ */
+}
+
+#L12 {
+  -webkit-animation: AL12 1.2s; /* Safari 4+ */
+  -moz-animation:    AL12 1.2s; /* Fx 5+ */
+  -o-animation:      AL12 1.2s; /* Opera 12+ */
+  animation:         AL12 1.2s; /* IE 10+, Fx 29+ */
+}
+
+
+#L13 {
+  -webkit-animation: AL13 1.3s; /* Safari 4+ */
+  -moz-animation:    AL13 1.3s; /* Fx 5+ */
+  -o-animation:      AL13 1.3s; /* Opera 12+ */
+  animation:         AL13 1.3s; /* IE 10+, Fx 29+ */
+}
+
+#L14 {
+  -webkit-animation: AL14 1.4s; /* Safari 4+ */
+  -moz-animation:    AL14 1.4s; /* Fx 5+ */
+  -o-animation:      AL14 1.4s; /* Opera 12+ */
+  animation:         AL14 1.4s; /* IE 10+, Fx 29+ */
+}
+
+#logo-container{
+  width: 100px;
+}
+
+/* these tags will allow you to pull the font from fs to use by font-family name just as you would with any native typeface */
+
+@font-face {
+  font-family: "markweb-light";
+  src: url("src/fonts/modified-MarkWeb-Light.woff") format('woff');
+}
+
+@font-face {
+  font-family: "markweb-bold";
+  src: url("/fonts/modified-MarkWeb-Bold.woff") format('woff');
+}
+
 /* 
 article,
 aside,

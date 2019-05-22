@@ -13,8 +13,8 @@ import {
 
 import PointSummaries from './PointSummaries'
 import LevelThermometer from './LevelThermometer'
-import NightingaleChart from './components/nightingale-chart.js/NightingaleChart'
-import TrackSelector from './TrackSelector'
+import NightingaleChart from './components/nightingale-chart/NightingaleChart'
+import CompetencySelector from './components/competency-selector/competency-selector.js'
 import KeyboardListener from './KeyboardListener'
 import Track from './Track'
 import { connect } from 'react-redux'
@@ -35,6 +35,7 @@ class Graph extends React.Component {
         {/* {console.log('this is the review at 0:' , profs(this.props.graph.review))} */}
       </div>
       <NightingaleChart />
+      <CompetencySelector />
       </>
     )
   }

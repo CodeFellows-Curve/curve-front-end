@@ -72,37 +72,6 @@ const eligibleTitles = milestoneMap => {
     .map(title => title.label)
 }
 
-let initialStateObjectStructure = {
-    individuals: {
-      name: 'John Cokos',
-      competencyScore: 50,
-      review: {
-        reviewDate: 20190521,
-        overallScore: 50,
-        reviewcomment: {
-          subject: '',
-          content: '',
-        },
-        category: {
-          categoryName: '',
-          overallScore: 50,
-          categorycomment: {
-            subject: '',
-            content: '',
-          subcategory: {
-            subCategoryName: '',
-            score: 4,
-            subcategorycomment:{
-              subject: '',
-              content: '',
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 // initialState.totalPoints = totalPointsFromMilestoneMap(
 //   initialState.focusedTrackId
 // )

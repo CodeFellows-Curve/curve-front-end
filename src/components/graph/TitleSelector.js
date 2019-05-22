@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { connect } from 'react-redux'
+import * as actions from '../../actions/graph-actions.js'
+
 import { eligibleTitles } from './constants'
 
 const Select = styled.select`
@@ -12,7 +15,9 @@ const Select = styled.select`
 
 class TitleSelector extends React.Component {
   render() {
-    const titles = eligibleTitles(this.props.milestoneByTrack)
+    // const titles = eligibleTitles(this.props.milestoneByTrack)
+    const titles = this.props.eligibleTitles
+
     return (
       <Select
         value={this.props.currentTitle}
@@ -26,4 +31,21 @@ class TitleSelector extends React.Component {
   }
 }
 
-export default TitleSelector
+// export default TitleSelector
+
+const mapStateToProps = state => ({
+  milestoneByTrack: state.graph.milestoneByTrack,
+  currentTitle: state.graph.currentTitle,
+  eligibleTitles: state.graph.eligibleTitles,
+
+  // categoryPoints: state.graph.categoryPoints,
+})
+
+const mapDispatchToProps = (dispatch, getState) => ({
+  setTitleFn: payload => dispatch(actions.setTitle(payload)),
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TitleSelector)

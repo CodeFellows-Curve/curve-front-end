@@ -7,6 +7,8 @@ import {
 } from './constants'
 import styled from 'styled-components'
 
+import { connect } from 'react-redux'
+
 const PointSummariesTable = styled.table`
   border-spacing: 3px;
   margin-bottom: 20px;
@@ -30,7 +32,8 @@ const PointSummariesTable = styled.table`
 
 class PointSummaries extends React.Component {
   render() {
-    const totalPoints = totalPointsFromMilestoneMap(this.props.milestoneByTrack)
+    // const totalPoints = totalPointsFromMilestoneMap(this.props.milestoneByTrack)
+    const totalPoints = this.props.totalPoints
 
     let currentLevel, nextLevel
 
@@ -86,4 +89,11 @@ class PointSummaries extends React.Component {
   }
 }
 
-export default PointSummaries
+// export default PointSummaries
+
+const mapStateToProps = state => ({
+  // milestoneByTrack: state.graph.milestoneByTrack,
+  totalPoints: state.graph.totalPoints,
+})
+
+export default connect(mapStateToProps)(PointSummaries)

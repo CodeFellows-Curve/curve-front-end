@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import { trackIds, milestones, categoryColorScale } from './constants'
 import tracks from './tracks.js'
 
+import { connect } from 'react-redux'
+import * as actions from '../../actions/graph-actions.js'
+
 const width = 400
 // "milestones" is an array of each level; [0, 1, 2, 3, 4, 5]
 const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a circle, not an arc.
@@ -123,4 +126,17 @@ class NightingaleChart extends React.Component {
   }
 }
 
-export default NightingaleChart
+const mapStateToProps = state => ({
+  milestoneByTrack: state.graph.milestoneByTrack,
+  focusedTrackId: state.graph.focusedTrackId,
+})
+
+const mapDispatchToProps = (dispatch, getState) => ({
+  setFocused: payload => dispatch(actions.setFocusedTrackId(payload)),
+  handleTrackMilestoneChangeFn: (...payload) =>
+    dispatch(actions.handleTrackMilestoneChange(payload)),
+})
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NightingaleChart)

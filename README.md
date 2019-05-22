@@ -5,7 +5,7 @@
 
 Authors: 
 * UI/UX Team: Billy Bunn, Vanessa Wei, Alex White, Aaron Ferris, Chris Merritt
-* Backend Integration Team: Joseph Wolfe, Cory Henderson, Spencer Hirata, Jon Gentry, & Gregory Dukes
+* Backend Integration Team: Joseph Wolfe, Cory Henderson, Spencer Hirata, Jon Gentry, Gregory Dukes
 * Project Manager: Erin Trainor
 
 ### Summary:

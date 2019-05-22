@@ -1,15 +1,19 @@
 import React from 'react'
 import * as d3 from 'd3'
 import styled from 'styled-components'
-import { trackIds, milestones, categoryColorScale } from './constants'
-import tracks from './tracks.js'
+import { categoryColorScale } from '../../constants'
+// import tracks from '../../tracks.js'
+import proficiencyArrayFn from '../../constants.js'
 
 import { connect } from 'react-redux'
-import * as actions from '../../actions/graph-actions.js'
+import * as actions from '../../../../actions/graph-actions.js'
 
+const milestones = [0, 1, 2, 3, 4]
 const width = 400
-// "milestones" is an array of each level; [0, 1, 2, 3, 4, 5]
+// "milestones" is an array of each level; [0, 1, 2, 3, 4]
 const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a circle, not an arc.
+
+
 
 // Styles
 const Figure = styled.figure`
@@ -30,6 +34,7 @@ const Figure = styled.figure`
   }
 `
 
+
 class NightingaleChart extends React.Component {
   constructor(props) {
     super(props)
@@ -48,33 +53,36 @@ class NightingaleChart extends React.Component {
       .outerRadius(
         milestone => this.radiusScale(milestone) + this.radiusScale.bandwidth()
       )
-      .startAngle(-Math.PI / trackIds.length)
-      .endAngle(Math.PI / trackIds.length)
+      // This start and end angle are hard coded for now!! this is bad and we will change it once the wiring is done.
+      .startAngle(-Math.PI / 41)
+      .endAngle(Math.PI / 41)
       .padAngle(Math.PI / 200)
       .padRadius(0.45 * width)
       .cornerRadius(2)
   }
+  
 
   render() {
-    const currentMilestoneId = this.props.milestoneByTrack[
-      this.props.focusedTrackId
-    ]
+    let proficiencyIds = proficiencyArrayFn(this.props.proficiencies.review)
+    
+    const currentMilestoneId = proficiencyIds[
+      this.props.focusedProficiencyId]
     return (
       <Figure>
         <svg>
           <g transform={`translate(${width / 2},${width / 2}) rotate(-33.75)`}>
-            {trackIds.map((trackId, i) => {
-              const isCurrentTrack = trackId == this.props.focusedTrackId
+            {proficiencyIds.map((proficiencyId, i) => {
+              const isCurrentProficiency = proficiencyId == this.props.focusedProficiencyId
               return (
                 <g
-                  key={trackId}
-                  transform={`rotate(${(i * 360) / trackIds.length})`}
+                  key={proficiencyId}
+                  transform={`rotate(${(i * 360) / proficiencyIds.length})`}
                 >
                   {arcMilestones.map(milestone => {
                     const isCurrentMilestone =
-                      isCurrentTrack && milestone == currentMilestoneId
+                      isCurrentProficiency && milestone == currentMilestoneId
                     const isMet =
-                      this.props.milestoneByTrack[trackId] >= milestone ||
+                      proficiencyIds[proficiencyId] >= milestone ||
                       milestone == 0
                     return (
                       <path
@@ -86,14 +94,14 @@ class NightingaleChart extends React.Component {
                         }
                         onClick={() =>
                           this.props.handleTrackMilestoneChangeFn(
-                            trackId,
+                            proficiencyId,
                             milestone
                           )
                         }
                         d={this.arcFn(milestone)}
                         style={{
                           fill: isMet
-                            ? categoryColorScale(tracks[trackId].category)
+                            ? categoryColorScale(proficiencyIds[proficiencyId])
                             : undefined,
                         }}
                       />
@@ -104,16 +112,16 @@ class NightingaleChart extends React.Component {
                     cx="0"
                     cy="-50"
                     style={{
-                      fill: categoryColorScale(tracks[trackId].category),
+                      fill: categoryColorScale(proficiencyIds[proficiencyId]),
                     }}
                     className={
                       'track-milestone ' +
-                      (isCurrentTrack && !currentMilestoneId
+                      (isCurrentProficiency && !currentMilestoneId
                         ? 'track-milestone-current'
                         : '')
                     }
                     onClick={() =>
-                      this.props.handleTrackMilestoneChangeFn(trackId, 0)
+                      this.props.handleTrackMilestoneChangeFn(proficiencyId, 0)
                     }
                   />
                 </g>
@@ -127,8 +135,8 @@ class NightingaleChart extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  milestoneByTrack: state.graph.milestoneByTrack,
-  focusedTrackId: state.graph.focusedTrackId,
+  proficiencies: state.graph.data.individual,
+  focusedProficiencyId: state.graph.focusedProficiencyId,
 })
 
 const mapDispatchToProps = (dispatch, getState) => ({

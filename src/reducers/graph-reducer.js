@@ -1,4 +1,5 @@
 // CONSTANTS ----------------------------------------------------------------
+import initialState from './initial-state-change.js'
 import tracks from '../components/graph/tracks.js'
 const trackIds = Object.keys(tracks)
 const titles = [
@@ -71,87 +72,35 @@ const eligibleTitles = milestoneMap => {
     .map(title => title.label)
 }
 
-// INITIAL STATE -----------------------------------------------------------------
-let initialState = {
-  name: 'Daenerys Targaryen',
-  title: 'Mother of Dragons',
-  milestoneByTrack: {
-    // BUSINESS ACUMEN COMPETENCY --------------------
-    MISSION_AND_VISION: 1,
-    CUSTOMER_ORIENTATION: 1,
-
-    // GROWTH MINDSET COMPETENCY --------------------
-    ADAPTABILITY: 1,
-    CURIOSITY: 1,
-    CONSTANT_IMPROVEMENT: 1,
-    HANDLING_AMBIGUITY: 1,
-    INCLUSIVITY: 1,
-    OPENNESS: 1,
-    AMBITION_AND_INITIATIVE: 1,
-
-    // LEADERSHIP COMPETENCY --------------------
-    ACCOUNTABILITY: 1,
-    INTEGRITY: 1,
-    OWNERSHIP: 1,
-    MENTORSHIP: 1,
-    NETWORKING: 1,
-    SUCCESSION: 1,
-    HEALTH_AND_SAFETY: 1,
-    CONFIDENCE: 1,
-    CREDIBILITY: 1,
-
-    // CRAFT COMPETENCY --------------------
-    TECHNICAL: 1,
-    PROCESS: 1,
-    INNOVATION: 1,
-    TOOL_PROFICIENCY: 1,
-
-    // QUALITY COMPETENCY --------------------
-    JUDGEMENT: 1,
-    ROOT_CAUSE_RESOLUTION: 1,
-
-    // COMMUNICATION COMPETENCY --------------------
-    WRITING: 1,
-    READING: 1,
-    SPEAKING: 1,
-    LISTENING: 1,
-
-    // TEAMWORK COMPETENCY --------------------
-    COLLABORATION: 1,
-
-    // RESULTS COMPETENCY --------------------
-    AGILE: 1,
-    ORGANIZATIONAL: 1,
-    CREATIVE: 1,
-    PROJECT_EXECUTION: 1,
-    ANALYTICAL_THINKING: 1,
-    PRIORITIZATION: 1,
-    PROBLEM_SOLVING: 1,
-    INCREMENTAL_DELIVERY: 1,
-    DECISION_MAKING: 1,
-    APPROPRIATE_AUTONOMY: 1,
-    PLANNING_AND_ESTIMATING: 1,
-    DEPENDABILITY_AND_RELIABILITY: 1,
-  },
-  focusedTrackId: 'MISSION_AND_VISION',
-  totalPoints: 41,
-  categoryPoints: [
-    { categoryId: 'A', points: 2 },
-    { categoryId: 'B', points: 7 },
-    { categoryId: 'C', points: 9 },
-    { categoryId: 'D', points: 4 },
-    { categoryId: 'E', points: 2 },
-    { categoryId: 'F', points: 4 },
-    { categoryId: 'G', points: 1 },
-    { categoryId: 'H', points: 12 },
-  ],
-  eligibleTitles: [
-    'Mother of Dragons',
-    'Breaker of Chains',
-    'Protector of the Realm',
-  ],
-  tracks,
-  trackIds,
+let initialStateObjectStructure = {
+    individuals: {
+      name: 'John Cokos',
+      competencyScore: 50,
+      review: {
+        reviewDate: 20190521,
+        overallScore: 50,
+        reviewcomment: {
+          subject: '',
+          content: '',
+        },
+        category: {
+          categoryName: '',
+          overallScore: 50,
+          categorycomment: {
+            subject: '',
+            content: '',
+          subcategory: {
+            subCategoryName: '',
+            score: 4,
+            subcategorycomment:{
+              subject: '',
+              content: '',
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // initialState.totalPoints = totalPointsFromMilestoneMap(

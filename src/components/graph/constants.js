@@ -109,3 +109,22 @@ export const eligibleTitles = milestoneMap => {
     )
     .map(title => title.label)
 }
+
+
+// Exporting proficiencyId array
+// const proficiencyId = (obj) => {
+
+// }
+//ToDo: Refactor to have a better time and space efficiency
+const proficiencyArrayFn = (arr) => {
+  let res = [];
+  let newArr = arr[0].category
+  newArr.forEach(item => {
+    item.subcategory.forEach(i => {
+      res.push(i.subCategoryName)
+    })
+  })
+  return res;
+}
+
+export default proficiencyArrayFn;

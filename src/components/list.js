@@ -1,38 +1,65 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import gql from 'graphql-tag'
+import { Query, ApolloConsumer } from 'react-apollo'
 
-const List = () => (
-  <StaticQuery
-    query={graphql`
-      {
-        curve_users {
-          individuals {
-            name
-            review {
-              id
-              overallScore
-            }
-          }
-        }
+// const INDIVIDUALS = gql`
+// query {
+//   individuals{
+//     name
+//   }
+// }`
+
+const SWAPI = gql`
+query {
+  allPeople {
+    edges {
+      node {
+        name
       }
-    `}
-    render={data => {
-      const content =
-        (data &&
-          data.curve_users &&
-          data.curve_users.individuals &&
-          data.curve_users.individuals.map(user => (
-            <li key={user.id}>{user.name}</li>
-          ))) ||
-        null
-      return (
-        <>
-          <h1>All Users</h1>
-          <ul>{content}</ul>
-        </>
-      )
-    }}
-  />
-)
+    }
+  }
+}`
+
+class List extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      data: null
+    }
+  }
+
+  updateData = (data) => {
+    console.log(data)
+    this.setState({ data })
+  }
+
+  render(){
+    return(
+      <>
+      <ApolloConsumer>
+      {client => (
+          <div>
+            <button
+              onClick={async () => {
+                const { data } = await client.query({
+                  query: SWAPI,
+                });
+                this.updateData(data);
+              }}
+            >
+              Click me!
+            </button>
+          </div>
+        )}
+      </ApolloConsumer>
+      </>
+    )
+  }
+  
+
+}
+
+
 
 export default List

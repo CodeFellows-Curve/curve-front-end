@@ -5,56 +5,53 @@ import { Query, ApolloConsumer } from 'react-apollo'
 import PersonCard from './person-card'
 
 const INDIVIDUALS = gql`
-query{
-  individuals{
-    name
+  query {
+    individuals {
+      name
+    }
   }
- }`
+`
 
 class List extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
-      data: [{name: 'Jon'}]
+      data: [{ name: 'Jon' }],
     }
   }
 
-  updateData = (data) => {
+  updateData = data => {
     console.log(data)
     this.setState({ data: data.individuals })
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <>
-      <ApolloConsumer>
-      {client => (
-          <div>
-            <button
-              onClick={async () => {
-                const { data } = await client.query({
-                  query: INDIVIDUALS,
-                });
-                this.updateData(data);
-              }}
-            >
-              Click me!
-            </button>
-          </div>
-        )}
-      </ApolloConsumer>
-      <ul>
-        { this.state.data.map(person => (
-          <PersonCard name={person.name} />
-         ) )}
-      </ul>
+        <ApolloConsumer>
+          {client => (
+            <div>
+              <button
+                onClick={async () => {
+                  const { data } = await client.query({
+                    query: INDIVIDUALS,
+                  })
+                  this.updateData(data)
+                }}
+              >
+                Show all employees
+              </button>
+            </div>
+          )}
+        </ApolloConsumer>
+        <ul>
+          {this.state.data.map(person => (
+            <PersonCard name={person.name} />
+          ))}
+        </ul>
       </>
     )
   }
-  
-
 }
-
-
 
 export default List

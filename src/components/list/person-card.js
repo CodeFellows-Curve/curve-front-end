@@ -3,6 +3,9 @@ import { Query, ApolloConsumer } from 'react-apollo'
 
 import gql from 'graphql-tag'
 
+import * as actions from '../../actions/graph-actions.js'
+import { connect } from 'react-redux'
+
 // individual(name: "Nate")
 const PERSON = gql`
   query($name: String!) {
@@ -41,8 +44,8 @@ class PersonCard extends React.Component {
                   query: PERSON,
                   variables: { name: this.props.name },
                 })
-                console.log(data)
-                // this.onPersonFetched(data)
+                // adds individual's data to state in Redux store
+                this.props.setReduxState(data.individual)
               }}
             >
               {this.props.name}
@@ -54,4 +57,12 @@ class PersonCard extends React.Component {
   }
 }
 
-export default PersonCard
+const mapDispatchToProps = (dispatch, getState) => ({
+  setReduxState: payload => dispatch(actions.setIndividualsData(payload)),
+})
+export default connect(
+  null,
+  mapDispatchToProps
+)(PersonCard)
+
+// export default PersonCard

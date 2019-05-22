@@ -1,4 +1,5 @@
 // CONSTANTS ----------------------------------------------------------------
+import initialState from './initial-state-change.js'
 import tracks from '../components/graph/tracks.js'
 const trackIds = Object.keys(tracks)
 const titles = [
@@ -71,218 +72,33 @@ const eligibleTitles = milestoneMap => {
     .map(title => title.label)
 }
 
-let initialState = {
-  userData:{
-    name: 'Hannah Ingham',
-    email: 'HannahTA@cf.com',
-    date: 20190521,
-    title: 'TA',
-
-    coreCompetencies: {
-      BUSINESS_ACUMEN: {
-        title: 'Business Acumen',
-        proficiencies: {
-          MISSION_AND_VISION:{
-            title: 'Mission and Vision Alignment',
+let initialStateObjectStructure = {
+    individuals: {
+      name: 'John Cokos',
+      competencyScore: 50,
+      review: {
+        reviewDate: 20190521,
+        overallScore: 50,
+        reviewcomment: {
+          subject: '',
+          content: '',
+        },
+        category: {
+          categoryName: '',
+          overallScore: 50,
+          categorycomment: {
+            subject: '',
+            content: '',
+          subcategory: {
+            subCategoryName: '',
             score: 4,
-          },
-          CUSTOMER_ORIENTATION:{
-            title: 'Customer Orientation',
-            score: 4,
+            subcategorycomment:{
+              subject: '',
+              content: '',
+            }
           }
         }
-      },
-      GROWTH_MINDSET:{
-        title: 'Growth Mindset',
-        proficiencies: {
-          ADAPTABILITY: {
-            title: 'Adaptability',
-            score: 4,
-          },
-          CURIOSITY: {
-            title: 'Curiosity',
-            score: 4,
-          },
-          CONSTANT_IMPROVEMENT: {
-            title: 'Constant Improvement',
-            score: 4,
-          },
-          HANDLING_AMBIGUITY: {
-            title: 'Handling Ambiguity',
-            score: 4,
-          },
-          INCLUSIVITY: {
-            title: 'Inclusivity',
-            score: 4,
-          },
-          OPENNESS: {
-            title: 'Adaptability',
-            score: 4,
-          },
-          AMBITION_AND_INITIATIVE: {
-            title: 'Ambition and Initiative',
-            score: 4,
-          },
-        }
-      },
-      LEADERSHIP:{
-        title: 'Leadership',
-        proficiencies: {
-          ACCOUNTABILITY: {
-            title: 'Accountability',
-            score: 4,
-          },
-          INTEGRITY: {
-            title: 'Integrity',
-            score: 4,
-          },
-          OWNERSHIP: {
-            title: 'Ownership',
-            score: 4,
-          },
-          MENTORSHIP: {
-            title: 'Mentorship',
-            score: 4,
-          },
-          NETWORKING: {
-            title: 'Networking',
-            score: 4,
-          },
-          SUCCESSION: {
-            title: 'Succession',
-            score: 4,
-          },
-          HEALTH_AND_SAFETY: {
-            title: 'Health and Safety',
-            score: 4,
-          },
-          CONFIDENCE: {
-            title: 'Confidence',
-            score: 4,
-          },
-          CREDIBILITY: {
-            title: 'Credibility',
-            score: 4,
-          },
-        },
-      },
-      CRAFT:{
-        title: 'Craft',
-        proficiencies: {
-          TECHNICAL: {
-            title: 'Technical',
-            score: 4,
-          },
-          PROCESS: {
-            title: 'Process',
-            score: 4,
-          },
-          INNOVATION: {
-            title: 'Innovation',
-            score: 4,
-          },
-          TOOL_PROFICIENCY: {
-            title: 'Tool Proficiency',
-            score: 4,
-          },
-        },
-      },
-      QUALITY:{
-        title: 'Quality',
-        proficiencies: {
-          JUDGEMENT: {
-            title: 'Judgement',
-            score: 4,
-          },
-          ROOT_CAUSE_RESOLUTION: {
-            title: 'Root Cause Resolution',
-            score: 4,
-          },
-        },
-      },
-      COMMUNICATION:{
-        title: 'Communication',
-        proficiencies: {
-          WRITING: {
-            title: 'Writing',
-            score: 4,
-          },
-          READING: {
-            title: 'Reading',
-            score: 4,
-          },
-          SPEAKING: {
-            title: 'Speaking',
-            score: 4,
-          },
-          LISTENING: {
-            title: 'Listening',
-            score: 4,
-          },
-        },
-      },
-      TEAMWORK:{
-        title: 'Teamwork',
-        proficiencies: {
-          COLLABORATION: {
-            title: 'Collaboration',
-            score: 4,
-          },
-        },
-      },
-      RESULTS:{
-        title: 'Results',
-        proficiencies: {
-          AGILE: {
-            title: 'Agile',
-            score: 4,
-          },
-          ORGANIZATIONAL: {
-            title: 'Organizational',
-            score: 4,
-          },
-          CREATIVE: {
-            title: 'Creative',
-            score: 4,
-          },
-          PROJECT_EXECUTION: {
-            title: 'Project Execution',
-            score: 4,
-          },
-          ANALYTICAL_THINKING: {
-            title: 'Analytical Thinking',
-            score: 4,
-          },
-          PRIORITIZATION: {
-            title: 'Prioritization',
-            score: 4,
-          },
-          PROBLEM_SOLVING: {
-            title: 'Problem Solving',
-            score: 4,
-          },
-          INCREMENTAL_DELIVERY: {
-            title: 'Incremental Delivery',
-            score: 4,
-          },
-          DECISION_MAKING: {
-            title: 'Decision Making',
-            score: 4,
-          },
-          APPROPRIATE_AUTONOMY: {
-            title: 'Appropriate Autonomy',
-            score: 4,
-          },
-          PLANNING_AND_ESTIMATING: {
-            title: 'Planning and Estimating',
-            score: 4,
-          },
-          DEPENDABILITY_AND_RELIABILITY: {
-            title: 'Dependability and Reliability',
-            score: 4,
-          },
-        },
-      },
+      }
     }
   }
 }

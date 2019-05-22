@@ -1,58 +1,53 @@
 import React from 'react'
+import { Query, ApolloConsumer } from 'react-apollo'
+
 import gql from 'graphql-tag'
 
-// const PERSON = gql`
-// query{
-//   individual (name: "Nate") {
-//     name
-//     review{
-//       category{
-//         categoryName
-//         overallScore
-//         subcategory{
-//           subCategoryName
-//           score
-//         }
-//       }
-//     }
-//   }
-// }`
-
-class PersonCard extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  handleClick = name => {
-    console.log('handleClick', name)
-
-  }
-
-  PERSON = gql`
-    query {
-      individual(name: "Nate") {
-        name
-        review {
-          category {
-            categoryName
-            overallScore
-            subcategory {
-              subCategoryName
-              score
-            }
+// individual(name: "Nate")
+const PERSON = gql`
+  query($name: String!) {
+    individual(name: $name) {
+      name
+      review {
+        category {
+          categoryName
+          overallScore
+          subcategory {
+            subCategoryName
+            score
           }
         }
       }
     }
-  `
+  }
+`
+
+class PersonCard extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { person: null }
+  }
+
+  onPersonFetched = person => this.setState(() => ({ person }))
 
   render() {
     return (
       <li>
         <ApolloConsumer>
-        <button onClick={() => this.handleClick(this.props.name)}>
-          {this.props.name}
-        </button>
+          {client => (
+            <button
+              onClick={async () => {
+                const { data } = await client.query({
+                  query: PERSON,
+                  variables: { name: this.props.name },
+                })
+                console.log(data)
+                // this.onPersonFetched(data)
+              }}
+            >
+              {this.props.name}
+            </button>
+          )}
         </ApolloConsumer>
       </li>
     )

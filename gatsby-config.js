@@ -4,7 +4,6 @@ module.exports = {
     description: `Competency visualization`,
     author: `Code Fellows JavaScript 401d29`,
   },
-  __experimentalThemes: [`gatsby-theme-docz`],
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
@@ -17,9 +16,9 @@ module.exports = {
     {
       resolve: `gatsby-source-graphql`,
       options: {
-        typeName: 'SWAPI',
-        fieldName: 'swapi',
-        url: 'https://api.graphcms.com/simple/v1/swapi',
+        typeName: 'Curve',
+        fieldName: 'curve_users',
+        url: 'https://cfcurve.azurewebsites.net/graphql',
       },
     },
     {

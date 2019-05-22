@@ -59,7 +59,7 @@ export default connect(
 export const query = graphql`
   {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/competencies/" } }
+      filter: { fileAbsolutePath: { regex: "markdown/competencies/" } }
     ) {
       edges {
         node {
@@ -68,7 +68,6 @@ export const query = graphql`
             category
             milestone
             proficiency
-            title
           }
         }
       }

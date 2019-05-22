@@ -14,6 +14,13 @@ export const handleLogout = callback => {
   return true
 }
 
+// export const silentAuth = callback => {
+//   if (!isAuthenticated()) {
+//     return callback()
+//   }
+//   auth.checkSession({}, setSession(callback))
+// }
+
 /***
  * Not using local storage for now because Redux is set up
  ***

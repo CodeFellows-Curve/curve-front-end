@@ -21,7 +21,8 @@ import store from "./src/store/"
 //   cache: new InMemoryCache(),
 // })
 
-const URL = "https://graphql-wrap-rest.herokuapp.com/";
+// const URL = "https://graphql-wrap-rest.herokuapp.com/";
+const URL = "https://cfcurve.azurewebsites.net/graphql";
 
 const httpLink = new HttpLink({
   uri: URL,

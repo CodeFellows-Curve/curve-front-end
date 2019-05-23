@@ -3,25 +3,17 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-index" */ 'docs/index.mdx'
     ),
-  'docs/README/README.mdx': () =>
+  'docs/README/Back-end.mdx': () =>
     import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-readme-readme" */ 'docs/README/README.mdx'
+      /* webpackPrefetch: true, webpackChunkName: "docs-readme-back-end" */ 'docs/README/Back-end.mdx'
     ),
-  'docs/actions/auth-actions.mdx': () =>
+  'docs/README/Front-end.mdx': () =>
     import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-actions-auth-actions" */ 'docs/actions/auth-actions.mdx'
+      /* webpackPrefetch: true, webpackChunkName: "docs-readme-front-end" */ 'docs/README/Front-end.mdx'
     ),
-  'docs/actions/competencies-actions.mdx': () =>
+  'docs/README/Project.mdx': () =>
     import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-actions-competencies-actions" */ 'docs/actions/competencies-actions.mdx'
-    ),
-  'docs/actions/graph-actions.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-actions-graph-actions" */ 'docs/actions/graph-actions.mdx'
-    ),
-  'docs/actions/user-actions.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-actions-user-actions" */ 'docs/actions/user-actions.mdx'
+      /* webpackPrefetch: true, webpackChunkName: "docs-readme-project" */ 'docs/README/Project.mdx'
     ),
   'docs/components/KeyboardListener.mdx': () =>
     import(
@@ -39,13 +31,17 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-components-nightingale-chart" */ 'docs/components/NightingaleChart.mdx'
     ),
+  'docs/components/PointSummaries.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-components-point-summaries" */ 'docs/components/PointSummaries.mdx'
+    ),
   'docs/components/TitleSelector.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-components-title-selector" */ 'docs/components/TitleSelector.mdx'
     ),
-  'docs/components/PointSummaries.mdx': () =>
+  'docs/components/Track.mdx': () =>
     import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-components-point-summaries" */ 'docs/components/PointSummaries.mdx'
+      /* webpackPrefetch: true, webpackChunkName: "docs-components-track" */ 'docs/components/Track.mdx'
     ),
   'docs/components/TrackSelector.mdx': () =>
     import(
@@ -54,10 +50,6 @@ export const imports = {
   'docs/components/header.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-components-header" */ 'docs/components/header.mdx'
-    ),
-  'docs/components/Track.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-components-track" */ 'docs/components/Track.mdx'
     ),
   'docs/components/list.mdx': () =>
     import(
@@ -78,6 +70,22 @@ export const imports = {
   'docs/components/seo.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-components-seo" */ 'docs/components/seo.mdx'
+    ),
+  'docs/actions/auth-actions.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-actions-auth-actions" */ 'docs/actions/auth-actions.mdx'
+    ),
+  'docs/actions/competencies-actions.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-actions-competencies-actions" */ 'docs/actions/competencies-actions.mdx'
+    ),
+  'docs/actions/graph-actions.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-actions-graph-actions" */ 'docs/actions/graph-actions.mdx'
+    ),
+  'docs/actions/user-actions.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-actions-user-actions" */ 'docs/actions/user-actions.mdx'
     ),
   'docs/reducers/competencies-reducer.mdx': () =>
     import(

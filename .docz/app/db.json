@@ -186,15 +186,15 @@
       }
     },
     {
-      "key": "docs/README/README.mdx",
+      "key": "docs/README/Back-end.mdx",
       "value": {
-        "name": "README",
+        "name": "Back-end",
         "menu": "README",
-        "id": "d748d149e8a9bbb6b9e996a338b68dc9",
-        "filepath": "docs/README/README.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/README/README.mdx",
-        "slug": "docs-readme-readme",
-        "route": "/docs-readme-readme",
+        "id": "a2f33b1fed7162b30d685daa71c0cca3",
+        "filepath": "docs/README/Back-end.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/README/Back-end.mdx",
+        "slug": "docs-readme-back-end",
+        "route": "/docs-readme-back-end",
         "headings": [
           {
             "slug": "curve",
@@ -235,6 +235,590 @@
             "slug": "uml-diagram",
             "depth": 3,
             "value": "UML Diagram:"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/README/Front-end.mdx",
+      "value": {
+        "name": "Front-end",
+        "menu": "README",
+        "id": "f8fdf1ce70b2095ecf8acd3d9d857af3",
+        "filepath": "docs/README/Front-end.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/README/Front-end.mdx",
+        "slug": "docs-readme-front-end",
+        "route": "/docs-readme-front-end",
+        "headings": [
+          {
+            "slug": "curve",
+            "depth": 1,
+            "value": "Curve"
+          },
+          {
+            "slug": "front-end-for-the-curve-employee-proficiency-scale",
+            "depth": 2,
+            "value": "Front End for the Curve employee proficiency scale."
+          },
+          {
+            "slug": "summary",
+            "depth": 3,
+            "value": "Summary:"
+          },
+          {
+            "slug": "links",
+            "depth": 3,
+            "value": "Links:"
+          },
+          {
+            "slug": "installation",
+            "depth": 3,
+            "value": "Installation:"
+          },
+          {
+            "slug": "methods",
+            "depth": 3,
+            "value": "Methods:"
+          },
+          {
+            "slug": "components",
+            "depth": 3,
+            "value": "Components:"
+          },
+          {
+            "slug": "uml-diagram",
+            "depth": 3,
+            "value": "UML Diagram:"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/README/Project.mdx",
+      "value": {
+        "name": "Project",
+        "menu": "README",
+        "id": "8257d3da26a72583d763893715b42d0e",
+        "filepath": "docs/README/Project.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/README/Project.mdx",
+        "slug": "docs-readme-project",
+        "route": "/docs-readme-project",
+        "headings": [
+          {
+            "slug": "curve",
+            "depth": 1,
+            "value": "Curve"
+          },
+          {
+            "slug": "front-end-for-the-curve-employee-proficiency-scale",
+            "depth": 2,
+            "value": "Front End for the Curve employee proficiency scale."
+          },
+          {
+            "slug": "summary",
+            "depth": 3,
+            "value": "Summary:"
+          },
+          {
+            "slug": "links",
+            "depth": 3,
+            "value": "Links:"
+          },
+          {
+            "slug": "installation",
+            "depth": 3,
+            "value": "Installation:"
+          },
+          {
+            "slug": "methods",
+            "depth": 3,
+            "value": "Methods:"
+          },
+          {
+            "slug": "components",
+            "depth": 3,
+            "value": "Components:"
+          },
+          {
+            "slug": "uml-diagram",
+            "depth": 3,
+            "value": "UML Diagram:"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/KeyboardListener.mdx",
+      "value": {
+        "name": "KeyboardListener",
+        "menu": "Components",
+        "id": "3b6c77f38a665950357ba0d5b32030c1",
+        "filepath": "docs/components/KeyboardListener.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/KeyboardListener.mdx",
+        "slug": "docs-components-keyboard-listener",
+        "route": "/docs-components-keyboard-listener",
+        "headings": [
+          {
+            "slug": "keyboardlistener",
+            "depth": 1,
+            "value": "KeyboardListener"
+          },
+          {
+            "slug": "srccomponentsgraphkeyboardlistenerjs",
+            "depth": 2,
+            "value": "./src/components/graph/KeyboardListener.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/LevelThermometer.mdx",
+      "value": {
+        "name": "LevelThermometer",
+        "menu": "Components",
+        "id": "76a21187e05fbc68258acd3bd9b0951a",
+        "filepath": "docs/components/LevelThermometer.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/LevelThermometer.mdx",
+        "slug": "docs-components-level-thermometer",
+        "route": "/docs-components-level-thermometer",
+        "headings": [
+          {
+            "slug": "levelthermometer",
+            "depth": 1,
+            "value": "LevelThermometer"
+          },
+          {
+            "slug": "srccomponentsgraphlevelthermometerjs",
+            "depth": 2,
+            "value": "./src/components/graph/LevelThermometer.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "component-example",
+            "depth": 2,
+            "value": "Component Example"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/NameInput.mdx",
+      "value": {
+        "name": "NameInput",
+        "menu": "Components",
+        "id": "ed1e9d59b73eb7f52d315c6abb18fbaf",
+        "filepath": "docs/components/NameInput.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/NameInput.mdx",
+        "slug": "docs-components-name-input",
+        "route": "/docs-components-name-input",
+        "headings": [
+          {
+            "slug": "nameinput",
+            "depth": 1,
+            "value": "NameInput"
+          },
+          {
+            "slug": "srccomponentsgraphnameinputjs",
+            "depth": 2,
+            "value": "./src/components/graph/NameInput.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
+          },
+          {
+            "slug": "component-example",
+            "depth": 2,
+            "value": "Component Example"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/NightingaleChart.mdx",
+      "value": {
+        "name": "NightingaleChart",
+        "menu": "Components",
+        "id": "6d732e3a51ff9d6fd1b6cfe7d984ea65",
+        "filepath": "docs/components/NightingaleChart.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/NightingaleChart.mdx",
+        "slug": "docs-components-nightingale-chart",
+        "route": "/docs-components-nightingale-chart",
+        "headings": [
+          {
+            "slug": "nightingalechart",
+            "depth": 1,
+            "value": "NightingaleChart"
+          },
+          {
+            "slug": "srccomponentsgraphnightingalechartjs",
+            "depth": 2,
+            "value": "./src/components/graph/NightingaleChart.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "component-example",
+            "depth": 2,
+            "value": "Component Example"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/PointSummaries.mdx",
+      "value": {
+        "name": "PointSummaries",
+        "menu": "Components",
+        "id": "413ee5c8bd4b6d8b377902f484d1cce8",
+        "filepath": "docs/components/PointSummaries.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/PointSummaries.mdx",
+        "slug": "docs-components-point-summaries",
+        "route": "/docs-components-point-summaries",
+        "headings": [
+          {
+            "slug": "pointsummaries",
+            "depth": 1,
+            "value": "PointSummaries"
+          },
+          {
+            "slug": "srccomponentsgraphpointsummariesjs",
+            "depth": 2,
+            "value": "./src/components/graph/PointSummaries.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
+          },
+          {
+            "slug": "component-example",
+            "depth": 2,
+            "value": "Component Example"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/TitleSelector.mdx",
+      "value": {
+        "name": "TitleSelector",
+        "menu": "Components",
+        "id": "4ca485ecf1e6b35233ffaf641da19f1c",
+        "filepath": "docs/components/TitleSelector.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/TitleSelector.mdx",
+        "slug": "docs-components-title-selector",
+        "route": "/docs-components-title-selector",
+        "headings": [
+          {
+            "slug": "titleselector",
+            "depth": 1,
+            "value": "TitleSelector"
+          },
+          {
+            "slug": "srccomponentsgraphtitleselectorjs",
+            "depth": 2,
+            "value": "./src/components/graph/TitleSelector.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
+          },
+          {
+            "slug": "component-example",
+            "depth": 2,
+            "value": "Component Example"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/Track.mdx",
+      "value": {
+        "name": "Track",
+        "menu": "Components",
+        "id": "6b4badfc4cb39cb2aa39832fc681064f",
+        "filepath": "docs/components/Track.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/Track.mdx",
+        "slug": "docs-components-track",
+        "route": "/docs-components-track",
+        "headings": [
+          {
+            "slug": "track",
+            "depth": 1,
+            "value": "Track"
+          },
+          {
+            "slug": "srccomponentsgraphtrackjs",
+            "depth": 2,
+            "value": "./src/components/graph/Track.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "component-example",
+            "depth": 2,
+            "value": "Component Example"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/TrackSelector.mdx",
+      "value": {
+        "name": "TrackSelector",
+        "menu": "Components",
+        "id": "2d496fff1c8e5361c8689ed67e32e7e0",
+        "filepath": "docs/components/TrackSelector.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/TrackSelector.mdx",
+        "slug": "docs-components-track-selector",
+        "route": "/docs-components-track-selector",
+        "headings": [
+          {
+            "slug": "trackselector",
+            "depth": 1,
+            "value": "TrackSelector"
+          },
+          {
+            "slug": "srccomponentsgraphtrackselectorjs",
+            "depth": 2,
+            "value": "./src/components/graph/TrackSelector.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "component-example",
+            "depth": 2,
+            "value": "Component Example"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/header.mdx",
+      "value": {
+        "name": "Header",
+        "menu": "Components",
+        "id": "ac4155439b2ee0b7ee3eee0a30c97c80",
+        "filepath": "docs/components/header.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/header.mdx",
+        "slug": "docs-components-header",
+        "route": "/docs-components-header",
+        "headings": [
+          {
+            "slug": "header",
+            "depth": 1,
+            "value": "Header"
+          },
+          {
+            "slug": "srclayoutheaderjs",
+            "depth": 2,
+            "value": "./src/layout/header.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "sub-components",
+            "depth": 2,
+            "value": "Sub Components"
+          },
+          {
+            "slug": "mapped-functions",
+            "depth": 2,
+            "value": "Mapped Functions"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/list.mdx",
+      "value": {
+        "name": "List",
+        "menu": "Components",
+        "id": "db1fdf73c311ac8a7ea4258c13eb621a",
+        "filepath": "docs/components/list.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/list.mdx",
+        "slug": "docs-components-list",
+        "route": "/docs-components-list",
+        "headings": [
+          {
+            "slug": "list",
+            "depth": 1,
+            "value": "List"
+          },
+          {
+            "slug": "srccomponentsstatic-listjs",
+            "depth": 2,
+            "value": "./src/components/static-list.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/login.mdx",
+      "value": {
+        "name": "Login",
+        "menu": "Components",
+        "id": "a895f87183792efc9c80a19c0c7b9353",
+        "filepath": "docs/components/login.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/login.mdx",
+        "slug": "docs-components-login",
+        "route": "/docs-components-login",
+        "headings": [
+          {
+            "slug": "login",
+            "depth": 1,
+            "value": "Login"
+          },
+          {
+            "slug": "srccomponentsloginjs",
+            "depth": 2,
+            "value": "./src/components/login.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/logo.mdx",
+      "value": {
+        "name": "Logo",
+        "menu": "Components",
+        "id": "946993d05cd7062d3aac137b909cf7e2",
+        "filepath": "docs/components/logo.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/logo.mdx",
+        "slug": "docs-components-logo",
+        "route": "/docs-components-logo",
+        "headings": [
+          {
+            "slug": "logo",
+            "depth": 1,
+            "value": "Logo"
+          },
+          {
+            "slug": "srccomponentslayoutlogojs",
+            "depth": 2,
+            "value": "./src/components/layout/logo.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "component-example",
+            "depth": 2,
+            "value": "Component Example"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/private-route.mdx",
+      "value": {
+        "name": "PrivateRoute",
+        "menu": "Components",
+        "id": "d37420e5738fbb110ecfd1cc68296879",
+        "filepath": "docs/components/private-route.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/private-route.mdx",
+        "slug": "docs-components-private-route",
+        "route": "/docs-components-private-route",
+        "headings": [
+          {
+            "slug": "privateroute",
+            "depth": 1,
+            "value": "PrivateRoute"
+          },
+          {
+            "slug": "srccomponentsprivate-routejs",
+            "depth": 2,
+            "value": "./src/components/private-route.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/seo.mdx",
+      "value": {
+        "name": "SEO",
+        "menu": "Components",
+        "id": "b0afbb828c3f1797c441538cd5622fe8",
+        "filepath": "docs/components/seo.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/seo.mdx",
+        "slug": "docs-components-seo",
+        "route": "/docs-components-seo",
+        "headings": [
+          {
+            "slug": "seo",
+            "depth": 1,
+            "value": "SEO"
+          },
+          {
+            "slug": "srccomponentsseojs",
+            "depth": 2,
+            "value": "./src/components/seo.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
           }
         ]
       }
@@ -448,489 +1032,18 @@
             "value": "./src/actions/users-actions.js"
           },
           {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
             "slug": "pull_competencies",
             "depth": 2,
             "value": "PULL_COMPETENCIES"
           },
           {
-            "slug": "description",
+            "slug": "description-1",
             "depth": 3,
-            "value": "Description"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/KeyboardListener.mdx",
-      "value": {
-        "name": "KeyboardListener",
-        "menu": "Components",
-        "id": "3b6c77f38a665950357ba0d5b32030c1",
-        "filepath": "docs/components/KeyboardListener.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/KeyboardListener.mdx",
-        "slug": "docs-components-keyboard-listener",
-        "route": "/docs-components-keyboard-listener",
-        "headings": [
-          {
-            "slug": "keyboardlistener",
-            "depth": 1,
-            "value": "KeyboardListener"
-          },
-          {
-            "slug": "srccomponentsgraphkeyboardlistenerjs",
-            "depth": 2,
-            "value": "./src/components/graph/KeyboardListener.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          },
-          {
-            "slug": "code-snippet",
-            "depth": 2,
-            "value": "Code Snippet"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/LevelThermometer.mdx",
-      "value": {
-        "name": "LevelThermometer",
-        "menu": "Components",
-        "id": "76a21187e05fbc68258acd3bd9b0951a",
-        "filepath": "docs/components/LevelThermometer.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/LevelThermometer.mdx",
-        "slug": "docs-components-level-thermometer",
-        "route": "/docs-components-level-thermometer",
-        "headings": [
-          {
-            "slug": "levelthermometer",
-            "depth": 1,
-            "value": "LevelThermometer"
-          },
-          {
-            "slug": "srccomponentsgraphlevelthermometerjs",
-            "depth": 2,
-            "value": "./src/components/graph/LevelThermometer.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          },
-          {
-            "slug": "component-example",
-            "depth": 2,
-            "value": "Component Example"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/NameInput.mdx",
-      "value": {
-        "name": "NameInput",
-        "menu": "Components",
-        "id": "ed1e9d59b73eb7f52d315c6abb18fbaf",
-        "filepath": "docs/components/NameInput.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/NameInput.mdx",
-        "slug": "docs-components-name-input",
-        "route": "/docs-components-name-input",
-        "headings": [
-          {
-            "slug": "nameinput",
-            "depth": 1,
-            "value": "NameInput"
-          },
-          {
-            "slug": "srccomponentsgraphnameinputjs",
-            "depth": 2,
-            "value": "./src/components/graph/NameInput.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          },
-          {
-            "slug": "code-snippet",
-            "depth": 2,
-            "value": "Code Snippet"
-          },
-          {
-            "slug": "component-example",
-            "depth": 2,
-            "value": "Component Example"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/NightingaleChart.mdx",
-      "value": {
-        "name": "NightingaleChart",
-        "menu": "Components",
-        "id": "6d732e3a51ff9d6fd1b6cfe7d984ea65",
-        "filepath": "docs/components/NightingaleChart.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/NightingaleChart.mdx",
-        "slug": "docs-components-nightingale-chart",
-        "route": "/docs-components-nightingale-chart",
-        "headings": [
-          {
-            "slug": "nightingalechart",
-            "depth": 1,
-            "value": "NightingaleChart"
-          },
-          {
-            "slug": "srccomponentsgraphnightingalechartjs",
-            "depth": 2,
-            "value": "./src/components/graph/NightingaleChart.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          },
-          {
-            "slug": "component-example",
-            "depth": 2,
-            "value": "Component Example"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/TitleSelector.mdx",
-      "value": {
-        "name": "TitleSelector",
-        "menu": "Components",
-        "id": "4ca485ecf1e6b35233ffaf641da19f1c",
-        "filepath": "docs/components/TitleSelector.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/TitleSelector.mdx",
-        "slug": "docs-components-title-selector",
-        "route": "/docs-components-title-selector",
-        "headings": [
-          {
-            "slug": "titleselector",
-            "depth": 1,
-            "value": "TitleSelector"
-          },
-          {
-            "slug": "srccomponentsgraphtitleselectorjs",
-            "depth": 2,
-            "value": "./src/components/graph/TitleSelector.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          },
-          {
-            "slug": "code-snippet",
-            "depth": 2,
-            "value": "Code Snippet"
-          },
-          {
-            "slug": "component-example",
-            "depth": 2,
-            "value": "Component Example"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/PointSummaries.mdx",
-      "value": {
-        "name": "PointSummaries",
-        "menu": "Components",
-        "id": "413ee5c8bd4b6d8b377902f484d1cce8",
-        "filepath": "docs/components/PointSummaries.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/PointSummaries.mdx",
-        "slug": "docs-components-point-summaries",
-        "route": "/docs-components-point-summaries",
-        "headings": [
-          {
-            "slug": "pointsummaries",
-            "depth": 1,
-            "value": "PointSummaries"
-          },
-          {
-            "slug": "srccomponentsgraphpointsummariesjs",
-            "depth": 2,
-            "value": "./src/components/graph/PointSummaries.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          },
-          {
-            "slug": "code-snippet",
-            "depth": 2,
-            "value": "Code Snippet"
-          },
-          {
-            "slug": "component-example",
-            "depth": 2,
-            "value": "Component Example"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/TrackSelector.mdx",
-      "value": {
-        "name": "TrackSelector",
-        "menu": "Components",
-        "id": "2d496fff1c8e5361c8689ed67e32e7e0",
-        "filepath": "docs/components/TrackSelector.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/TrackSelector.mdx",
-        "slug": "docs-components-track-selector",
-        "route": "/docs-components-track-selector",
-        "headings": [
-          {
-            "slug": "trackselector",
-            "depth": 1,
-            "value": "TrackSelector"
-          },
-          {
-            "slug": "srccomponentsgraphtrackselectorjs",
-            "depth": 2,
-            "value": "./src/components/graph/TrackSelector.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          },
-          {
-            "slug": "component-example",
-            "depth": 2,
-            "value": "Component Example"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/header.mdx",
-      "value": {
-        "name": "Header",
-        "menu": "Components",
-        "id": "ac4155439b2ee0b7ee3eee0a30c97c80",
-        "filepath": "docs/components/header.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/header.mdx",
-        "slug": "docs-components-header",
-        "route": "/docs-components-header",
-        "headings": [
-          {
-            "slug": "header",
-            "depth": 1,
-            "value": "Header"
-          },
-          {
-            "slug": "srclayoutheaderjs",
-            "depth": 2,
-            "value": "./src/layout/header.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          },
-          {
-            "slug": "sub-components",
-            "depth": 2,
-            "value": "Sub Components"
-          },
-          {
-            "slug": "mapped-functions",
-            "depth": 2,
-            "value": "Mapped Functions"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/Track.mdx",
-      "value": {
-        "name": "Track",
-        "menu": "Components",
-        "id": "6b4badfc4cb39cb2aa39832fc681064f",
-        "filepath": "docs/components/Track.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/Track.mdx",
-        "slug": "docs-components-track",
-        "route": "/docs-components-track",
-        "headings": [
-          {
-            "slug": "track",
-            "depth": 1,
-            "value": "Track"
-          },
-          {
-            "slug": "srccomponentsgraphtrackjs",
-            "depth": 2,
-            "value": "./src/components/graph/Track.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          },
-          {
-            "slug": "component-example",
-            "depth": 2,
-            "value": "Component Example"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/list.mdx",
-      "value": {
-        "name": "List",
-        "menu": "Components",
-        "id": "db1fdf73c311ac8a7ea4258c13eb621a",
-        "filepath": "docs/components/list.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/list.mdx",
-        "slug": "docs-components-list",
-        "route": "/docs-components-list",
-        "headings": [
-          {
-            "slug": "list",
-            "depth": 1,
-            "value": "List"
-          },
-          {
-            "slug": "srccomponentsstatic-listjs",
-            "depth": 2,
-            "value": "./src/components/static-list.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/login.mdx",
-      "value": {
-        "name": "Login",
-        "menu": "Components",
-        "id": "a895f87183792efc9c80a19c0c7b9353",
-        "filepath": "docs/components/login.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/login.mdx",
-        "slug": "docs-components-login",
-        "route": "/docs-components-login",
-        "headings": [
-          {
-            "slug": "login",
-            "depth": 1,
-            "value": "Login"
-          },
-          {
-            "slug": "srccomponentsloginjs",
-            "depth": 2,
-            "value": "./src/components/login.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/logo.mdx",
-      "value": {
-        "name": "Logo",
-        "menu": "Components",
-        "id": "946993d05cd7062d3aac137b909cf7e2",
-        "filepath": "docs/components/logo.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/logo.mdx",
-        "slug": "docs-components-logo",
-        "route": "/docs-components-logo",
-        "headings": [
-          {
-            "slug": "logo",
-            "depth": 1,
-            "value": "Logo"
-          },
-          {
-            "slug": "srccomponentslayoutlogojs",
-            "depth": 2,
-            "value": "./src/components/layout/logo.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          },
-          {
-            "slug": "component-example",
-            "depth": 2,
-            "value": "Component Example"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/private-route.mdx",
-      "value": {
-        "name": "PrivateRoute",
-        "menu": "Components",
-        "id": "d37420e5738fbb110ecfd1cc68296879",
-        "filepath": "docs/components/private-route.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/private-route.mdx",
-        "slug": "docs-components-private-route",
-        "route": "/docs-components-private-route",
-        "headings": [
-          {
-            "slug": "privateroute",
-            "depth": 1,
-            "value": "PrivateRoute"
-          },
-          {
-            "slug": "srccomponentsprivate-routejs",
-            "depth": 2,
-            "value": "./src/components/private-route.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/components/seo.mdx",
-      "value": {
-        "name": "SEO",
-        "menu": "Components",
-        "id": "b0afbb828c3f1797c441538cd5622fe8",
-        "filepath": "docs/components/seo.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/seo.mdx",
-        "slug": "docs-components-seo",
-        "route": "/docs-components-seo",
-        "headings": [
-          {
-            "slug": "seo",
-            "depth": 1,
-            "value": "SEO"
-          },
-          {
-            "slug": "srccomponentsseojs",
-            "depth": 2,
-            "value": "./src/components/seo.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
             "value": "Description"
           }
         ]

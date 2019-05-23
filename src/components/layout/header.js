@@ -302,6 +302,10 @@ const Header = ({ loggedIn, logout, siteTitle }) => (
           </li>
 
           <li>
+            <Link to="/docs">Docs</Link>
+          </li>
+
+          <li>
             <Link to="/rubric">Rubric</Link>
           </li>
 

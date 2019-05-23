@@ -151,20 +151,44 @@
   ],
   "entries": [
     {
-      "key": "docs/actions/user-actions.mdx",
+      "key": "docs/index.mdx",
       "value": {
-        "name": "Users Actions",
-        "menu": "Redux Actions",
-        "id": "f74a633afeeaf98302afba7214a6149e",
-        "filepath": "docs/actions/user-actions.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/actions/user-actions.mdx",
-        "slug": "docs-actions-user-actions",
-        "route": "/docs-actions-user-actions",
+        "name": "Getting Started",
+        "route": "/docs",
+        "id": "73498ad0e1e62a714b08085d318f9de1",
+        "filepath": "docs/index.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/index.mdx",
+        "slug": "docs-index",
+        "menu": "",
         "headings": [
           {
-            "slug": "users-actions",
+            "slug": "getting-started",
             "depth": 1,
-            "value": "Users Actions"
+            "value": "Getting Started"
+          },
+          {
+            "slug": "welcome-to-curve-documentation",
+            "depth": 2,
+            "value": "Welcome to Curve Documentation"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/actions/competencies-actions.mdx",
+      "value": {
+        "name": "Competencies Actions",
+        "menu": "Redux Actions",
+        "id": "4a7be222ed11b55d3215a8550eb450fd",
+        "filepath": "docs/actions/competencies-actions.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/actions/competencies-actions.mdx",
+        "slug": "docs-actions-competencies-actions",
+        "route": "/docs-actions-competencies-actions",
+        "headings": [
+          {
+            "slug": "competencies-actions",
+            "depth": 1,
+            "value": "Competencies Actions"
           },
           {
             "slug": "actions",
@@ -204,20 +228,20 @@
       }
     },
     {
-      "key": "docs/actions/competencies-actions.mdx",
+      "key": "docs/actions/user-actions.mdx",
       "value": {
-        "name": "Competencies Actions",
+        "name": "Users Actions",
         "menu": "Redux Actions",
-        "id": "4a7be222ed11b55d3215a8550eb450fd",
-        "filepath": "docs/actions/competencies-actions.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/actions/competencies-actions.mdx",
-        "slug": "docs-actions-competencies-actions",
-        "route": "/docs-actions-competencies-actions",
+        "id": "f74a633afeeaf98302afba7214a6149e",
+        "filepath": "docs/actions/user-actions.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/actions/user-actions.mdx",
+        "slug": "docs-actions-user-actions",
+        "route": "/docs-actions-user-actions",
         "headings": [
           {
-            "slug": "competencies-actions",
+            "slug": "users-actions",
             "depth": 1,
-            "value": "Competencies Actions"
+            "value": "Users Actions"
           },
           {
             "slug": "actions",
@@ -444,30 +468,6 @@
       }
     },
     {
-      "key": "docs/components/index.mdx",
-      "value": {
-        "name": "Getting Started",
-        "route": "/docs",
-        "id": "2e059b4715cabe58b67becb76d03d605",
-        "filepath": "docs/components/index.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/index.mdx",
-        "slug": "docs-components-index",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "getting-started",
-            "depth": 1,
-            "value": "Getting Started"
-          },
-          {
-            "slug": "welcome-to-curve-documentation",
-            "depth": 2,
-            "value": "Welcome to Curve Documentation"
-          }
-        ]
-      }
-    },
-    {
       "key": "docs/components/list.mdx",
       "value": {
         "name": "List",
@@ -568,30 +568,6 @@
       }
     },
     {
-      "key": "docs/reducers/users-reducer.mdx",
-      "value": {
-        "name": "Users Reducer",
-        "menu": "Redux Reducers",
-        "id": "b53804e77ab067b356d77b3acc844454",
-        "filepath": "docs/reducers/users-reducer.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/reducers/users-reducer.mdx",
-        "slug": "docs-reducers-users-reducer",
-        "route": "/docs-reducers-users-reducer",
-        "headings": [
-          {
-            "slug": "users-reducer",
-            "depth": 1,
-            "value": "Users Reducer"
-          },
-          {
-            "slug": "associated-actions",
-            "depth": 2,
-            "value": "Associated Actions"
-          }
-        ]
-      }
-    },
-    {
       "key": "docs/reducers/graph-reducer.mdx",
       "value": {
         "name": "Graph Reducer",
@@ -606,6 +582,30 @@
             "slug": "graph-reducer",
             "depth": 1,
             "value": "Graph Reducer"
+          },
+          {
+            "slug": "associated-actions",
+            "depth": 2,
+            "value": "Associated Actions"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/reducers/users-reducer.mdx",
+      "value": {
+        "name": "Users Reducer",
+        "menu": "Redux Reducers",
+        "id": "b53804e77ab067b356d77b3acc844454",
+        "filepath": "docs/reducers/users-reducer.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/reducers/users-reducer.mdx",
+        "slug": "docs-reducers-users-reducer",
+        "route": "/docs-reducers-users-reducer",
+        "headings": [
+          {
+            "slug": "users-reducer",
+            "depth": 1,
+            "value": "Users Reducer"
           },
           {
             "slug": "associated-actions",

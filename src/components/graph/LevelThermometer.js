@@ -21,6 +21,7 @@ const WIDTH = 550
 
 const Figure = styled.figure`
   margin: 0 0 0 -10px;
+  text-align: center;
 
   svg {
     width: ${WIDTH}px;
@@ -106,7 +107,7 @@ class LevelThermometer extends React.Component {
     //   this.props.milestoneByTrack
     // )
     let categoryPoints = this.props.categoryPoints
-    console.log('categoryPoints--------------------------', categoryPoints)
+    // console.log('categoryPoints--------------------------', categoryPoints)
 
     let lastCategoryIndex = 0
     categoryPoints.forEach((categoryPoint, i) => {
@@ -114,7 +115,7 @@ class LevelThermometer extends React.Component {
     })
     let cumulativePoints = 0
     return (
-      <figure>
+      <Figure>
         <style jsx>{`
           figure {
             margin: 0 0 0 -10px;
@@ -172,7 +173,7 @@ class LevelThermometer extends React.Component {
             />
           </g>
         </svg>
-      </figure>
+      </Figure>
     )
   }
 }

@@ -37,26 +37,26 @@ class PersonCard extends React.Component {
 
   render() {
     return (
-      <li>
-        <ApolloConsumer>
-          {client => (
-            <button
-              onClick={async () => {
-                const { data } = await client.query({
-                  query: PERSON,
-                  variables: { name: this.props.name },
-                })
-                // adds individual's data to state in Redux store
-                this.props.setReduxState(data.individual)
-                // Then redirect to the graph page
-                navigate('/')
-              }}
-            >
-              {this.props.name}
-            </button>
-          )}
-        </ApolloConsumer>
-      </li>
+      // <li>
+      <ApolloConsumer>
+        {client => (
+          <button
+            onClick={async () => {
+              const { data } = await client.query({
+                query: PERSON,
+                variables: { name: this.props.name },
+              })
+              // adds individual's data to state in Redux store
+              this.props.setReduxState(data.individual)
+              // Then redirect to the graph page
+              navigate('/app/graph')
+            }}
+          >
+            {this.props.name}
+          </button>
+        )}
+      </ApolloConsumer>
+      // </li>
     )
   }
 }

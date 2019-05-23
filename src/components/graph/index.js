@@ -1,8 +1,8 @@
 import React from 'react'
-
 import NameInput from './NameInput'
 import TitleSelector from './TitleSelector'
 import SubmitButton from './submit-button'
+import DateSelector from './DateSelector'
 
 import // eligibleTitles,
 // trackIds,
@@ -65,6 +65,7 @@ class Graph extends React.Component {
               <SubmitButton />
               <NameInput />
               <TitleSelector />
+              <DateSelector />
             </form>
             <PointSummaries />
             <LevelThermometer />

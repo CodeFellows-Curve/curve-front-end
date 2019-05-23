@@ -7,7 +7,30 @@ import { Playground, Props } from 'docz'
 import NameInput from '../../src/components/graph/NameInput.js'
 
 # NameInput
-The name input component creates an input field which enables change of a user's name and saving that change to application state.
+---
+## ```./src/components/graph/NameInput.js```
+## Description
+The name input component renders an input field which takes a user's name and saves changes to application state.
+
+## Code Snippet
+```
+class NameInput extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <Input
+        type="text"
+        className="name-input"
+        value={this.props.name}
+        onChange={e => this.props.handleNameInputChange(e.target.value)}
+        placeholder="Name"
+      />
+    )
+  }
+}
+```
 
 ## Component Example
 <Playground>

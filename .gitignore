@@ -5,6 +5,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Docz genereted files:
+.docz/app/db.json
+.docz/app/imports.js
+
 # Runtime data
 pids
 *.pid
@@ -51,8 +55,9 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# dotenv environment variables file
+# dotenv environment variables files
 .env
+.env.production
 
 # gatsby files
 .cache/
@@ -65,5 +70,10 @@ public
 yarn-error.log
 .pnp/
 .pnp.js
+
 # Yarn Integrity file
 .yarn-integrity
+
+# Docz generated files:
+.docz/app/imports.js
+.docz/app/db.json

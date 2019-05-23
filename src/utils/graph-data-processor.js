@@ -7,20 +7,30 @@ function toLetters(num) {
   return pow ? toLetters(pow) + out : out
 }
 
-export default function newFormatGraphQLData(graphQLData) {
-  let output = graphQLData.review[0].category.reduce(
+export default function formatGraphQLData(graphQLData) {
+  let categoryPoints = []
+
+  // Reducer that goes over every Competency ("category")
+  return graphQLData.review[0].category.reduce(
     (acc, competency, idx) => {
-      let categoryPoints = []
+      // Start the "total competency points" at 0
       categoryPoints[idx] = { points: 0 }
+
+      // Reducer that goes over every Proficiency ("subcategory") within a Competency
       let currMilestones = competency.subcategory.reduce(
         (milestones, proficiency) => {
+          // Set the "milestoneByTrack" obj key for this Competency (proficiency group) to all caps & snake case
           acc.milestoneByTrack[
             proficiency.subCategoryName.toUpperCase().replace(/ /g, '_')
           ] = proficiency.score
+
+          // Add to the "grand total" of points across all proficiencies
           acc.totalPoints += proficiency.score
 
           categoryPoints[idx] = {
+            // Add a letter key for the Competency (A, B, C, etc...)
             categoryId: toLetters(idx + 1),
+            // Add to the total points for this Competency
             points: proficiency.score + categoryPoints[idx].points,
           }
 
@@ -28,11 +38,20 @@ export default function newFormatGraphQLData(graphQLData) {
         },
         {}
       )
+
+      // Accumulate the milestoneByTrack object
       acc.milestoneByTrack = { ...acc.milestoneByTrack, ...currMilestones }
+
+      // Set the focusedTrackId with the first "track" (Competency) in the milestoneByTrack obj
       acc.focusedTrackId = Object.keys(acc.milestoneByTrack)[0]
+
+      // Accumulate the categoryPoints array
       acc.categoryPoints = [...acc.categoryPoints, categoryPoints[idx]]
+
       return acc
     },
+
+    // Initial accumulator shape -- see initial state in src/reducers/graph-reducer.js
     {
       name: graphQLData.name,
       title: 'Hard-coded Title',
@@ -52,12 +71,9 @@ export default function newFormatGraphQLData(graphQLData) {
       ],
     }
   )
-
-  return output
 }
 
 // Example data from graphQL query
-/*
 let exData = {
   name: 'Nate',
   review: [
@@ -279,6 +295,5 @@ let exData = {
     },
   ],
 }
-*/
 
-// console.log(formatGraphQLData(exData))
+console.log(formatGraphQLData(exData))

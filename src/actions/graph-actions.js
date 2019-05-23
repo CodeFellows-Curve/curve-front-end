@@ -64,3 +64,10 @@ export const selectPrevTrack = payload => {
     payload: -1,
   }
 }
+
+export const toggleHidden = payload => {
+  return{
+    type: 'isHidden',
+    payload: payload,
+  }
+}

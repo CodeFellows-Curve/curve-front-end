@@ -1,0 +1,50 @@
+.competencyli {
+  display: inline-block;
+  width: 30px;
+  padding: 5px;
+  margin: 5px;
+  border: 3px solid black;
+  overflow: hidden;
+  font-size: 20px;
+  color: pink;
+}
+.BusinessAcumen {
+  border: 3px solid black;
+  background: pink;
+  padding: 5px;
+}
+.GrowthMindset {
+  border: 3px solid black;
+  background: red;
+  padding: 5px;
+}
+.Leadership {
+  border: 3px solid black;
+  background: orange;
+  padding: 5px;
+}
+.Craft {
+  border: 3px solid black;
+  background: yellow;
+  padding: 5px;
+}
+.Quality {
+  border: 3px solid black;
+  background: green;
+  padding: 5px;
+}
+.Communication {
+  border: 3px solid black;
+  background: blue;
+  padding: 5px;
+}
+.Teamwork {
+  border: 3px solid black;
+  background: indigo;
+  padding: 5px;
+}
+.Results {
+  border: 3px solid black;
+  background: violet;
+  padding: 5px;
+}

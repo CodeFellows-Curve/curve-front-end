@@ -1,6 +1,7 @@
 // CONSTANTS ----------------------------------------------------------------
 // import initialState from './initial-state-change.js'
 import tracks from '../components/graph/tracks.js'
+import { bool } from 'prop-types';
 const trackIds = Object.keys(tracks)
 const titles = [
   { label: 'Engineer I', minPoints: 0, maxPoints: 16 },
@@ -77,6 +78,228 @@ const eligibleTitles = milestoneMap => {
 // )
 
 let initialState = {
+  user: {
+    "name": "Nate",
+      "review": [
+        {
+          "category": [
+            {
+              "categoryName": "Business Acumen",
+              'isHidden': true,
+              "overallScore": 1,
+              "subcategory": [
+                {
+                  "subCategoryName": "Mission and Vision",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Customer Orientation",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "categoryName": "Growth Mindset",
+              "overallScore": 1,
+              "subcategory": [
+                {
+                  "subCategoryName": "Adaptability",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Curiousity",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Constant Improvement",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Handling Ambiguity",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Inclusivity",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Openness",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Ambition and Initiative",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "categoryName": "Leadership",
+              "overallScore": 1,
+              "subcategory": [
+                {
+                  "subCategoryName": "Accountability",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Integrity",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Ownership",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Mentorship",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Networking",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Succession",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Health and Safety",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Confidence",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Credibility",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "categoryName": "Craft",
+              "overallScore": 1,
+              "subcategory": [
+                {
+                  "subCategoryName": "Technical",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Process",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Innovation",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Tool Proficiency",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "categoryName": "Quality",
+              "overallScore": 1,
+              "subcategory": [
+                {
+                  "subCategoryName": "Judgement",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Root Cause Resolution",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "categoryName": "Communication",
+              "overallScore": 1,
+              "subcategory": [
+                {
+                  "subCategoryName": "Writing",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Reading",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Speaking",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Listening",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "categoryName": "Teamwork",
+              "overallScore": 1,
+              "subcategory": [
+                {
+                  "subCategoryName": "Collaboration",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "categoryName": "Results",
+              "overallScore": 1,
+              "subcategory": [
+                {
+                  "subCategoryName": "Agile",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Organizational",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Creative",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Project Execution",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Analytical Thinking",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Prioritization",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Problem Solving",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Incremental Delivery",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Decision Making",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Appropriate Autonomy",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Planning and Estimating",
+                  "score": 1
+                },
+                {
+                  "subCategoryName": "Dependability and Reliability",
+                  "score": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+  },
 }
 
 // REDUCER FUNCTION -----------------------------------------------------------------
@@ -84,10 +307,15 @@ export default (state = initialState, action) => {
   let { type, payload } = action
 
   switch (type) {
+
+    case 'isHidden':
+      let boolean = payload
+      return {...state.user.review.category[0], isHidden: boolean }
+
     // This case adds all the raw graphQL data for a single indidual to state
     case 'setIndividualsData':
       let graphQLRawData = payload
-      return { state: graphQLRawData }
+      return { ...state, user: graphQLRawData }
 
     case 'setFocusedTrackId':
       let index = trackIds.indexOf(payload)

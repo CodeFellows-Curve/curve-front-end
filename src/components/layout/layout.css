@@ -239,17 +239,17 @@ body {
 
 /* these tags will allow you to pull the font from fs to use by font-family name just as you would with any native typeface */
 
-@font-face {
+/* @font-face {
   font-family: "markweb-light";
-  src: url("src/fonts/modified-MarkWeb-Light.woff") format('woff');
+  src: url("../../fonts/modified-MarkWeb-Light.woff") format('woff');
 }
 
 @font-face {
   font-family: "markweb-bold";
   src: url("/fonts/modified-MarkWeb-Bold.woff") format('woff');
-}
+} */
 
-/* 
+
 article,
 aside,
 details,
@@ -862,4 +862,4 @@ pre tt:after {
     font-size: 100%;
   }
 } 
-*/
+

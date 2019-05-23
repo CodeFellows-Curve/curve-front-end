@@ -51,39 +51,30 @@ class Login extends Component {
                 {/* .cls-1 {
                 fill: #8742ab;
               }
-
               .cls-2 {
                 opacity: 0.66;
               }
-
               .cls-3 {
                 opacity: 0.33;
               }
-
               .cls-4 {
                 fill: #4758c4;
               }
-
               .cls-5 {
                 fill: #55cddc;
               }
-
               .cls-6 {
                 fill: #5bea8a;
               }
-
               .cls-7 {
                 fill: #a1f462;
               }
-
               .cls-8 {
                 fill: #fbd763;
               }
-
               .cls-9 {
                 fill: #fc9960;
               }
-
               .cls-10 {
                 fill: #fc5b5e;
               } */}

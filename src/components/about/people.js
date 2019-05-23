@@ -1,7 +1,4 @@
 const people = { 
-  icons:{
-    linkedin:
-  }
   teams:[
     {
       name: 'Project Manager',

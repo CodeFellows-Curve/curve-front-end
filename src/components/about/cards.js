@@ -1,7 +1,7 @@
 import React from 'react'
 import people from './people.js'
 import "./cards.css"
-import github from './assets/github.png'
+import github from './assets/team-pics/other_logos/github_50x50.png'
 import pictures from './assets/team-pics'
 // import js from '.assets/js.png'
 // import c from '.assets/c.png'

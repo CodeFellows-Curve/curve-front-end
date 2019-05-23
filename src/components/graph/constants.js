@@ -44,7 +44,10 @@ export const maxLevel = 135
 
 // SOURCE: https://codefellows.github.io/common_curriculum/career_coaching/Professional_Competencies
 
-export const trackIds = Object.keys(tracks)
+const alltracks = Object.keys(tracks)
+alltracks.pop();
+
+export const trackIds = alltracks
 
 export const categoryIds = trackIds.reduce((set, trackId) => {
   set.add(tracks[trackId].category)

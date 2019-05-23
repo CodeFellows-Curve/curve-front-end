@@ -1,5 +1,5 @@
 import React from 'react'
-import { Provider } from "react-redux";
+// import { Provider } from "react-redux";
 import { connect } from 'react-redux'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
@@ -11,10 +11,8 @@ import Logo from './logo'
 import * as a from '../../actions/auth-actions'
 import authService from '../../utils/auth-service'
 
-
 // TODO: Move all this styling for the header and mobile site-menu into a separate file. Consider using something else besides styled components for this piece. It's already in a scss format below;
 const HeaderEl = styled.div`
-
   * {
     box-sizing: inherit;
   }
@@ -278,70 +276,87 @@ const HeaderEl = styled.div`
   }
 `
 
+const login = e => {
+  e.preventDefault()
+  authService.handleLogin()
+}
+
 const Header = ({ logout, siteTitle }) => (
-    <HeaderEl>
-      <input id="main-menu-checkbox" type="checkbox" />
-      <header>
-        <label htmlFor="main-menu-checkbox" className="menu-toggle">
-          <span className="sr-only">Menu</span>
+  <HeaderEl>
+    <input id="main-menu-checkbox" type="checkbox" />
+    <header>
+      <label htmlFor="main-menu-checkbox" className="menu-toggle">
+        <span className="sr-only">Menu</span>
 
-          <span className="fa fa-bars" />
+        <span className="fa fa-bars" />
+      </label>
+
+      <div>
+        <Logo />
+        <h1 className="logo">
+          <Link to="/">{siteTitle}</Link>
+        </h1>
+      </div>
+      <nav id="main-menu" role="navigation" className="main-menu">
+        <label htmlFor="main-menu-checkbox" className="menu-close">
+          <span className="sr-only">Close</span>
+          <span className="fa fa-close" />
         </label>
+        <ul>
+          <li>
+            <If condition={authService.isAuthenticated()}>
+              <Link to="/app/graph">Home</Link>
+            </If>
+            <If condition={!authService.isAuthenticated()}>
+              <Link to="/">Home</Link>
+            </If>
+          </li>
 
-        <div>
-          <Logo />
-          <h1 className="logo">
-            <Link to="/">{siteTitle}</Link>
-          </h1>
-        </div>
-        <nav id="main-menu" role="navigation" className="main-menu">
-          <label htmlFor="main-menu-checkbox" className="menu-close">
-            <span className="sr-only">Close</span>
-            <span className="fa fa-close" />
-          </label>
-          <ul>
-            <li>
-              <If condition={authService.isAuthenticated()}>
-                <Link to="/app/graph">Home</Link>
-              </If>
-              <If condition={!authService.isAuthenticated()}>
-                <Link to="/">Home</Link>
-              </If>
-            </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
 
-            <li>
-              <Link to="/about">About</Link>
-            </li>
+          <li>
+            <Link to="/docs">Docs</Link>
+          </li>
 
-            <li>
-              <Link to="/docs">Docs</Link>
-            </li>
-
-            {/* <li>
+          {/* <li>
             <Link to="/rubric">Rubric</Link>
           </li> */}
 
-            <If condition={authService.isAuthenticated()}>
-              <li>
-                <Link to="/app/list/">All Users</Link>
-              </li>
+          <If condition={authService.isAuthenticated()}>
+            <li>
+              <Link to="/app/list/">All Users</Link>
+            </li>
+          </If>
 
+          <If
+            condition={authService.isAuthenticated()}
+            then={
               <li>
                 <a href="#logout" onClick={logout}>
                   Logout
                 </a>
               </li>
-            </If>
-          </ul>
-        </nav>
-        <label
-          htmlFor="main-menu-checkbox"
-          className="backdrop"
-          tabIndex={-1}
-          hidden
-        />
-      </header>
-    </HeaderEl>
+            }
+            else={
+              <li>
+                <a href="#login" onClick={login}>
+                  Login
+                </a>
+              </li>
+            }
+          />
+        </ul>
+      </nav>
+      <label
+        htmlFor="main-menu-checkbox"
+        className="backdrop"
+        tabIndex={-1}
+        hidden
+      />
+    </header>
+  </HeaderEl>
 )
 
 Header.propTypes = {

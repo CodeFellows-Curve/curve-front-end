@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { milestones, categoryColorScale } from './constants'
-import tracks from './tracks.js'
+// import tracks from './tracks.js'
 
 import { connect } from 'react-redux'
 import * as actions from '../../actions/graph-actions.js'
@@ -39,8 +39,11 @@ const TrackDiv = styled.div`
 `
 
 class Track extends React.Component {
+  constructor(props) {
+    super(props)
+  }
   render() {
-    const track = tracks[this.props.focusedTrackId]
+    const track = this.props.tracks[this.props.focusedTrackId]
     const currentMilestoneId = this.props.milestoneByTrack[
       this.props.focusedTrackId
     ]
@@ -112,6 +115,7 @@ class Track extends React.Component {
 const mapStateToProps = state => ({
   milestoneByTrack: state.graph.milestoneByTrack,
   focusedTrackId: state.graph.focusedTrackId,
+  tracks: state.competencies
 })
 
 const mapDispatchToProps = (dispatch, getState) => ({

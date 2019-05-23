@@ -36,7 +36,7 @@ class TrackSelector extends React.Component {
         `}</style>
         <tbody>
           <tr>
-            {this.props.trackIds.map(trackId => (
+            {trackIds.map(trackId => (
               <td
                 key={trackId}
                 className="track-selector-label"
@@ -47,7 +47,7 @@ class TrackSelector extends React.Component {
             ))}
           </tr>
           <tr>
-            {this.props.trackIds.map(trackId => (
+            {trackIds.map(trackId => (
               <td
                 key={trackId}
                 className="track-selector-value"
@@ -78,8 +78,9 @@ class TrackSelector extends React.Component {
 const mapStateToProps = state => ({
   milestoneByTrack: state.graph.milestoneByTrack,
   focusedTrackId: state.graph.focusedTrackId,
-  tracks: state.graph.tracks,
+  // tracks: state.graph.tracks,
   trackIds: state.graph.trackIds,
+  tracks: state.competencies
 })
 
 const mapDispatchToProps = (dispatch, getState) => ({

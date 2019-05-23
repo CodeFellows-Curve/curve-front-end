@@ -2,10 +2,13 @@ import React from 'react'
 import * as d3 from 'd3'
 import styled from 'styled-components'
 import { trackIds, milestones, categoryColorScale } from './constants'
-import tracks from './tracks.js'
+// import tracks from './tracks.js'
 
 import { connect } from 'react-redux'
 import * as actions from '../../actions/graph-actions.js'
+
+// TODO: Currently will not render without this odd .pop(). Make it not need this
+trackIds.pop()
 
 const width = 400
 // "milestones" is an array of each level; [0, 1, 2, 3, 4, 5]
@@ -57,6 +60,8 @@ class NightingaleChart extends React.Component {
   }
 
   render() {
+    // console.log('trackIDs ---------------', trackIds)
+    // console.log('IN NIGHTENGALE', Object.keys(this.props.tracks))
     const currentMilestoneId = this.props.milestoneByTrack[
       this.props.focusedTrackId
     ]
@@ -65,6 +70,7 @@ class NightingaleChart extends React.Component {
         <svg>
           <g transform={`translate(${width / 2},${width / 2}) rotate(-33.75)`}>
             {trackIds.map((trackId, i) => {
+              {/* console.log('current trackId ----------',trackId) */}
               const isCurrentTrack = trackId == this.props.focusedTrackId
               return (
                 <g
@@ -94,7 +100,7 @@ class NightingaleChart extends React.Component {
                         d={this.arcFn(milestone)}
                         style={{
                           fill: isMet
-                            ? categoryColorScale(tracks[trackId].category)
+                            ? categoryColorScale(this.props.tracks[trackId].category)
                             : undefined,
                         }}
                       />
@@ -105,7 +111,7 @@ class NightingaleChart extends React.Component {
                     cx="0"
                     cy="-50"
                     style={{
-                      fill: categoryColorScale(tracks[trackId].category),
+                      fill: categoryColorScale(this.props.tracks[trackId].category),
                     }}
                     className={
                       'track-milestone ' +
@@ -130,6 +136,7 @@ class NightingaleChart extends React.Component {
 const mapStateToProps = state => ({
   milestoneByTrack: state.graph.milestoneByTrack,
   focusedTrackId: state.graph.focusedTrackId,
+  tracks: state.competencies
 })
 
 const mapDispatchToProps = (dispatch, getState) => ({

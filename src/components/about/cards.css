@@ -1,0 +1,48 @@
+a{
+  margin: 0px;
+}
+.members {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+img{
+  margin:3px;
+}
+.card {
+  border-radius: 10px; 
+  /* box-shadow: 5px 5px 3px 3px grey; */
+  box-shadow: 0 2px 43px -4px rgba(0, 0, 0, 0.41);
+  background-color:  #ffffff;
+  flex-basis: 20%;
+  margin: 20px;
+  text-align: center;
+}
+
+.icons{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  padding: 5px;
+}
+.icon{
+  width: 25px;
+  height: 25px;
+}
+.portrait{
+  width: 90%;
+}
+.team{
+  margin: 20px;
+}
+#teams {
+  text-align:center;
+  background-color: rgb(248, 248, 248);
+  padding: 3px;
+  border-radius: 20px;
+}
+#about{
+  text-align: center;
+}

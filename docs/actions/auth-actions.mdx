@@ -1,0 +1,29 @@
+---
+name: Auth Actions
+menu: Redux Actions
+---
+
+# Auth Actions
+---
+## `./src/actions/auth-actions.js`
+## Description
+Actions for Authorization
+
+## Login
+### Description
+Logs a user in
+```js
+export const login = user => ({ user, type: 'LOGIN' })
+```
+
+---
+
+## Logout
+### Description
+Logs a user out
+```js
+export const logout = () => {
+  authService.handleLogout()
+  return { type: 'LOGOUT' }
+}
+```

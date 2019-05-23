@@ -6,14 +6,14 @@ import { Router } from '@reach/router'
 import * as a from '../actions/competencies-actions'
 import Layout from '../components/layout/'
 import PrivateRoute from '../components/private-route'
-import Login from '../components/login'
 import Graph from '../components/graph'
-import List from '../components/list'
+import List from '../components/list/index.js'
+import authService from '../utils/auth-service'
 
 class App extends Component {
   componentDidMount() {
-    const { data, loggedIn, pullMarkdown } = this.props
-    if (loggedIn) {
+    const { data, pullMarkdown } = this.props
+    if (authService.isAuthenticated()) {
       // Add competencies markdown to Redux store on login
       pullMarkdown(data)
     }
@@ -25,21 +25,18 @@ class App extends Component {
         <Router>
           <PrivateRoute path="/app/graph" component={Graph} />
           <PrivateRoute path="/app/list" component={List} />
-          <Login path="/app/login" />
         </Router>
       </Layout>
     )
   }
 }
 
-const mapStateToProps = ({ auth }) => ({ loggedIn: auth.loggedIn })
-
 const mapDispatchToProps = dispatch => ({
   pullMarkdown: data => dispatch(a.pullMarkdown(data)),
 })
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(App)
 

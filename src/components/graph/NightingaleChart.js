@@ -14,6 +14,7 @@ const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a
 // Styles
 const Figure = styled.figure`
   margin: 0;
+  text-align: center;
   svg {
     width: ${width}px;
     height: ${width}px;

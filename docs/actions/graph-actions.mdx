@@ -1,0 +1,115 @@
+---
+name: Graph Actions
+menu: Redux Actions
+---
+
+# Graph Actions
+
+---
+## `./src/actions/graph-actions.js`
+## Description
+These are all the actions related to the graph
+
+## setIndividualsData 
+### Description
+//TODO
+This action is related to getting an individuals data after clicking on one of the users on the All Users page
+
+```js
+export const setIndividualsData = payload => {
+  return {
+    type: 'setIndividualsData',
+    payload: payload,
+  }
+}
+```
+
+---
+## setFocusedTrackId 
+### Description
+//TODO
+
+
+```js
+export const setFocusedTrackId = payload => {
+  return {
+    type: 'setFocusedTrackId',
+    payload: payload,
+  }
+}
+```
+
+---
+## handleTrackMilestoneChange 
+### Description
+//TODO
+
+
+```js
+export const handleTrackMilestoneChange = payload => {
+  return {
+    type: 'handleTrackMilestoneChange',
+    payload: payload,
+  }
+}
+```
+
+---
+## setTitle 
+### Description
+//TODO
+
+
+```js
+export const setTitle = payload => {
+  return {
+    type: 'setTitle',
+    payload: payload,
+  }
+}
+```
+
+---
+## NameInputChange 
+### Description
+//TODO
+
+
+```js
+export const NameInputChange = payload => {
+  return {
+    type: 'NameInputChange',
+    payload: payload,
+  }
+}
+```
+
+---
+## selectNextTrack 
+### Description
+//TODO
+
+
+```js
+export const selectNextTrack = payload => {
+  return {
+    type: 'shiftFocusedTrack',
+    payload: 1,
+  }
+}
+```
+
+---
+## selectPrevTrack 
+### Description
+//TODO
+
+
+```js
+export const selectPrevTrack = payload => {
+  return {
+    type: 'shiftFocusedTrack',
+    payload: -1,
+  }
+}
+```

@@ -14,7 +14,7 @@ const Cards = () => {
   const gitbase='http://github.com/'
   return (
   <div id='teams'>
-    <h2>Meet The Teams</h2>
+    <h2>Meet the Teams</h2>
     
     {
       people.teams.map(team => {
@@ -26,7 +26,7 @@ const Cards = () => {
                 {team.members.map( member => {
                   return (
                     <div class='card'>        
-                      {member.name}
+                      <div class='name'> {member.name} </div>
                       <img class='portrait' src={pictures[member.picture]} />
                       <div class='icons'>  
                         <a href={gitbase+member.github}> <img class='icon' src={github} /> </a>

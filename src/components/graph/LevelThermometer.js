@@ -107,7 +107,7 @@ class LevelThermometer extends React.Component {
     //   this.props.milestoneByTrack
     // )
     let categoryPoints = this.props.categoryPoints
-    console.log('categoryPoints--------------------------', categoryPoints)
+    // console.log('categoryPoints--------------------------', categoryPoints)
 
     let lastCategoryIndex = 0
     categoryPoints.forEach((categoryPoint, i) => {

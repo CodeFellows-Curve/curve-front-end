@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: "markweb-light";
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -15,16 +15,13 @@ body {
   src: url("../../fonts/modified-MarkWeb-Light.woff") format('woff');
  }
  ​
- /* @font-face {
+ @font-face {
   font-family: "markweb-bold";
   src: url("../../fonts/modified-MarkWeb-Bold.woff") format('woff');
- } */
- ​
- *{
-  font-family: "markweb-light", Arial;
  }
  ​
+ 
+ 
  a{
   font-family: "markweb-bold", Arial;
  }
-

@@ -5,6 +5,15 @@
 // shiftFocusedTrackMilestoneByDelta
 //
 
+// Action to add graphQL query data to state
+export const setIndividualsData = payload => {
+  // console.log('PAYLOAD in graph-actions.js: ', payload)
+  return {
+    type: 'setIndividualsData',
+    payload: payload,
+  }
+}
+
 export const setFocusedTrackId = payload => {
   // console.log('PAYLOAD in graph-actions.js: ', payload)
   return {

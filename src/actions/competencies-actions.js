@@ -13,24 +13,24 @@ export const pullMarkdown = data => {
    ***/
   const competencies = {}
 
-  data.allMarkdownRemark.edges.forEach(num => {
-    const { category } = num.node.frontmatter
+  data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const { category } = node.frontmatter
     if (competencies[category]) {
-      const { proficiency } = num.node.frontmatter
+      const { proficiency } = node.frontmatter
       if (competencies[category][proficiency]) {
-        competencies[category][proficiency].push(num.node)
+        competencies[category][proficiency].push(node)
       } else {
-        competencies[category][proficiency] = [num.node]
+        competencies[category][proficiency] = [node]
       }
     } else {
       competencies[category] = {}
-      const { proficiency } = num.node.frontmatter
-      competencies[category][proficiency] = [num.node]
+      const { proficiency } = node.frontmatter
+      competencies[category][proficiency] = [node]
     }
   })
 
   return {
-    data,
+    data: competencies,
     type: 'PULL_COMPETENCIES',
   }
 }

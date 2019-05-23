@@ -8,8 +8,7 @@ import styled from 'styled-components'
 import Logo from './logo'
 
 import * as a from '../../actions/auth-actions'
-import ReduxPOL from '../redux-pol'
-
+import authService from '../../utils/auth-service'
 
 // TODO: Move all this styling for the header and mobile site-menu into a separate file. Consider using something else besides styled components for this piece. It's already in a scss format below;
 const HeaderEl = styled.div`
@@ -271,7 +270,7 @@ const HeaderEl = styled.div`
   }
 `
 
-const Header = ({ loggedIn, logout, siteTitle }) => (
+const Header = ({ logout, siteTitle }) => (
   <HeaderEl>
     <input id="main-menu-checkbox" type="checkbox" />
     <header>
@@ -294,7 +293,12 @@ const Header = ({ loggedIn, logout, siteTitle }) => (
         </label>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <If condition={authService.isAuthenticated()}>
+              <Link to="/app/graph">Home</Link>
+            </If>
+            <If condition={!authService.isAuthenticated()}>
+              <Link to="/">Home</Link>
+            </If>
           </li>
 
           <li>
@@ -309,7 +313,7 @@ const Header = ({ loggedIn, logout, siteTitle }) => (
             <Link to="/rubric">Rubric</Link>
           </li>
 
-          <If condition={loggedIn}>
+          <If condition={authService.isAuthenticated()}>
             <li>
               <Link to="/app/list/">All Users</Link>
             </li>
@@ -340,13 +344,11 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-const mapStateToProps = ({ auth }) => ({ loggedIn: auth.loggedIn })
-
 const mapDispatchToProps = dispatch => ({
   logout: callback => dispatch(a.logout(callback)),
 })
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Header)

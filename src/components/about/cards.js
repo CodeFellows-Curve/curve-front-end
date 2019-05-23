@@ -2,6 +2,7 @@ import React from 'react'
 import people from './people.js'
 import "./cards.css"
 import github from './assets/github.png'
+import 
 // import js from '.assets/js.png'
 // import c from '.assets/c.png'
 import linkedin from './assets/linkedin.jpg'

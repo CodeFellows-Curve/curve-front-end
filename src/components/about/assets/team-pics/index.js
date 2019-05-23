@@ -18,7 +18,9 @@ import michael_kelly from './michael_kelly.png'
 import spencer_hirata from './spencer_hirata.png'
 import tanner_percival from './tanner_percival.png'
 import vanessa_wei from './vanessa_wei.png'
-
+import nate_tibbals from './nate_tibbals.png'
+import hannah_ingham from './hannah_ingham.png'
+import caity_heath from './caity_heath.png'
 const pictures = {
    aaron_ferris : aaron_ferris,
    alex_white : alex_white,
@@ -40,5 +42,8 @@ const pictures = {
    spencer_hirata : spencer_hirata,
    tanner_percival : tanner_percival,
    vanessa_wei : vanessa_wei,
+   nate_tibbals: nate_tibbals,
+   hannah_ingham: hannah_ingham,
+   caity_heath: caity_heath,
 }
 export default pictures

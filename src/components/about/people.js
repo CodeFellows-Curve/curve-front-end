@@ -182,7 +182,7 @@ const people = {
         {
           name:'Caity Heath ',
           logo: 'js',
-          picture:'caity_heath ',
+          picture:'caity_heath',
           github: 'caityheath', 
           linkedin: 'https://www.linkedin.com/in/billybunn/',
         },

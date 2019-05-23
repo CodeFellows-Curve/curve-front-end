@@ -5,18 +5,20 @@ import github from './assets/team-pics/other_logos/github_50x50.png'
 import pictures from './assets/team-pics'
 // import js from '.assets/js.png'
 // import c from '.assets/c.png'
-import linkedin from './assets/linkedin.jpg'
+import linkedin from './assets/team-pics/other_logos/linkedin_50x50.png'
+import js from './assets/team-pics/other_logos/javaScript.png'
+import c from './assets/team-pics/other_logos/c.png'
 
 
 const Cards = () => {
-  console.log('people object', people.teams);
   const gitbase='http://github.com/'
   return (
   <div id='teams'>
-    <h2>Teams</h2>
+    <h2>Meet The Teams</h2>
     
     {
       people.teams.map(team => {
+        console.log(pictures)
         return (
           <div class='team'>
           <h3 class='title'> {team.name} </h3>
@@ -25,10 +27,10 @@ const Cards = () => {
                   return (
                     <div class='card'>        
                       {member.name}
-                      <img src={pictures[member.picture]} />
+                      <img class='portrait' src={pictures[member.picture]} />
                       <div class='icons'>  
                         <a href={gitbase+member.github}> <img class='icon' src={github} /> </a>
-                        <img class ='icon' src = {member.logo==='js'? 'https://raw.githubusercontent.com/CodeFellows-Curve/project-resources/master/assets/480px-Unofficial_JavaScript_logo_2.svg.png' : 'https://raw.githubusercontent.com/CodeFellows-Curve/project-resources/master/assets/C-Logo-1.jpg'} />
+                        <img class ='icon' src = {member.logo==='js'? js : c} />
                         <a href={member.linkedin}><img class='icon' src={linkedin} /></a>
                       </div>
                     </div>

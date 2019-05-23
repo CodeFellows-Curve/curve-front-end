@@ -73,6 +73,10 @@ class AuthService {
    * once we're authenticated. The `cb` defaults to empty.
    ***/
   setSession = (cb = () => {}) => (err, authResult) => {
+    if (!isBrowser) {
+      return
+    }
+
     if (err) {
       navigate('/')
       cb()
@@ -123,6 +127,10 @@ class AuthService {
 
   // The tokens may be used as part of authentication with the back end server.
   getTokens() {
+    if (!isBrowser) {
+      return
+    }
+
     const { accessToken, idToken } = this.tokens
     if (!accessToken) {
       throw new Error('No access token found')
@@ -153,6 +161,10 @@ class AuthService {
    * localStorage.
    ***/
   silentAuth(callback) {
+    if (!isBrowser) {
+      return
+    }
+
     if (!this.isAuthenticated()) {
       return callback()
     }
@@ -165,6 +177,10 @@ class AuthService {
    * configuration.
    ***/
   handleLogout() {
+    if (!isBrowser) {
+      return
+    }
+
     localStorage.removeItem('expires_at')
     localStorage.removeItem('curve_user')
 

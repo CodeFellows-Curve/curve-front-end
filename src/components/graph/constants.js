@@ -48,6 +48,7 @@ export const trackIds = Object.keys(tracks)
 
 export const categoryIds = trackIds.reduce((set, trackId) => {
   set.add(tracks[trackId].category)
+  console.log(set);
   return set
 }, new Set())
 

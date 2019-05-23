@@ -7,61 +7,53 @@ function toLetters(num) {
   return pow ? toLetters(pow) + out : out
 }
 
-export default function formatGraphQLData(graphQLData) {
-  // Creates array of objects with keys of each proficiency name and score
-  let allSubcategoriesArray = graphQLData.review[0].category.reduce(
-    (acc, category, idx) => {
-      return (acc = [...acc, ...category.subcategory])
+export default function newFormatGraphQLData(graphQLData) {
+  let output = graphQLData.review[0].category.reduce(
+    (acc, competency, idx) => {
+      let categoryPoints = []
+      categoryPoints[idx] = { points: 0 }
+      let currMilestones = competency.subcategory.reduce(
+        (milestones, proficiency) => {
+          acc.milestoneByTrack[
+            proficiency.subCategoryName.toUpperCase().replace(/ /g, '_')
+          ] = proficiency.score
+          acc.totalPoints += proficiency.score
+
+          categoryPoints[idx] = {
+            categoryId: toLetters(idx + 1),
+            points: proficiency.score + categoryPoints[idx].points,
+          }
+
+          return milestones
+        },
+        {}
+      )
+      acc.milestoneByTrack = { ...acc.milestoneByTrack, ...currMilestones }
+      acc.focusedTrackId = Object.keys(acc.milestoneByTrack)[0]
+      acc.categoryPoints = [...acc.categoryPoints, categoryPoints[idx]]
+      return acc
     },
-    []
+    {
+      name: graphQLData.name,
+      title: 'Hard-coded Title',
+      milestoneByTrack: {},
+      focusedTrackId: '',
+      totalPoints: 0,
+      categoryPoints: [],
+      eligibleTitles: [
+        'Engineer I',
+        'Engineer II',
+        'Senior Engineer',
+        'Group Lead',
+        'Staff Engineer',
+        'Senior Group Lead',
+        'Principal Engineer',
+        'Director of Engineering',
+      ],
+    }
   )
 
-  // Creates obj with key/value of each proficiency/score and calculates total points
-  let milestones = allSubcategoriesArray.reduce(
-    (acc, subCategory) => {
-      let name = subCategory.subCategoryName.toUpperCase().replace(/ /g, '_')
-      let score = subCategory.score
-      let milestoneByTrack = { ...acc.milestoneByTrack, [name]: score }
-      let totalPoints = acc.totalPoints + score
-      return (acc = { ...acc, milestoneByTrack, totalPoints })
-    },
-    { milestoneByTrack: {}, totalPoints: 0 }
-  )
-
-  // Creates an array of objects (1 for each competency) with the comptency name & total points for that competency
-  let categoryPoints = graphQLData.review[0].category.reduce(
-    (acc, category, idx) => {
-      let categoryId = toLetters(idx + 1)
-
-      let points = category.subcategory.reduce((acc, subcat, idx) => {
-        return (acc += subcat.score)
-      }, 0)
-      return (acc = [...acc, { categoryId, points }])
-    },
-    []
-  )
-
-  // OUTPUT -- Same shape as initial state in 'reducers/graph-reducer.js'
-  let formattedData = {
-    name: graphQLData.name,
-    title: 'Hard-coded Title',
-    milestoneByTrack: milestones.milestoneByTrack,
-    focusedTrackId: Object.keys(milestones.milestoneByTrack)[0],
-    totalPoints: milestones.totalPoints,
-    categoryPoints,
-    eligibleTitles: [
-      'Engineer I',
-      'Engineer II',
-      'Senior Engineer',
-      'Group Lead',
-      'Staff Engineer',
-      'Senior Group Lead',
-      'Principal Engineer',
-      'Director of Engineering',
-    ],
-  }
-
-  return formattedData
+  return output
 }
 
 // Example data from graphQL query
@@ -288,3 +280,5 @@ let exData = {
   ],
 }
 */
+
+// console.log(formatGraphQLData(exData))

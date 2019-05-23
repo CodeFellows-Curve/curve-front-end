@@ -4,7 +4,35 @@ menu: Redux Actions
 ---
 
 # Competencies Actions
-This file contains definitions for actions associated with pulling user information from the database.
 
-## Actions
-- ** PULL_COMPETENCIES: ** Uses a GraphQL query to pull associated user competencies from the database.
+---
+## PULL_COMPETENCIES
+```js
+//Filepath: './src/actions/competencies-actions.js'
+export const pullMarkdown = data => {
+  const competencies = {}
+  data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const { category } = node.frontmatter
+    if (competencies[category]) {
+      const { proficiency } = node.frontmatter
+      if (competencies[category][proficiency]) {
+        competencies[category][proficiency].push(node)
+      } else {
+        competencies[category][proficiency] = [node]
+      }
+    } else {
+      competencies[category] = {}
+      const { proficiency } = node.frontmatter
+      competencies[category][proficiency] = [node]
+    }
+  })
+
+  return {
+    data: competencies,
+    type: 'PULL_COMPETENCIES',
+  }
+}
+
+```
+### Description
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

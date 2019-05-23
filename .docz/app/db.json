@@ -175,6 +175,99 @@
       }
     },
     {
+      "key": "docs/README/README.mdx",
+      "value": {
+        "name": "README",
+        "menu": "README",
+        "id": "d748d149e8a9bbb6b9e996a338b68dc9",
+        "filepath": "docs/README/README.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/README/README.mdx",
+        "slug": "docs-readme-readme",
+        "route": "/docs-readme-readme",
+        "headings": [
+          {
+            "slug": "curve",
+            "depth": 1,
+            "value": "Curve"
+          },
+          {
+            "slug": "front-end-for-the-curve-employee-proficiency-scale",
+            "depth": 2,
+            "value": "Front End for the Curve employee proficiency scale."
+          },
+          {
+            "slug": "summary",
+            "depth": 3,
+            "value": "Summary:"
+          },
+          {
+            "slug": "links",
+            "depth": 3,
+            "value": "Links:"
+          },
+          {
+            "slug": "installation",
+            "depth": 3,
+            "value": "Installation:"
+          },
+          {
+            "slug": "methods",
+            "depth": 3,
+            "value": "Methods:"
+          },
+          {
+            "slug": "components",
+            "depth": 3,
+            "value": "Components:"
+          },
+          {
+            "slug": "uml-diagram",
+            "depth": 3,
+            "value": "UML Diagram:"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/actions/auth-actions.mdx",
+      "value": {
+        "name": "Auth Actions",
+        "menu": "Redux Actions",
+        "id": "39f153e6205383aa4abdb8a102a9ea97",
+        "filepath": "docs/actions/auth-actions.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/actions/auth-actions.mdx",
+        "slug": "docs-actions-auth-actions",
+        "route": "/docs-actions-auth-actions",
+        "headings": [
+          {
+            "slug": "auth-actions",
+            "depth": 1,
+            "value": "Auth Actions"
+          },
+          {
+            "slug": "login",
+            "depth": 2,
+            "value": "Login"
+          },
+          {
+            "slug": "description",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "logout",
+            "depth": 2,
+            "value": "Logout"
+          },
+          {
+            "slug": "description-1",
+            "depth": 3,
+            "value": "Description"
+          }
+        ]
+      }
+    },
+    {
       "key": "docs/actions/competencies-actions.mdx",
       "value": {
         "name": "Competencies Actions",
@@ -191,9 +284,14 @@
             "value": "Competencies Actions"
           },
           {
-            "slug": "actions",
+            "slug": "pull_competencies",
             "depth": 2,
-            "value": "Actions"
+            "value": "PULL_COMPETENCIES"
+          },
+          {
+            "slug": "description",
+            "depth": 3,
+            "value": "Description"
           }
         ]
       }
@@ -215,14 +313,74 @@
             "value": "Graph Actions"
           },
           {
-            "slug": "actions",
+            "slug": "setindividualsdata",
             "depth": 2,
-            "value": "Actions"
+            "value": "setIndividualsData"
           },
           {
-            "slug": "action-definitions",
+            "slug": "description",
             "depth": 3,
-            "value": "Action Definitions"
+            "value": "Description"
+          },
+          {
+            "slug": "setfocusedtrackid",
+            "depth": 2,
+            "value": "setFocusedTrackId"
+          },
+          {
+            "slug": "description-1",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "handletrackmilestonechange",
+            "depth": 2,
+            "value": "handleTrackMilestoneChange"
+          },
+          {
+            "slug": "description-2",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "settitle",
+            "depth": 2,
+            "value": "setTitle"
+          },
+          {
+            "slug": "description-3",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "nameinputchange",
+            "depth": 2,
+            "value": "NameInputChange"
+          },
+          {
+            "slug": "description-4",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "selectnexttrack",
+            "depth": 2,
+            "value": "selectNextTrack"
+          },
+          {
+            "slug": "description-5",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "selectprevtrack",
+            "depth": 2,
+            "value": "selectPrevTrack"
+          },
+          {
+            "slug": "description-6",
+            "depth": 3,
+            "value": "Description"
           }
         ]
       }
@@ -244,9 +402,14 @@
             "value": "Users Actions"
           },
           {
-            "slug": "actions",
+            "slug": "pull_competencies",
             "depth": 2,
-            "value": "Actions"
+            "value": "PULL_COMPETENCIES"
+          },
+          {
+            "slug": "description",
+            "depth": 3,
+            "value": "Description"
           }
         ]
       }
@@ -611,6 +774,74 @@
             "slug": "associated-actions",
             "depth": 2,
             "value": "Associated Actions"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/Teams/C#/C#.mdx",
+      "value": {
+        "name": "C# Team",
+        "menu": "C# Team",
+        "id": "9a59e882746990710c6670f5ac39fb17",
+        "filepath": "docs/Teams/C#/C#.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/Teams/C#/C#.mdx",
+        "slug": "docs-teams-c-c",
+        "route": "/docs-teams-c-c",
+        "headings": [
+          {
+            "slug": "c-team-readme",
+            "depth": 1,
+            "value": "C# Team Readme"
+          },
+          {
+            "slug": "auth",
+            "depth": 2,
+            "value": "Auth"
+          },
+          {
+            "slug": "data",
+            "depth": 2,
+            "value": "Data"
+          },
+          {
+            "slug": "integrations",
+            "depth": 2,
+            "value": "Integrations"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/Teams/JS/401d29JS.mdx",
+      "value": {
+        "name": "401d29JS Team",
+        "menu": "JS Team",
+        "id": "e36f44eec79f0b79293c1ab79fa8c660",
+        "filepath": "docs/Teams/JS/401d29JS.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/Teams/JS/401d29JS.mdx",
+        "slug": "docs-teams-js-401d29-js",
+        "route": "/docs-teams-js-401d29-js",
+        "headings": [
+          {
+            "slug": "js-team-readme",
+            "depth": 1,
+            "value": "JS Team Readme"
+          },
+          {
+            "slug": "backend",
+            "depth": 2,
+            "value": "Backend"
+          },
+          {
+            "slug": "frontend",
+            "depth": 2,
+            "value": "Frontend"
+          },
+          {
+            "slug": "integrations",
+            "depth": 2,
+            "value": "Integrations"
           }
         ]
       }

@@ -3,6 +3,14 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-index" */ 'docs/index.mdx'
     ),
+  'docs/README/README.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-readme-readme" */ 'docs/README/README.mdx'
+    ),
+  'docs/actions/auth-actions.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-actions-auth-actions" */ 'docs/actions/auth-actions.mdx'
+    ),
   'docs/actions/competencies-actions.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-actions-competencies-actions" */ 'docs/actions/competencies-actions.mdx'
@@ -78,5 +86,13 @@ export const imports = {
   'docs/reducers/users-reducer.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-reducers-users-reducer" */ 'docs/reducers/users-reducer.mdx'
+    ),
+  'docs/Teams/C#/C#.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-teams-c-c" */ 'docs/Teams/C#/C#.mdx'
+    ),
+  'docs/Teams/JS/401d29JS.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-teams-js-401d29-js" */ 'docs/Teams/JS/401d29JS.mdx'
     ),
 }

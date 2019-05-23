@@ -19,6 +19,17 @@
   },
   "props": [
     {
+      "key": "src/components/graph/DateSelector.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "DateSelector",
+          "methods": [],
+          "actualName": "DateSelector"
+        }
+      ]
+    },
+    {
       "key": "src/components/graph/KeyboardListener.js",
       "value": [
         {
@@ -145,75 +156,6 @@
           "displayName": "TrackSelector",
           "methods": [],
           "actualName": "TrackSelector"
-        }
-      ]
-    },
-    {
-      "key": "src/components/static-list.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "List",
-          "methods": [],
-          "actualName": "List"
-        }
-      ]
-    },
-    {
-      "key": "src/components/about/blurb.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Blurb",
-          "methods": [],
-          "actualName": "Blurb"
-        }
-      ]
-    },
-    {
-      "key": "src/components/about/cards.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Cards",
-          "methods": [],
-          "actualName": "Cards"
-        }
-      ]
-    },
-    {
-      "key": "src/components/login.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Login",
-          "methods": [
-            {
-              "name": "handleSubmit",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "handleUpdate",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Login"
         }
       ]
     }
@@ -450,6 +392,21 @@
             "slug": "description-6",
             "depth": 3,
             "value": "Description"
+          },
+          {
+            "slug": "lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-ut-enim-ad-minim-veniam-quis-nostrud-exercitation-ullamco-laboris-nisi-ut-aliquip-ex-ea-commodo-consequat-duis-aute-irure-dolor-in-reprehenderit-in-voluptate-velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur-excepteur-sint-occaecat-cupidatat-non-proident-sunt-in-culpa-qui-officia-deserunt-mollit-anim-id-est-laborum",
+            "depth": 1,
+            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          },
+          {
+            "slug": "actions",
+            "depth": 2,
+            "value": "Actions"
+          },
+          {
+            "slug": "action-definitions",
+            "depth": 3,
+            "value": "Action Definitions"
           }
         ]
       }
@@ -505,6 +462,11 @@
             "value": "./src/components/graph/KeyboardListener.js"
           },
           {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
             "slug": "code-snippet",
             "depth": 2,
             "value": "Code Snippet"
@@ -534,6 +496,11 @@
             "value": "./src/components/graph/LevelThermometer.js"
           },
           {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
             "slug": "component-example",
             "depth": 2,
             "value": "Component Example"
@@ -561,6 +528,11 @@
             "slug": "srccomponentsgraphnameinputjs",
             "depth": 2,
             "value": "./src/components/graph/NameInput.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
           },
           {
             "slug": "code-snippet",
@@ -597,6 +569,11 @@
             "value": "./src/components/graph/NightingaleChart.js"
           },
           {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
             "slug": "component-example",
             "depth": 2,
             "value": "Component Example"
@@ -624,6 +601,11 @@
             "slug": "srccomponentsgraphpointsummariesjs",
             "depth": 2,
             "value": "./src/components/graph/PointSummaries.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
           },
           {
             "slug": "code-snippet",
@@ -660,6 +642,11 @@
             "value": "./src/components/graph/TitleSelector.js"
           },
           {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
             "slug": "code-snippet",
             "depth": 2,
             "value": "Code Snippet"
@@ -694,6 +681,11 @@
             "value": "./src/components/graph/Track.js"
           },
           {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
             "slug": "component-example",
             "depth": 2,
             "value": "Component Example"
@@ -723,6 +715,11 @@
             "value": "./src/components/graph/TrackSelector.js"
           },
           {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
             "slug": "component-example",
             "depth": 2,
             "value": "Component Example"
@@ -745,6 +742,16 @@
             "slug": "header",
             "depth": 1,
             "value": "Header"
+          },
+          {
+            "slug": "srclayoutheaderjs",
+            "depth": 2,
+            "value": "./src/layout/header.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
           },
           {
             "slug": "sub-components",
@@ -774,6 +781,16 @@
             "slug": "list",
             "depth": 1,
             "value": "List"
+          },
+          {
+            "slug": "srccomponentsstatic-listjs",
+            "depth": 2,
+            "value": "./src/components/static-list.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
           }
         ]
       }
@@ -793,6 +810,16 @@
             "slug": "login",
             "depth": 1,
             "value": "Login"
+          },
+          {
+            "slug": "srccomponentsloginjs",
+            "depth": 2,
+            "value": "./src/components/login.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
           }
         ]
       }
@@ -812,6 +839,21 @@
             "slug": "logo",
             "depth": 1,
             "value": "Logo"
+          },
+          {
+            "slug": "srccomponentslayoutlogojs",
+            "depth": 2,
+            "value": "./src/components/layout/logo.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "component-example",
+            "depth": 2,
+            "value": "Component Example"
           }
         ]
       }
@@ -831,6 +873,45 @@
             "slug": "privateroute",
             "depth": 1,
             "value": "PrivateRoute"
+          },
+          {
+            "slug": "srccomponentsprivate-routejs",
+            "depth": 2,
+            "value": "./src/components/private-route.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/seo.mdx",
+      "value": {
+        "name": "SEO",
+        "menu": "Components",
+        "id": "b0afbb828c3f1797c441538cd5622fe8",
+        "filepath": "docs/components/seo.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/seo.mdx",
+        "slug": "docs-components-seo",
+        "route": "/docs-components-seo",
+        "headings": [
+          {
+            "slug": "seo",
+            "depth": 1,
+            "value": "SEO"
+          },
+          {
+            "slug": "srccomponentsseojs",
+            "depth": 2,
+            "value": "./src/components/seo.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
           }
         ]
       }
@@ -857,12 +938,17 @@
             "value": "./src/reducers/competencies-reducer.js"
           },
           {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
             "slug": "pull_competencies",
             "depth": 2,
             "value": "PULL_COMPETENCIES"
           },
           {
-            "slug": "description",
+            "slug": "description-1",
             "depth": 3,
             "value": "Description"
           }
@@ -891,12 +977,17 @@
             "value": "./src/reducers/graph-reducer.js"
           },
           {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
             "slug": "setindividualsdata",
             "depth": 2,
             "value": "setIndividualsData"
           },
           {
-            "slug": "description",
+            "slug": "description-1",
             "depth": 3,
             "value": "Description"
           },
@@ -906,7 +997,7 @@
             "value": "setFocusedTrackId"
           },
           {
-            "slug": "description-1",
+            "slug": "description-2",
             "depth": 3,
             "value": "Description"
           },
@@ -916,7 +1007,7 @@
             "value": "handleTrackMilestoneChange"
           },
           {
-            "slug": "description-2",
+            "slug": "description-3",
             "depth": 3,
             "value": "Description"
           },
@@ -926,7 +1017,7 @@
             "value": "setTitle"
           },
           {
-            "slug": "description-3",
+            "slug": "description-4",
             "depth": 3,
             "value": "Description"
           },
@@ -936,7 +1027,7 @@
             "value": "NameInputChange"
           },
           {
-            "slug": "description-4",
+            "slug": "description-5",
             "depth": 3,
             "value": "Description"
           },
@@ -946,7 +1037,7 @@
             "value": "shiftFocusedTrack"
           },
           {
-            "slug": "description-5",
+            "slug": "description-6",
             "depth": 3,
             "value": "Description"
           },
@@ -956,9 +1047,43 @@
             "value": "shiftFocusedTrackMilestone"
           },
           {
-            "slug": "description-6",
+            "slug": "description-7",
             "depth": 3,
             "value": "Description"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/reducers/index.mdx",
+      "value": {
+        "name": "Index",
+        "menu": "Redux Reducers",
+        "id": "0cecf163e66620acaf45ab7ade8c6a1d",
+        "filepath": "docs/reducers/index.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/reducers/index.mdx",
+        "slug": "docs-reducers-index",
+        "route": "/docs-reducers-index",
+        "headings": [
+          {
+            "slug": "index",
+            "depth": 1,
+            "value": "Index"
+          },
+          {
+            "slug": "srcreducersindexjs",
+            "depth": 2,
+            "value": "./src/reducers/index.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
           }
         ]
       }
@@ -985,12 +1110,17 @@
             "value": "./src/reducers/users-reducer.js"
           },
           {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
             "slug": "pull_competencies",
             "depth": 2,
             "value": "PULL_COMPETENCIES"
           },
           {
-            "slug": "description",
+            "slug": "description-1",
             "depth": 3,
             "value": "Description"
           }

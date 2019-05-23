@@ -1,12 +1,61 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import gql from 'graphql-tag'
-import { Query, ApolloConsumer } from 'react-apollo'
+import { Query } from 'react-apollo'
 import PersonCard from './person-card'
+import styled from 'styled-components';
 
+const User = styled.div`
+  text-align: center;
+  font-family: 'markweb-light', Arial;
+
+  h2{
+    font-size: 1.5em;
+  }
+  ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justfy-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+  }
+  ul>li{
+    font-size: 1.2em;
+    color: purple;
+    border-bottom: 1px solid #ccc;
+  }
+  li:last-child {
+    border: none;
+  }
+  li button {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 200px;
+    border: 0;
+   
+    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+  }
+   
+  li button:hover {
+    font-size: 30px;
+    background: #f6f6f6;
+  }
+
+`
 const INDIVIDUALS = gql`
   query {
     individuals {
+      id
       name
     }
   }
@@ -21,7 +70,7 @@ class List extends React.Component {
   }
 
   updateData = data => {
-    console.log(data)
+    // console.log(data)
     this.setState({ data: data.individuals })
   }
 
@@ -35,41 +84,25 @@ class List extends React.Component {
             console.log('DATA', data)
             return (
               <>
-                <h2>All Users</h2>
-                <p>
-                  Click a user's name to make a graphQL query for their data and
-                  set that data to state (in the Redux store).
-                </p>
-                <ul>
-                  {data.individuals.map(person => (
-                    <PersonCard name={person.name} />
-                  ))}
-                </ul>
+                <User>
+                  <h2>All Users</h2>
+                  <p>
+                    Click a user's name to make a graphQL query for their data and
+                    set that data to state (in the Redux store).
+                  </p>
+                  <ul>
+                    {data.individuals.map(person => (
+                      <li key={person.id}>
+                        <PersonCard name={person.name} />
+                      </li>
+                    ))}
+                  </ul>
+                </User>
+                
               </>
             )
           }}
         </Query>
-        {/* <ApolloConsumer>
-          {client => (
-            <div>
-              <button
-                onClick={async () => {
-                  const { data } = await client.query({
-                    query: INDIVIDUALS,
-                  })
-                  this.updateData(data)
-                }}
-              >
-                Show all employees
-              </button>
-            </div>
-          )}
-        </ApolloConsumer>
-        <ul>
-          {this.state.data.map(person => (
-            <PersonCard name={person.name} />
-          ))}
-        </ul> */}
       </>
     )
   }

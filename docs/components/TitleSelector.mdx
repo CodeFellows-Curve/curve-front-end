@@ -7,7 +7,31 @@ import { Playground, Props } from 'docz'
 import TitleSelector from '../../src/components/graph/TitleSelector.js'
 
 # TitleSelector
+---
+## ```./src/components/graph/TitleSelector.js```
+## Description
 The title selector component renders a select option which enables a user to select from a variety of job titles based on their point totals.
+
+## Code Snippet
+```
+class TitleSelector extends React.Component {
+  render() {
+    // const titles = eligibleTitles(this.props.milestoneByTrack)
+    const titles = this.props.eligibleTitles
+
+    return (
+      <Select
+        value={this.props.currentTitle}
+        onChange={e => this.props.setTitleFn(e.target.value)}
+      >
+        {titles.map(title => (
+          <option key={title}>{title}</option>
+        ))}
+      </Select>
+    )
+  }
+}
+```
 
 ## Component Example
 <Playground>

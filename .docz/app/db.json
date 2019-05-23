@@ -147,6 +147,75 @@
           "actualName": "TrackSelector"
         }
       ]
+    },
+    {
+      "key": "src/components/static-list.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "List",
+          "methods": [],
+          "actualName": "List"
+        }
+      ]
+    },
+    {
+      "key": "src/components/about/blurb.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Blurb",
+          "methods": [],
+          "actualName": "Blurb"
+        }
+      ]
+    },
+    {
+      "key": "src/components/about/cards.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Cards",
+          "methods": [],
+          "actualName": "Cards"
+        }
+      ]
+    },
+    {
+      "key": "src/components/login.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Login",
+          "methods": [
+            {
+              "name": "handleSubmit",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleUpdate",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Login"
+        }
+      ]
     }
   ],
   "entries": [
@@ -429,6 +498,16 @@
             "slug": "keyboardlistener",
             "depth": 1,
             "value": "KeyboardListener"
+          },
+          {
+            "slug": "srccomponentsgraphkeyboardlistenerjs",
+            "depth": 2,
+            "value": "./src/components/graph/KeyboardListener.js"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
           }
         ]
       }
@@ -448,6 +527,11 @@
             "slug": "levelthermometer",
             "depth": 1,
             "value": "LevelThermometer"
+          },
+          {
+            "slug": "srccomponentsgraphlevelthermometerjs",
+            "depth": 2,
+            "value": "./src/components/graph/LevelThermometer.js"
           },
           {
             "slug": "component-example",
@@ -474,6 +558,16 @@
             "value": "NameInput"
           },
           {
+            "slug": "srccomponentsgraphnameinputjs",
+            "depth": 2,
+            "value": "./src/components/graph/NameInput.js"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
+          },
+          {
             "slug": "component-example",
             "depth": 2,
             "value": "Component Example"
@@ -496,6 +590,11 @@
             "slug": "nightingalechart",
             "depth": 1,
             "value": "NightingaleChart"
+          },
+          {
+            "slug": "srccomponentsgraphnightingalechartjs",
+            "depth": 2,
+            "value": "./src/components/graph/NightingaleChart.js"
           },
           {
             "slug": "component-example",
@@ -522,6 +621,16 @@
             "value": "PointSummaries"
           },
           {
+            "slug": "srccomponentsgraphpointsummariesjs",
+            "depth": 2,
+            "value": "./src/components/graph/PointSummaries.js"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
+          },
+          {
             "slug": "component-example",
             "depth": 2,
             "value": "Component Example"
@@ -544,6 +653,16 @@
             "slug": "titleselector",
             "depth": 1,
             "value": "TitleSelector"
+          },
+          {
+            "slug": "srccomponentsgraphtitleselectorjs",
+            "depth": 2,
+            "value": "./src/components/graph/TitleSelector.js"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
           },
           {
             "slug": "component-example",
@@ -570,6 +689,11 @@
             "value": "Track"
           },
           {
+            "slug": "srccomponentsgraphtrackjs",
+            "depth": 2,
+            "value": "./src/components/graph/Track.js"
+          },
+          {
             "slug": "component-example",
             "depth": 2,
             "value": "Component Example"
@@ -592,6 +716,11 @@
             "slug": "trackselector",
             "depth": 1,
             "value": "TrackSelector"
+          },
+          {
+            "slug": "srccomponentsgraphtrackselectorjs",
+            "depth": 2,
+            "value": "./src/components/graph/TrackSelector.js"
           },
           {
             "slug": "component-example",
@@ -723,9 +852,19 @@
             "value": "Competencies Reducer"
           },
           {
-            "slug": "associated-actions",
+            "slug": "srcreducerscompetencies-reducerjs",
             "depth": 2,
-            "value": "Associated Actions"
+            "value": "./src/reducers/competencies-reducer.js"
+          },
+          {
+            "slug": "pull_competencies",
+            "depth": 2,
+            "value": "PULL_COMPETENCIES"
+          },
+          {
+            "slug": "description",
+            "depth": 3,
+            "value": "Description"
           }
         ]
       }
@@ -747,9 +886,79 @@
             "value": "Graph Reducer"
           },
           {
-            "slug": "associated-actions",
+            "slug": "srcreducersgraph-reducerjs",
             "depth": 2,
-            "value": "Associated Actions"
+            "value": "./src/reducers/graph-reducer.js"
+          },
+          {
+            "slug": "setindividualsdata",
+            "depth": 2,
+            "value": "setIndividualsData"
+          },
+          {
+            "slug": "description",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "setfocusedtrackid",
+            "depth": 2,
+            "value": "setFocusedTrackId"
+          },
+          {
+            "slug": "description-1",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "handletrackmilestonechange",
+            "depth": 2,
+            "value": "handleTrackMilestoneChange"
+          },
+          {
+            "slug": "description-2",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "settitle",
+            "depth": 2,
+            "value": "setTitle"
+          },
+          {
+            "slug": "description-3",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "nameinputchange",
+            "depth": 2,
+            "value": "NameInputChange"
+          },
+          {
+            "slug": "description-4",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "shiftfocusedtrack",
+            "depth": 2,
+            "value": "shiftFocusedTrack"
+          },
+          {
+            "slug": "description-5",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "shiftfocusedtrackmilestone",
+            "depth": 2,
+            "value": "shiftFocusedTrackMilestone"
+          },
+          {
+            "slug": "description-6",
+            "depth": 3,
+            "value": "Description"
           }
         ]
       }
@@ -771,9 +980,19 @@
             "value": "Users Reducer"
           },
           {
-            "slug": "associated-actions",
+            "slug": "srcreducersusers-reducerjs",
             "depth": 2,
-            "value": "Associated Actions"
+            "value": "./src/reducers/users-reducer.js"
+          },
+          {
+            "slug": "pull_competencies",
+            "depth": 2,
+            "value": "PULL_COMPETENCIES"
+          },
+          {
+            "slug": "description",
+            "depth": 3,
+            "value": "Description"
           }
         ]
       }

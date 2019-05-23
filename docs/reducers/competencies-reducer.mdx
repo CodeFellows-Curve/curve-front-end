@@ -4,7 +4,26 @@ menu: Redux Reducers
 ---
 
 # Competencies Reducer
+---
+## ```./src/reducers/competencies-reducer.js```
+## Description
 The competencies reducer returns a given data set based on specified actions defined in the competencies-actions.js file. 
 
-## Associated Actions
-- ** PULL_COMPETENCIES: ** 
+## PULL_COMPETENCIES
+
+### Description
+Returns results of competencies database query.
+
+```
+const initialState = {}
+
+export default (state = initialState, action) => {
+  const { data, type } = action
+  switch (type) {
+    case 'PULL_COMPETENCIES':
+      return data
+    default:
+      return state
+  }
+}
+```

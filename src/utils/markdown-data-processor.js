@@ -1,5 +1,7 @@
 // Example markdown data to process
 import exDataJSON from './ex-mardown-data'
+// exDataJSON.data.allMarkdownRemark.edges[0] //?
+// exDataJSON.data.allMarkdownRemark.edges[0].node.milestones //?
 
 // exDataJSON.data.allMarkdownRemark.edges[0] //?
 
@@ -35,23 +37,54 @@ const letterFromCompetency = competency => {
   }
 }
 
+// Helper function to parse through raw markdown
+const milestonesArrMaker = (milestoneNum, node) => {
+  let milestonesArr = []
+  // node
+
+  // let summaryMd = milestoneMd.indexOf('###'); //?
+
+  for (let i = 0; i < 5; i++) {
+    // let start = milestoneMd.indexOf('###');
+    // let end = milestoneMd.indexOf('####');
+    // let summary = milestoneMd.substring(start, end);
+    // milestonesArr.push({summary, signals: [], examples:[]})
+  }
+
+  return milestonesArr
+}
+
 export default function formatMarkdownData(mdData) {
+  let milestonesData = {}
+
   let formattedData = mdData.data.allMarkdownRemark.edges.reduce(
     (acc, curr, idx) => {
+      let displayName = curr.node.frontmatter.displayName
       let category = letterFromCompetency(curr.node.frontmatter.category)
-      let proficiency = curr.node.frontmatter.displayName
       let proficiencyAllCaps = curr.node.frontmatter.displayName
         .toUpperCase()
         .replace(/ /g, '_')
-      let milestone = curr.node.frontmatter.milestone
-      let description = curr.node.frontmatter.summary
+      let description = curr.node.frontmatter.summary // description of proficiency
+
+      let milestones = milestonesArrMaker(
+        curr.node.frontmatter.milestone,
+        curr.node
+      )
+    
+      !milestonesData.hasOwnProperty(proficiencyAllCaps)
+        ? milestonesData[proficiencyAllCaps] = [curr.node.milestones]
+        : console.log('GETTIN IT --- ')
+        
+      // console.log('already has it')
+      // milestonesData[proficiencyAllCaps] = 'push(curr.node.milestones)'
+      // console.log(milestonesData)
 
       acc[proficiencyAllCaps] = {
-        displayName: proficiency,
+        displayName,
         category,
+        description,
+        milestones,
       }
-      // acc[competency]= {}
-
       return acc
     },
     {}
@@ -61,7 +94,7 @@ export default function formatMarkdownData(mdData) {
 }
 
 // formatMarkdownData(exDataJSON) //?
-let results = formatMarkdownData(exDataJSON) //?
+let results = formatMarkdownData(exDataJSON).JUDGEMENT //?
 Object.keys(results).length //?
 // Shape of output
 const tracks = {

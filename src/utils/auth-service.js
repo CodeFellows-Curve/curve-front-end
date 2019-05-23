@@ -60,12 +60,13 @@ class AuthService {
 
       const user = authResult.idTokenPayload
 
-      localStorage.setItem('access_token', authResult.accessToken)
-      localStorage.setItem('id_token', authResult.idToken)
       localStorage.setItem('expires_at', expiresAt)
-      localStorage.setItem('authorized_user', user)
+
+      const curve_user = JSON.stringify(user)
+      localStorage.setItem('curve_user', curve_user)
 
       store.dispatch(a.login(user))
+      // This redirect should not be hardcoded in a larger application
       navigate('/app/graph')
       return cb()
     }
@@ -77,22 +78,33 @@ class AuthService {
     }
 
     const expiresAt = JSON.parse(localStorage.getItem('expires_at'))
-    // maybe on logout set this to null
-    return new Date().getTime() < expiresAt
+    const loggedIn = new Date().getTime() < expiresAt
+    if (loggedIn) {
+      const user = JSON.parse(localStorage.getItem('curve_user'))
+      store.dispatch(a.login(user))
+      return true
+    }
+    return false
   }
 
   getAccessToken() {
-    const accessToken = localStorage.getItem('access_token')
+    const accessToken = this.tokens.accessToken
     if (!accessToken) {
       throw new Error('No access token found')
     }
     return accessToken
   }
+
   getTokens() {
     return this.tokens
   }
 
   silentAuth(callback) {
+    // TODO: Silent auth will not work with Google test keys
+    // Auth0 provides for development.
+    // You can generate Google keys and add them to the
+    // Auth0 configuration.
+    // https://auth0.com/docs/connections/social/google
     if (!this.isAuthenticated()) {
       return callback()
     }
@@ -100,10 +112,8 @@ class AuthService {
   }
 
   handleLogout() {
-    localStorage.setItem('access_token', null)
-    localStorage.setItem('id_token', null)
-    localStorage.setItem('expires_at', null)
-    localStorage.setItem('authorized_user', null)
+    localStorage.removeItem('expires_at')
+    localStorage.removeItem('curve_user')
 
     //  const options = {
     //    client_id: process.env.AUTH0_CLIENT_ID,

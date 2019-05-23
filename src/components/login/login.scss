@@ -68,23 +68,6 @@ svg {
       background: rgb(250, 2, 64);
       transform: scale(1.1); 
   }
-
-    // &:after {
-    //   content: "";
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 50%;
-    //   margin-left: -1.5rem;
-    //   margin-top: -1.5rem;
-    //   width: 3rem;
-    //   height: 3rem;
-    //   border: 2px dotted #fff;
-    //   border-radius: 50%;
-    //   border-left: none;
-    //   border-bottom: none;
-    //   transition: opacity 0.1s 0.4s;
-    //   opacity: 0;
-    // }
   }
 
 @keyframes animRipple {

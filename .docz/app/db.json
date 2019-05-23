@@ -17,6 +17,149 @@
       "**/*.{md,markdown}"
     ]
   },
+  "props": [
+    {
+      "key": "src/components/graph/DateSelector.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "DateSelector",
+          "methods": [],
+          "actualName": "DateSelector"
+        }
+      ]
+    },
+    {
+      "key": "src/components/graph/KeyboardListener.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "KeyboardListener",
+          "methods": [
+            {
+              "name": "handleKeyDown",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "KeyboardListener"
+        }
+      ]
+    },
+    {
+      "key": "src/components/graph/LevelThermometer.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "LevelThermometer",
+          "methods": [
+            {
+              "name": "rightRoundedRect",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "x",
+                  "type": null
+                },
+                {
+                  "name": "y",
+                  "type": null
+                },
+                {
+                  "name": "width",
+                  "type": null
+                },
+                {
+                  "name": "height",
+                  "type": null
+                },
+                {
+                  "name": "radius",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "LevelThermometer"
+        }
+      ]
+    },
+    {
+      "key": "src/components/graph/NameInput.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "NameInput",
+          "methods": [],
+          "actualName": "NameInput"
+        }
+      ]
+    },
+    {
+      "key": "src/components/graph/NightingaleChart.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "NightingaleChart",
+          "methods": [],
+          "actualName": "NightingaleChart"
+        }
+      ]
+    },
+    {
+      "key": "src/components/graph/PointSummaries.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "PointSummaries",
+          "methods": [],
+          "actualName": "PointSummaries"
+        }
+      ]
+    },
+    {
+      "key": "src/components/graph/TitleSelector.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TitleSelector",
+          "methods": [],
+          "actualName": "TitleSelector"
+        }
+      ]
+    },
+    {
+      "key": "src/components/graph/Track.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Track",
+          "methods": [],
+          "actualName": "Track"
+        }
+      ]
+    },
+    {
+      "key": "src/components/graph/TrackSelector.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TrackSelector",
+          "methods": [],
+          "actualName": "TrackSelector"
+        }
+      ]
+    }
+  ],
   "entries": [
     {
       "key": "docs/index.mdx",
@@ -596,6 +739,45 @@
       }
     },
     {
+      "key": "docs/reducers/competencies-reducer.mdx",
+      "value": {
+        "name": "Competencies Reducer",
+        "menu": "Redux Reducers",
+        "id": "b2880853643548f87a72394b2a38f66e",
+        "filepath": "docs/reducers/competencies-reducer.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/reducers/competencies-reducer.mdx",
+        "slug": "docs-reducers-competencies-reducer",
+        "route": "/docs-reducers-competencies-reducer",
+        "headings": [
+          {
+            "slug": "competencies-reducer",
+            "depth": 1,
+            "value": "Competencies Reducer"
+          },
+          {
+            "slug": "srcreducerscompetencies-reducerjs",
+            "depth": 2,
+            "value": "./src/reducers/competencies-reducer.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "pull_competencies",
+            "depth": 2,
+            "value": "PULL_COMPETENCIES"
+          },
+          {
+            "slug": "description-1",
+            "depth": 3,
+            "value": "Description"
+          }
+        ]
+      }
+    },
+    {
       "key": "docs/reducers/graph-reducer.mdx",
       "value": {
         "name": "Graph Reducer",
@@ -695,45 +877,6 @@
       }
     },
     {
-      "key": "docs/reducers/competencies-reducer.mdx",
-      "value": {
-        "name": "Competencies Reducer",
-        "menu": "Redux Reducers",
-        "id": "b2880853643548f87a72394b2a38f66e",
-        "filepath": "docs/reducers/competencies-reducer.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/reducers/competencies-reducer.mdx",
-        "slug": "docs-reducers-competencies-reducer",
-        "route": "/docs-reducers-competencies-reducer",
-        "headings": [
-          {
-            "slug": "competencies-reducer",
-            "depth": 1,
-            "value": "Competencies Reducer"
-          },
-          {
-            "slug": "srcreducerscompetencies-reducerjs",
-            "depth": 2,
-            "value": "./src/reducers/competencies-reducer.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          },
-          {
-            "slug": "pull_competencies",
-            "depth": 2,
-            "value": "PULL_COMPETENCIES"
-          },
-          {
-            "slug": "description-1",
-            "depth": 3,
-            "value": "Description"
-          }
-        ]
-      }
-    },
-    {
       "key": "docs/reducers/index.mdx",
       "value": {
         "name": "Index",
@@ -805,149 +948,6 @@
           }
         ]
       }
-    }
-  ],
-  "props": [
-    {
-      "key": "src/components/graph/DateSelector.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "DateSelector",
-          "methods": [],
-          "actualName": "DateSelector"
-        }
-      ]
-    },
-    {
-      "key": "src/components/graph/KeyboardListener.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "KeyboardListener",
-          "methods": [
-            {
-              "name": "handleKeyDown",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "KeyboardListener"
-        }
-      ]
-    },
-    {
-      "key": "src/components/graph/LevelThermometer.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "LevelThermometer",
-          "methods": [
-            {
-              "name": "rightRoundedRect",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "x",
-                  "type": null
-                },
-                {
-                  "name": "y",
-                  "type": null
-                },
-                {
-                  "name": "width",
-                  "type": null
-                },
-                {
-                  "name": "height",
-                  "type": null
-                },
-                {
-                  "name": "radius",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "LevelThermometer"
-        }
-      ]
-    },
-    {
-      "key": "src/components/graph/NameInput.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "NameInput",
-          "methods": [],
-          "actualName": "NameInput"
-        }
-      ]
-    },
-    {
-      "key": "src/components/graph/NightingaleChart.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "NightingaleChart",
-          "methods": [],
-          "actualName": "NightingaleChart"
-        }
-      ]
-    },
-    {
-      "key": "src/components/graph/PointSummaries.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "PointSummaries",
-          "methods": [],
-          "actualName": "PointSummaries"
-        }
-      ]
-    },
-    {
-      "key": "src/components/graph/TitleSelector.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "TitleSelector",
-          "methods": [],
-          "actualName": "TitleSelector"
-        }
-      ]
-    },
-    {
-      "key": "src/components/graph/TrackSelector.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "TrackSelector",
-          "methods": [],
-          "actualName": "TrackSelector"
-        }
-      ]
-    },
-    {
-      "key": "src/components/graph/Track.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Track",
-          "methods": [],
-          "actualName": "Track"
-        }
-      ]
     }
   ]
 }

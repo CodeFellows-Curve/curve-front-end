@@ -20,10 +20,10 @@ class AuthService {
      ***/
     this.auth = isBrowser
       ? new auth0.WebAuth({
-          domain: process.env.AUTH0_DOMAIN,
-          clientID: process.env.AUTH0_CLIENT_ID,
-          redirectUri: process.env.AUTH0_REDIRECT_URI,
-          audience: process.env.AUTH0_AUDIENCE,
+          domain: process.env.AUTH0_DOMAIN || 'curveauth.auth0.com',
+          clientID: process.env.AUTH0_CLIENT_ID || '55raOQGzHseKnRVzxilQgClt7xL3oFAB',
+          redirectUri: process.env.AUTH0_REDIRECT_URI || 'http://localhost:8000/callback',
+          audience: process.env.AUTH0_AUDIENCE || 'https://curveauth/api',
           responseType: 'token id_token',
           scope: 'openid profile email',
         })

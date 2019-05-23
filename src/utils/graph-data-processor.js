@@ -296,4 +296,4 @@ let exData = {
   ],
 }
 
-console.log(formatGraphQLData(exData))
+// console.log(formatGraphQLData(exData))

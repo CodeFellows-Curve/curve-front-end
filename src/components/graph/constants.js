@@ -51,6 +51,7 @@ export const trackIds = alltracks
 
 export const categoryIds = trackIds.reduce((set, trackId) => {
   set.add(tracks[trackId].category)
+  console.log(set);
   return set
 }, new Set())
 

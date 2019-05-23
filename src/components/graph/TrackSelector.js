@@ -1,5 +1,5 @@
 import React from 'react'
-import { trackIds, categoryColorScale } from './constants'
+import { trackIds, categoryIds, categoryColorScale } from './constants'
 import styled from 'styled-components'
 // import tracks from './tracks.js'
 
@@ -9,6 +9,13 @@ import * as actions from '../../actions/graph-actions.js'
 class TrackSelector extends React.Component {
   render() {
     return (
+      <>
+      <ul>
+      {categoryIds.forEach((category,i)=>(
+        <li key={i}>{console.log(category)}</li>
+        ))}
+        <li>{categoryIds}</li>
+      </ul>
       <table>
         <style jsx>{`
           table {
@@ -71,6 +78,7 @@ class TrackSelector extends React.Component {
           </tr>
         </tbody>
       </table>
+      </>
     )
   }
 }

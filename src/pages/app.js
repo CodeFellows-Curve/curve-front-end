@@ -8,7 +8,7 @@ import Layout from '../components/layout/'
 import PrivateRoute from '../components/private-route'
 import Login from '../components/login'
 import Graph from '../components/graph'
-import List from '../components/list'
+import List from '../components/list/index.js'
 
 class App extends Component {
   componentDidMount() {

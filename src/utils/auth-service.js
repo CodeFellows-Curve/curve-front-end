@@ -31,7 +31,7 @@ export const isAuthenticated = () => {
 }
 
 export const login = () => {
-  console.log('THIS IS AUTH OBJECT:', auth)
+  // console.log('THIS IS AUTH OBJECT:', auth)
   if (!isBrowser) {
     return
   }

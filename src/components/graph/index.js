@@ -3,6 +3,7 @@ import React from 'react'
 
 import NameInput from './NameInput'
 import TitleSelector from './TitleSelector'
+import DateSelector from './DateSelector'
 
 import {
   eligibleTitles,
@@ -69,6 +70,7 @@ class Graph extends React.Component {
             <form>
               <NameInput />
               <TitleSelector />
+              <DateSelector />
             </form>
             <PointSummaries />
             <LevelThermometer />

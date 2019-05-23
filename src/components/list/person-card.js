@@ -1,7 +1,6 @@
 import React from 'react'
 import { ApolloConsumer } from 'react-apollo'
 
-
 import { navigate } from 'gatsby'
 
 import gql from 'graphql-tag'
@@ -50,7 +49,7 @@ class PersonCard extends React.Component {
               // adds individual's data to state in Redux store
               this.props.setReduxState(data.individual)
               // Then redirect to the graph page
-              navigate('/')
+              navigate('/app/graph')
             }}
           >
             {this.props.name}

@@ -55,6 +55,10 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-components-list" */ 'docs/components/list.mdx'
     ),
+  'docs/components/header.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-components-header" */ 'docs/components/header.mdx'
+    ),
   'docs/components/login.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-components-login" */ 'docs/components/login.mdx'

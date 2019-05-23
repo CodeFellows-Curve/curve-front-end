@@ -87,15 +87,17 @@ class AuthService {
     return false
   }
 
-  getAccessToken() {
-    const accessToken = this.tokens.accessToken
+  getTokens() {
+    const { accessToken, idToken, expiresAt } = this.tokens
     if (!accessToken) {
       throw new Error('No access token found')
     }
-    return accessToken
-  }
-
-  getTokens() {
+    if (!idToken) {
+      throw new Error('No id token found')
+    }
+    if (!expiresAt) {
+      throw new Error('No token expiresAt found')
+    }
     return this.tokens
   }
 

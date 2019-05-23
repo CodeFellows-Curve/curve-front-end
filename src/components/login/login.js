@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import If from 'react-ifs'
 
 import authService from '../../utils/auth-service'
+// import Logo from '../layout/logo'
 // import Logo from './logo'
 import './login.scss';
 
@@ -411,7 +412,7 @@ class Login extends Component {
                     </g>
                   </svg>
                 </div>
-                <p>Personal And Professional Evolution… Measured</p>
+                <p>Personal and professional evolution… measured</p>
                 <button type="button" className="login__submit" onClick={this.login}>Login</button>
               </div>
               

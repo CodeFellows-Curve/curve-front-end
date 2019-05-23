@@ -17,9 +17,9 @@ svg {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -15rem;
+  margin-left: -17rem;
   margin-top: -26.5rem;
-  width: 30rem;
+  width: 35rem;
   height: 53rem;
   overflow: hidden;
   
@@ -34,12 +34,6 @@ svg {
 
   
   &__form {
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    padding: 1.5rem 2.5rem;
     text-align: center;
     p {
         font-family: 'markweb-bold', Arial;
@@ -55,7 +49,7 @@ svg {
     height: 4rem;
     line-height: 4rem;
     // margin: 4rem 2.2rem;
-    color: rgba(255,255,255,0.8);
+    color: white;
     background: #FF3366;
     font-size: 1.5rem;
     border-radius: 3rem;

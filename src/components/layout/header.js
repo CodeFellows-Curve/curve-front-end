@@ -1,4 +1,5 @@
 import React from 'react'
+import { Provider } from "react-redux";
 import { connect } from 'react-redux'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
@@ -10,52 +11,27 @@ import Logo from './logo'
 import * as a from '../../actions/auth-actions'
 import authService from '../../utils/auth-service'
 
+
 // TODO: Move all this styling for the header and mobile site-menu into a separate file. Consider using something else besides styled components for this piece. It's already in a scss format below;
 const HeaderEl = styled.div`
-  * {
-    box-sizing: inherit;
-  }
-  *:before {
-    box-sizing: inherit;
-  }
-  *:after {
-    box-sizing: inherit;
-  }
-  /* checkbox */
-  > input {
-    /* To move the checkbox off-screen */
-    left: -100vw;
-    position: absolute;
-    &:checked ~ header {
-      > nav {
-        left: 0;
-        outline: none;
-        box-shadow: 35px 0 70px rgba(0, 0, 0, 0.5);
 
-        > label {
-          z-index: 1001;
-        }
-        > ul {
-          position: relative;
-          z-index: 1000;
-        }
-      }
-      > label.backdrop {
-        background: rgba(0, 0, 0, 0.05);
-        content: '';
-        cursor: default;
-        display: block;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 998;
-      }
-    }
-  }
+  // * {
+  //   box-sizing: inherit;
+    
+  // }
+  // *:before {
+  //   box-sizing: inherit;
+  // }
+  // *:after {
+  //   box-sizing: inherit;
+  // }
 
   header {
+    background: #9053c7;
+    background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
     align-items: stretch;
     ${'' /* background: #e0e0e0; */}
     box-sizing: border-box;
@@ -198,7 +174,7 @@ const HeaderEl = styled.div`
 
     > header {
       margin: 0;
-      max-width: 960px;
+      width:100%;
       > label.menu-toggle {
         display: none;
         > span {
@@ -271,69 +247,69 @@ const HeaderEl = styled.div`
 `
 
 const Header = ({ logout, siteTitle }) => (
-  <HeaderEl>
-    <input id="main-menu-checkbox" type="checkbox" />
-    <header>
-      <label htmlFor="main-menu-checkbox" className="menu-toggle">
-        <span className="sr-only">Menu</span>
+    <HeaderEl>
+      <input id="main-menu-checkbox" type="checkbox" />
+      <header>
+        <label htmlFor="main-menu-checkbox" className="menu-toggle">
+          <span className="sr-only">Menu</span>
 
-        <span className="fa fa-bars" />
-      </label>
-
-      <div>
-        <Logo />
-        <h1 className="logo">
-          <Link to="/">{siteTitle}</Link>
-        </h1>
-      </div>
-      <nav id="main-menu" role="navigation" className="main-menu">
-        <label htmlFor="main-menu-checkbox" className="menu-close">
-          <span className="sr-only">Close</span>
-          <span className="fa fa-close" />
+          <span className="fa fa-bars" />
         </label>
-        <ul>
-          <li>
-            <If condition={authService.isAuthenticated()}>
-              <Link to="/app/graph">Home</Link>
-            </If>
-            <If condition={!authService.isAuthenticated()}>
-              <Link to="/">Home</Link>
-            </If>
-          </li>
 
-          <li>
-            <Link to="/about">About</Link>
-          </li>
+        <div>
+          <Logo />
+          <h1 className="logo">
+            <Link to="/">{siteTitle}</Link>
+          </h1>
+        </div>
+        <nav id="main-menu" role="navigation" className="main-menu">
+          <label htmlFor="main-menu-checkbox" className="menu-close">
+            <span className="sr-only">Close</span>
+            <span className="fa fa-close" />
+          </label>
+          <ul>
+            <li>
+              <If condition={authService.isAuthenticated()}>
+                <Link to="/app/graph">Home</Link>
+              </If>
+              <If condition={!authService.isAuthenticated()}>
+                <Link to="/">Home</Link>
+              </If>
+            </li>
 
-          <li>
-            <Link to="/docs">Docs</Link>
-          </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
 
-          <li>
+            <li>
+              <Link to="/docs">Docs</Link>
+            </li>
+
+            {/* <li>
             <Link to="/rubric">Rubric</Link>
-          </li>
+          </li> */}
 
-          <If condition={authService.isAuthenticated()}>
-            <li>
-              <Link to="/app/list/">All Users</Link>
-            </li>
+            <If condition={authService.isAuthenticated()}>
+              <li>
+                <Link to="/app/list/">All Users</Link>
+              </li>
 
-            <li>
-              <a href="#logout" onClick={logout}>
-                Logout
-              </a>
-            </li>
-          </If>
-        </ul>
-      </nav>
-      <label
-        htmlFor="main-menu-checkbox"
-        className="backdrop"
-        tabIndex={-1}
-        hidden
-      />
-    </header>
-  </HeaderEl>
+              <li>
+                <a href="#logout" onClick={logout}>
+                  Logout
+                </a>
+              </li>
+            </If>
+          </ul>
+        </nav>
+        <label
+          htmlFor="main-menu-checkbox"
+          className="backdrop"
+          tabIndex={-1}
+          hidden
+        />
+      </header>
+    </HeaderEl>
 )
 
 Header.propTypes = {

@@ -293,7 +293,12 @@ const Header = ({ logout, siteTitle }) => (
         </label>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <If condition={authService.isAuthenticated()}>
+              <Link to="/app/graph">Home</Link>
+            </If>
+            <If condition={!authService.isAuthenticated()}>
+              <Link to="/">Home</Link>
+            </If>
           </li>
 
           <li>

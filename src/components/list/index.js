@@ -1,12 +1,12 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import gql from 'graphql-tag'
-import { Query, ApolloConsumer } from 'react-apollo'
+import { Query } from 'react-apollo'
 import PersonCard from './person-card'
 
 const INDIVIDUALS = gql`
   query {
     individuals {
+      id
       name
     }
   }
@@ -21,7 +21,7 @@ class List extends React.Component {
   }
 
   updateData = data => {
-    console.log(data)
+    // console.log(data)
     this.setState({ data: data.individuals })
   }
 
@@ -42,34 +42,15 @@ class List extends React.Component {
                 </p>
                 <ul>
                   {data.individuals.map(person => (
-                    <PersonCard name={person.name} />
+                    <li key={person.id}>
+                      <PersonCard name={person.name} />
+                    </li>
                   ))}
                 </ul>
               </>
             )
           }}
         </Query>
-        {/* <ApolloConsumer>
-          {client => (
-            <div>
-              <button
-                onClick={async () => {
-                  const { data } = await client.query({
-                    query: INDIVIDUALS,
-                  })
-                  this.updateData(data)
-                }}
-              >
-                Show all employees
-              </button>
-            </div>
-          )}
-        </ApolloConsumer>
-        <ul>
-          {this.state.data.map(person => (
-            <PersonCard name={person.name} />
-          ))}
-        </ul> */}
       </>
     )
   }

@@ -25,7 +25,6 @@ class AuthService {
       expiresAt: false,
     }
   }
-
   handleLogin() {
     if (!isBrowser) {
       return
@@ -36,11 +35,9 @@ class AuthService {
     if (!isBrowser) {
       return
     }
-    console.log('handling authentication...')
 
     this.auth.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
-        console.log('authResult:', authResult)
         this.setSession()(null, authResult)
       } else if (err) {
         console.error(err)
@@ -49,7 +46,6 @@ class AuthService {
   }
 
   setSession = (cb = () => false) => (err, authResult) => {
-    console.log('Setting session with authResult:', authResult)
     if (err) {
       navigate('/')
       cb()

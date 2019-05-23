@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+
 import { graphql } from 'gatsby'
 import { Router } from '@reach/router'
 
@@ -9,20 +9,12 @@ import PrivateRoute from '../../components/private-route'
 import Graph from '../../components/graph'
 import List from '../../components/list/index.js'
 import authService from '../../utils/auth-service'
+import BuildMD from '../../components/buildMarkdown'
 
 import { Provider } from 'react-redux'
 import store from '../../store/'
 
 class App extends Component {
-  //TODO: move {connect} to a component within the app root
-  
-  // componentDidMount() {
-  //   const { data, pullMarkdown } = this.props
-  //   if (authService.isAuthenticated()) {
-  //     // Add competencies markdown to Redux store on login
-  //     pullMarkdown(data)
-  //   }
-  // }
 
   render() {
     return (
@@ -32,21 +24,12 @@ class App extends Component {
             <PrivateRoute path="/app/graph" component={Graph} />
             <PrivateRoute path="/app/list" component={List} />
           </Router>
-          <DoStoreStuff data={data}/>
+          <BuildMD data={data} />
         </Layout>
       </Provider>
     )
   }
 }
-
-// const mapDispatchToProps = dispatch => ({
-//   pullMarkdown: data => dispatch(a.pullMarkdown(data)),
-// })
-
-// export default connect(
-//   null,
-//   mapDispatchToProps
-// )(App)
 
 export const query = graphql`
   {

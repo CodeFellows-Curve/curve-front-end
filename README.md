@@ -1,35 +1,142 @@
-<<<<<<< HEAD
-# Curve: JavaScript front end
+<br>
+
+![Curve Logo](https://github.com/CodeFellows-Curve/project-resources/blob/master/assets/logoSnip.JPG)
+# Curve: Curve Front End
+
+## DESCRIPTION
+
+<details>
+  <summary><b>Contributers</b></summary>
+    <ul>
+      <li>Vanessa Wei</li>
+      <li>Spencer Hirata</li>
+      <li>Joseph Wolfe</li>
+      <li>Jon Gentry</li>
+      <li>Gregory Dukes</li>
+      <li>Cory Henderson</li>
+      <li>Chris Merrit</li>
+      <li>Billy Bunn</li>
+      <li>Alex White</li>
+      <li>Aaron Ferris</li>
+    </ul>
+</details>
+
+This Group was split into two teams and tasked with creating the front-end, this user focused portion of the Curve app.  The Group was split into two teams for this initial part of the project. One team focused on the UX/UI and styling of the app, while the other focused on the logic and integration with the back-end, or server side of the app.
+
+***
+
+## Client Requirements
 
 
-This is the repo containing the logic and styling which gives Curve its polishid look and feel.  We are using cutting-edge JavaScript frameworks such as Gatsby, Apollo, and SASS.  Our queries are lightning fast thanks to GraphQL.  With inspiration from the Medium site -Snowflake- we used their amazing circle graph, thermometer, and Proficiency bar.  Our two teams worked tirelessly and relentlessly to bring this site to life and should be commended on their persistence and dedication to the integrity of this applicaiton.
-=======
-# Curve
-<img src='https://raw.githubusercontent.com/CodeFellows-Curve/project-resources/master/adobe/CurveFullSize-01.png'  width="100"> 
-
-## Front End for the Curve employee proficiency scale.
-
-Authors: 
-* UI/UX Team: Billy Bunn, Vanessa Wei, Alex White, Aaron Ferris, Chris Merritt
-* Backend Integration Team: Joseph Wolfe, Cory Henderson, Spencer Hirata, Jon Gentry, Gregory Dukes
-* Project Manager: Erin Trainor
-
-### Summary:
-This is the front end for the Codefellows employee proficiency scale. Users can log in and view their current [professional competency](https://codefellows.github.io/common_curriculum/career_coaching/Professional_Competencies) ratings. As an Admin, you will be able to set the score for a specific user across all of their competencies. 
-
-### Links:
-
-* Docs: [Click Here](www.google.com)
-* Backend: [Click Here](https://github.com/CodeFellows-Curve/dotnet-api)
-
-### Installation:
+The client had several requirements for us to try to achieve with the front end of this app.  First and foremost, they wanted us to re-create the functionality of an example found at [Medium: Snowflake](https://snowflake.medium.com).  Other requirements include:
+* Implement GraphQL
+* Utilize Gatsby.js
+* Dynamically import Competencies and Proficiencies 
 
 
-### Methods:
+## Deployment Link
 
 
-### Components:
+* [Here's a link](http://someurl.link)
 
 
-### UML Diagram:
->>>>>>> 9be95c7a49bd2062555740b4e6454fa4fdbd1b39
+## How to run locally
+
+Clone the repo and open in your favorite editor.  Run `npm -i` to install the necessary dependencies. Run `npm start` to get the app up and running.  Have fun!
+
+
+## Frameworks and Tools Used
+* Node.js
+* React.js
+* Redux
+* Gatsby.js
+* Apollo.js
+* GraphQL
+* Medium
+* docz
+* Jira
+* VS Code
+* VIM
+
+
+#### And Rationale for that choice:
+
+
+We choose Node because we wanted to write this in JavaScript and Node is the preferred platform for JS applications.  We wanted to use Gatsby because it had built in support for GraphQL and Apollo. Those frameworks gave us capabilities we needed for speedy data queries. The original inspiration for this app was found on the Medium website, and we chose to use docz to document the app because it plays nicely with Gatsby. We utilized Jira for our agile focused daily sprints and Khanbhan board, with team managers setting tasks and assigning them to team members.
+
+
+## UML
+
+![a-neat-pic](http://someurl.link)
+
+
+## Process flow
+
+
+the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox 
+
+
+## Current functionality
+
+
+the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox 
+
+
+## Known bugs 
+
+#### Existing limitations, etc
+
+
+the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox 
+
+
+## Tasks remaining 
+
+#### TODOs
+
+
+the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox 
+
+
+## Recommendations for future development
+
+
+the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox 
+
+
+## Docs Referenced (links)
+
+
+* [Here's a link](http://someurl.link)
+* [And another link](http://someurl.link)
+
+
+
+<!-- ##### SUB HEADERS -->
+<!--
+ xof nworb kciuq eht xof nworb kciuq eht xof nworb kciuq eht xof nworb kciuq eht xof nworb kciuq eht xof nworb kciuq eht xof nworb kciuq eht xof nworb kciuq eht xof nworb kciuq eht xof nworb kciuq eht xof nworb kciuq eht xof nworb kciuq eht xof nworb kciuq eht 
+-->
+***
+
+footnotes
+
+
+<!-- Lengthy lists of things? Use: -->
+<!--
+<details>
+  <summary><b>List Title</b></summary>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+</details>
+ -->
+
+<!-- Endpoints? Methods? Arguments? Can use: -->
+<!-- 
+| Method | Use | Big O Time | Big O Space | IN | OUT |
+| :----------- | :----------- | :-------------: | :-------------: | :-----------: | :-----------: |
+| Method | desc | O(n) | O(n) | DICT | LIST |
+ -->

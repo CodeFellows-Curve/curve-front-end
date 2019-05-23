@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import './logo.css'
 
 const LogoSvg = styled.svg`
   @-webkit-keyframes AL1 {

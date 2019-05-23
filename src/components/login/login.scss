@@ -1,0 +1,82 @@
+// @import "compass/css3";
+
+button {
+  outline: none;
+  border: none;
+}
+
+svg {
+  width:10rem;
+  text-align: center;
+  height: 100%;
+
+}
+
+.demo {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -17rem;
+  margin-top: -26.5rem;
+  width: 35rem;
+  height: 53rem;
+  overflow: hidden;
+  
+}
+.login {
+  position: relative;
+  margin-top: 50%;
+  height: 50%;
+//   background: linear-gradient(to bottom, rgba(146, 135, 187, 0.8) 0%, rgba(0,0,0,0.6) 100%);
+//   transition: opacity 0.1s, transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25);
+  transform: scale(1);
+
+  
+  &__form {
+    text-align: center;
+    p {
+        font-family: 'markweb-bold', Arial;
+        padding-top: 5%;
+    }
+  }
+
+  
+  &__submit {
+    font-family: 'markweb-bold', Arial;
+    position: relative;
+    width: 50%;
+    height: 4rem;
+    line-height: 4rem;
+    // margin: 4rem 2.2rem;
+    color: white;
+    background: #FF3366;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: width 0.3s 0.15s, font-size 0.1s 0.15s;
+  }
+
+  &__submit:hover {
+      background: rgb(250, 2, 64);
+      transform: scale(1.1); 
+  }
+  }
+
+@keyframes animRipple {
+  to {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animatePath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

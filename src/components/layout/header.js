@@ -15,48 +15,16 @@ import authService from '../../utils/auth-service'
 // TODO: Move all this styling for the header and mobile site-menu into a separate file. Consider using something else besides styled components for this piece. It's already in a scss format below;
 const HeaderEl = styled.div`
 
-  * {
-    box-sizing: inherit;
-  }
-  *:before {
-    box-sizing: inherit;
-  }
-  *:after {
-    box-sizing: inherit;
-  }
-  /* checkbox */
-  > input {
-    /* To move the checkbox off-screen */
-    left: -100vw;
-    position: absolute;
-    &:checked ~ header {
-      > nav {
-        left: 0;
-        outline: none;
-        box-shadow: 35px 0 70px rgba(0, 0, 0, 0.5);
-
-        > label {
-          z-index: 1001;
-        }
-        > ul {
-          position: relative;
-          z-index: 1000;
-        }
-      }
-      > label.backdrop {
-        background: rgba(0, 0, 0, 0.05);
-        content: '';
-        cursor: default;
-        display: block;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 998;
-      }
-    }
-  }
+  // * {
+  //   box-sizing: inherit;
+    
+  // }
+  // *:before {
+  //   box-sizing: inherit;
+  // }
+  // *:after {
+  //   box-sizing: inherit;
+  // }
 
   header {
     background: #9053c7;
@@ -206,7 +174,7 @@ const HeaderEl = styled.div`
 
     > header {
       margin: 0;
-      max-width: 960px;
+      width:100%;
       > label.menu-toggle {
         display: none;
         > span {

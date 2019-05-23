@@ -6,23 +6,23 @@ import './layout/logo.css'
 
 import authService from '../utils/auth-service'
 
-class Login extends Component {
-  login = e => {
-    e.preventDefault()
-    authService.handleLogin()
-  }
-  render() {
-    return (
-      <If condition={!authService.isAuthenticated()}>
-        <button onClick={this.login}>Login</button>
-        <div id="logo-container">
-          <Logo />
+// class Login extends Component {
+//   login = e => {
+//     e.preventDefault()
+//     authService.handleLogin()
+//   }
+//   render() {
+//     return (
+//       <If condition={!authService.isAuthenticated()}>
+//         <button onClick={this.login}>Login</button>
+//         <div id="logo-container">
+//           <Logo />
 
-        </div>
+//         </div>
         
-      </If>
-    )
-  }
-}
+//       </If>
+//     )
+//   }
+// }
 
-export default Login
+// export default Login

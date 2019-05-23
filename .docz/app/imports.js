@@ -7,13 +7,13 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-actions-competencies-actions" */ 'docs/actions/competencies-actions.mdx'
     ),
-  'docs/actions/graph-actions.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-actions-graph-actions" */ 'docs/actions/graph-actions.mdx'
-    ),
   'docs/actions/user-actions.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-actions-user-actions" */ 'docs/actions/user-actions.mdx'
+    ),
+  'docs/actions/graph-actions.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-actions-graph-actions" */ 'docs/actions/graph-actions.mdx'
     ),
   'docs/components/KeyboardListener.mdx': () =>
     import(
@@ -39,13 +39,17 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-components-title-selector" */ 'docs/components/TitleSelector.mdx'
     ),
+  'docs/components/TrackSelector.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-components-track-selector" */ 'docs/components/TrackSelector.mdx'
+    ),
   'docs/components/Track.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-components-track" */ 'docs/components/Track.mdx'
     ),
-  'docs/components/TrackSelector.mdx': () =>
+  'docs/components/header.mdx': () =>
     import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-components-track-selector" */ 'docs/components/TrackSelector.mdx'
+      /* webpackPrefetch: true, webpackChunkName: "docs-components-header" */ 'docs/components/header.mdx'
     ),
   'docs/components/list.mdx': () =>
     import(

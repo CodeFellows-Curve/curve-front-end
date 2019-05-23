@@ -14,13 +14,6 @@ body {
   font-family: "markweb-light";
   src: url("../../fonts/modified-MarkWeb-Light.woff") format('woff');
  }
- ​
- @font-face {
-  font-family: "markweb-bold";
-  src: url("../../fonts/modified-MarkWeb-Bold.woff") format('woff');
- }
- ​
- 
  
  a{
   font-family: "markweb-bold", Arial;

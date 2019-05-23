@@ -2,7 +2,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 
 import Layout from '../components/layout/'
-import Login from '../components/login'
+import Login from '../components/login/login'
 import SEO from '../components/seo'
 
 import store from '../store/index.js'

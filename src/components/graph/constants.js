@@ -44,9 +44,9 @@ export const maxLevel = 135
 
 // SOURCE: https://codefellows.github.io/common_curriculum/career_coaching/Professional_Competencies
 
+//hotfix for the extra copetency that was called __metadata make it into a temp variable, pop it, then set trackIds to be the modified verson
 const alltracks = Object.keys(tracks)
 alltracks.pop();
-
 export const trackIds = alltracks
 
 export const categoryIds = trackIds.reduce((set, trackId) => {

@@ -171,6 +171,17 @@
       ]
     },
     {
+      "key": "src/components/about/cards.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Cards",
+          "methods": [],
+          "actualName": "Cards"
+        }
+      ]
+    },
+    {
       "key": "src/components/login.js",
       "value": [
         {
@@ -203,17 +214,6 @@
             }
           ],
           "actualName": "Login"
-        }
-      ]
-    },
-    {
-      "key": "src/components/about/cards.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Cards",
-          "methods": [],
-          "actualName": "Cards"
         }
       ]
     }

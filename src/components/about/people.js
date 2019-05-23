@@ -1,10 +1,4 @@
 const people = { 
-  icons: {
-    linkedin: '../filepath/to/linkedin/icon',
-    github: '../ filepath/to/github/icon',
-    js: '../filepath/to/js/icon',
-    c: '../fileapth/to/c/icon',
-  },
   teams:[
     {
       name: 'Project Manager',

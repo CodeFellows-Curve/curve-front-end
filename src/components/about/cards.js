@@ -25,9 +25,11 @@ const Cards = () => {
                     <div class='card'>        
                       {member.name}
                       <img src='https://via.placeholder.com/200' />
-                      <a href={gitbase+member.github}> <img src={github} /> </a>
-                      {/* <img src = {member.logo==='js'? js : c} />*/}
-                      <a href={member.linkedin}><img class='icon' src={linkedin} width='30' height='30'/></a>
+                      <div class='icons'>  
+                        <a href={gitbase+member.github}> <img class='icon' src={github} /> </a>
+                        <img class ='icon' src = {member.logo==='js'? 'https://raw.githubusercontent.com/CodeFellows-Curve/project-resources/master/assets/480px-Unofficial_JavaScript_logo_2.svg.png' : 'https://raw.githubusercontent.com/CodeFellows-Curve/project-resources/master/assets/C-Logo-1.jpg'} />
+                        <a href={member.linkedin}><img class='icon' src={linkedin} /></a>
+                      </div>
                     </div>
                     )
                   }

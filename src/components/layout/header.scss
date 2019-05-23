@@ -1,21 +1,5 @@
-import React from 'react'
-import { Provider } from "react-redux";
-import { connect } from 'react-redux'
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
-import If from 'react-ifs'
-
-import styled from 'styled-components'
-import Logo from './logo'
-
-import * as a from '../../actions/auth-actions'
-import authService from '../../utils/auth-service'
-
-
-// TODO: Move all this styling for the header and mobile site-menu into a separate file. Consider using something else besides styled components for this piece. It's already in a scss format below;
-const HeaderEl = styled.div`
-
-  * {
+#___gatsby{
+* {
     box-sizing: inherit;
   }
   *:before {
@@ -59,13 +43,7 @@ const HeaderEl = styled.div`
   }
 
   header {
-    background: #9053c7;
-    background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
-    background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
-    background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
     align-items: stretch;
-    ${'' /* background: #e0e0e0; */}
     box-sizing: border-box;
     display: flex;
     flex-flow: row nowrap;
@@ -87,7 +65,6 @@ const HeaderEl = styled.div`
     /* logo and title container */
     > div {
       align-items: center;
-      ${'' /* background: lightblue; */}
       display: flex;
       flex-flow: row nowrap;
       justify-content: center;
@@ -225,13 +202,11 @@ const HeaderEl = styled.div`
       }
 
       > nav {
-        ${'' /* background: red; */}
         position: relative;
         left: auto;
         top: auto;
         height: 50px;
         width: 100%;
-        ${'' /* for MS Edge scrollbar issue  */}
         overflow-y: auto;
 
         /* "close menu" button */
@@ -276,87 +251,4 @@ const HeaderEl = styled.div`
       }
     }
   }
-`
-
-const Header = ({ logout, siteTitle }) => (
-    <HeaderEl>
-      <input id="main-menu-checkbox" type="checkbox" />
-      <header>
-        <label htmlFor="main-menu-checkbox" className="menu-toggle">
-          <span className="sr-only">Menu</span>
-
-          <span className="fa fa-bars" />
-        </label>
-
-        <div>
-          <Logo />
-          <h1 className="logo">
-            <Link to="/">{siteTitle}</Link>
-          </h1>
-        </div>
-        <nav id="main-menu" role="navigation" className="main-menu">
-          <label htmlFor="main-menu-checkbox" className="menu-close">
-            <span className="sr-only">Close</span>
-            <span className="fa fa-close" />
-          </label>
-          <ul>
-            <li>
-              <If condition={authService.isAuthenticated()}>
-                <Link to="/app/graph">Home</Link>
-              </If>
-              <If condition={!authService.isAuthenticated()}>
-                <Link to="/">Home</Link>
-              </If>
-            </li>
-
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-
-            <li>
-              <Link to="/docs">Docs</Link>
-            </li>
-
-            {/* <li>
-            <Link to="/rubric">Rubric</Link>
-          </li> */}
-
-            <If condition={authService.isAuthenticated()}>
-              <li>
-                <Link to="/app/list/">All Users</Link>
-              </li>
-
-              <li>
-                <a href="#logout" onClick={logout}>
-                  Logout
-                </a>
-              </li>
-            </If>
-          </ul>
-        </nav>
-        <label
-          htmlFor="main-menu-checkbox"
-          className="backdrop"
-          tabIndex={-1}
-          hidden
-        />
-      </header>
-    </HeaderEl>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-const mapDispatchToProps = dispatch => ({
-  logout: callback => dispatch(a.logout(callback)),
-})
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(Header)

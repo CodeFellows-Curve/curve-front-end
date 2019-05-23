@@ -158,6 +158,41 @@
           "actualName": "TrackSelector"
         }
       ]
+    },
+    {
+      "key": "src/components/login/login.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Login",
+          "methods": [
+            {
+              "name": "login",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Login"
+        }
+      ]
+    },
+    {
+      "key": "src/pages/index.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "IndexPage",
+          "methods": [],
+          "actualName": "IndexPage"
+        }
+      ]
     }
   ],
   "entries": [

@@ -39,17 +39,13 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-components-nightingale-chart" */ 'docs/components/NightingaleChart.mdx'
     ),
-  'docs/components/PointSummaries.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-components-point-summaries" */ 'docs/components/PointSummaries.mdx'
-    ),
   'docs/components/TitleSelector.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-components-title-selector" */ 'docs/components/TitleSelector.mdx'
     ),
-  'docs/components/Track.mdx': () =>
+  'docs/components/PointSummaries.mdx': () =>
     import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-components-track" */ 'docs/components/Track.mdx'
+      /* webpackPrefetch: true, webpackChunkName: "docs-components-point-summaries" */ 'docs/components/PointSummaries.mdx'
     ),
   'docs/components/TrackSelector.mdx': () =>
     import(
@@ -58,6 +54,10 @@ export const imports = {
   'docs/components/header.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-components-header" */ 'docs/components/header.mdx'
+    ),
+  'docs/components/Track.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-components-track" */ 'docs/components/Track.mdx'
     ),
   'docs/components/list.mdx': () =>
     import(

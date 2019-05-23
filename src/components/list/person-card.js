@@ -1,6 +1,7 @@
 import React from 'react'
 import { ApolloConsumer } from 'react-apollo'
 
+
 import { navigate } from 'gatsby'
 
 import gql from 'graphql-tag'

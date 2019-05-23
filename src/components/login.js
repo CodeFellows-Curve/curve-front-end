@@ -498,6 +498,7 @@ class Login extends Component {
           <input type="submit" value="Log in" />
           <br />
           <br />
+          <h2>Personal and Professional Evolution… Measured <h2></h2>
           <small>
             *Pssst.... hardcoded login only:
             <br />

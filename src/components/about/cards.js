@@ -2,7 +2,7 @@ import React from 'react'
 import people from './people.js'
 import "./cards.css"
 import github from './assets/github.png'
-import 
+import pictures from './assets/team-pics'
 // import js from '.assets/js.png'
 // import c from '.assets/c.png'
 import linkedin from './assets/linkedin.jpg'
@@ -25,7 +25,7 @@ const Cards = () => {
                   return (
                     <div class='card'>        
                       {member.name}
-                      <img src='https://via.placeholder.com/200' />
+                      <img src={pictures[member.picture]} />
                       <div class='icons'>  
                         <a href={gitbase+member.github}> <img class='icon' src={github} /> </a>
                         <img class ='icon' src = {member.logo==='js'? 'https://raw.githubusercontent.com/CodeFellows-Curve/project-resources/master/assets/480px-Unofficial_JavaScript_logo_2.svg.png' : 'https://raw.githubusercontent.com/CodeFellows-Curve/project-resources/master/assets/C-Logo-1.jpg'} />

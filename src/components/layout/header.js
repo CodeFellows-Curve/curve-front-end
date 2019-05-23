@@ -1,4 +1,5 @@
 import React from 'react'
+// import { Provider } from "react-redux";
 import { connect } from 'react-redux'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
@@ -55,7 +56,13 @@ const HeaderEl = styled.div`
     }
   }
 
+
   header {
+    background: #9053c7;
+    background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
     align-items: stretch;
     ${'' /* background: #e0e0e0; */}
     box-sizing: border-box;
@@ -103,9 +110,10 @@ const HeaderEl = styled.div`
     }
 
     > nav {
-      height: 100vh;
+      
       left: -200px;
       overflow-x: visible;
+      overflow: visible;
       position: absolute;
       top: 0;
       transition: left 0.2s ease, box-shadow 0.3s ease;
@@ -136,7 +144,6 @@ const HeaderEl = styled.div`
         background: #fff;
         list-style: none;
         margin: 0;
-        min-height: calc(100vh - 2.5em);
         padding: 2.5em 0 0;
         width: 200px;
 
@@ -146,7 +153,7 @@ const HeaderEl = styled.div`
             display: block;
             padding: 0.75em 15px;
             line-height: 1em;
-            font-size: 1em;
+            font-size: .9em;
             color: #000;
             text-decoration: none;
             &:hover,
@@ -157,21 +164,27 @@ const HeaderEl = styled.div`
           /* Rainbow background colors on hover */
           &:nth-child(1) > a:hover {
             background: #fe9959;
+            color: #fff;
           }
           &:nth-child(2) > a:hover {
             background: #fcd859;
+            color: #fff;
           }
           &:nth-child(3) > a:hover {
             background: #9ef657;
+            color: #fff;
           }
           &:nth-child(4) > a:hover {
             background: #5ecddd;
+            color: #fff;
           }
           &:nth-child(5) > a:hover {
             background: #4655c7;
+            color: #fff;
           }
           &:nth-child(6) > a:hover {
             background: #883dad;
+            color: #fff;
           }
           &:last-child {
             > a {
@@ -198,7 +211,7 @@ const HeaderEl = styled.div`
 
     > header {
       margin: 0;
-      max-width: 960px;
+      width:100%;
       > label.menu-toggle {
         display: none;
         > span {
@@ -224,7 +237,7 @@ const HeaderEl = styled.div`
         height: 50px;
         width: 100%;
         ${'' /* for MS Edge scrollbar issue  */}
-        overflow-y: auto;
+        overflow-y: hidden;
 
         /* "close menu" button */
         > label {
@@ -243,6 +256,7 @@ const HeaderEl = styled.div`
           padding: 0;
           width: auto;
           > li {
+            height:50px;
             align-items: center;
             display: flex;
             flex-flow: column nowrap;
@@ -269,6 +283,11 @@ const HeaderEl = styled.div`
     }
   }
 `
+
+const login = e => {
+  e.preventDefault()
+  authService.handleLogin()
+}
 
 const Header = ({ logout, siteTitle }) => (
   <HeaderEl>
@@ -309,21 +328,33 @@ const Header = ({ logout, siteTitle }) => (
             <Link to="/docs">Docs</Link>
           </li>
 
-          <li>
+          {/* <li>
             <Link to="/rubric">Rubric</Link>
-          </li>
+          </li> */}
 
           <If condition={authService.isAuthenticated()}>
             <li>
               <Link to="/app/list/">All Users</Link>
             </li>
-
-            <li>
-              <a href="#logout" onClick={logout}>
-                Logout
-              </a>
-            </li>
           </If>
+
+          <If
+            condition={authService.isAuthenticated()}
+            then={
+              <li>
+                <a href="#logout" onClick={logout}>
+                  Logout
+                </a>
+              </li>
+            }
+            else={
+              <li>
+                <a href="#login" onClick={login}>
+                  Login
+                </a>
+              </li>
+            }
+          />
         </ul>
       </nav>
       <label

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Footer renders correctly 1`] = `
+<div
+  className="sc-bdVaJa iCkKpr"
+>
+  <div>
+    © 
+    2019
+     
+    <span>
+      Curve
+    </span>
+  </div>
+</div>
+`;

@@ -32,7 +32,7 @@ class App extends Component {
             <PrivateRoute path="/app/graph" component={Graph} />
             <PrivateRoute path="/app/list" component={List} />
           </Router>
-          <DoStoreStuff data={data}/>
+          {/* <DoStoreStuff data={data} /> */}
         </Layout>
       </Provider>
     )

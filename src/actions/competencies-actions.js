@@ -11,6 +11,8 @@ export const pullMarkdown = data => {
    * }
    *
    ***/
+  // Joseph's action -----------------------------------
+  /*
   const competencies = {}
 
   data.allMarkdownRemark.edges.forEach(({ node }) => {
@@ -32,5 +34,12 @@ export const pullMarkdown = data => {
   return {
     data: competencies,
     type: 'PULL_COMPETENCIES',
+  }
+*/
+  // New action -----------------------------------
+
+  return {
+    type: 'PULL_COMPETENCIES',
+    payload: data
   }
 }

@@ -41,20 +41,20 @@ export default connect(
 )(App)
 
 export const query = graphql`
-  {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "markdown/competencies/" } }
-    ) {
-      edges {
-        node {
-          html
-          frontmatter {
-            category
-            milestone
-            proficiency
-          }
+{
+  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "markdown/competencies/"}}) {
+    edges {
+      node {
+        frontmatter {
+          category
+          # categoryId
+          milestone
+          displayName: proficiency
+          summary
         }
+        milestones: rawMarkdownBody
       }
     }
   }
+}
 `

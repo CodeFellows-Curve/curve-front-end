@@ -105,7 +105,9 @@ export default function formatMarkdownData(mdData) {
 
 // let results = formatMarkdownData(exDataJSON).JUDGEMENT //?
 
+
 // Shape of output
+// Note that it's an object with a key for each proficiency
 const tracks = {
   // BUSINESS ACUMEN COMPETENCY --------------------
   MISSION_AND_VISION: {

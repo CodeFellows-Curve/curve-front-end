@@ -71,3 +71,11 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# Docz generated files:
+.docz/app/imports.js
+.docz/app/db.json
+
+# env files
+.env.development
+.env.production

@@ -73,6 +73,7 @@ const eligibleTitles = milestoneMap => {
 
 // INITIAL STATE -----------------------------------------------------------------
 let initialState = {
+  graphQLRawData: null,
   name: 'Daenerys Targaryen',
   title: 'Mother of Dragons',
   milestoneByTrack: {
@@ -163,6 +164,11 @@ export default (state = initialState, action) => {
   let { type, payload } = action
 
   switch (type) {
+    // This case adds all the raw graphQL data for a single indidual to state
+    case 'setIndividualsData':
+      let graphQLRawData = payload
+      return { ...state, graphQLRawData }
+
     case 'setFocusedTrackId':
       let index = trackIds.indexOf(payload)
       const focusedTrackId = trackIds[index]

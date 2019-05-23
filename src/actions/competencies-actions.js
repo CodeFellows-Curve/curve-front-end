@@ -12,7 +12,7 @@ export const pullMarkdown = data => {
    *
    ***/
   const competencies = {}
-
+  console.log(data);
   data.allMarkdownRemark.edges.forEach(({ node }) => {
     const { category } = node.frontmatter
     if (competencies[category]) {

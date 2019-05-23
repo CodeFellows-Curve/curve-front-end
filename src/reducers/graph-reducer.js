@@ -168,12 +168,16 @@ export default (state = initialState, action) => {
   switch (type) {
     // This case adds all the raw graphQL data for a single indidual to state
     case 'setIndividualsData':
-      console.log('FORMATTED DATA ----------------')
+      console.log('setIndividualsData ----------------')
 
       let graphQLRawData = payload
       let formattedData = graphDataProcessor(graphQLRawData)
-      console.log('FORMATTED DATA ----------------', formattedData)
-      return { ...state, graphQLRawData }
+      return {
+        ...formattedData,
+        tracks: state.tracks,
+        trackIds: state.trackIds,
+        graphQLRawData,
+      }
 
     case 'setFocusedTrackId':
       let index = trackIds.indexOf(payload)

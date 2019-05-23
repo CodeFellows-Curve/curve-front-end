@@ -1,7 +1,7 @@
 ---
 category: 'Craft'
-proficiency: 'Process'
-summary: 'Prioritizes and completes assigned tasks according to team's process. Consults with more senior teammates on how and when to ask for help. Aligns with team’s management style, best practices and processes. Addresses issues on-demand as a standard rule.'
+proficiency: 'Innovation'
+summary: 'Generates new ideas for meeting customer needs by effectively using customer interaction and research. Proactively identifies and manages risks within scope and resolves issues via an established process or with coaching. Develops multiple options for fulfilling customer needs.'
 milestone: 3
 ---        
 

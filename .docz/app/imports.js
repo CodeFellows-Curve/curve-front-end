@@ -67,6 +67,10 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-components-private-route" */ 'docs/components/private-route.mdx'
     ),
+  'docs/reducers/users-reducer.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "docs-reducers-users-reducer" */ 'docs/reducers/users-reducer.mdx'
+    ),
   'docs/reducers/competencies-reducer.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-reducers-competencies-reducer" */ 'docs/reducers/competencies-reducer.mdx'
@@ -74,9 +78,5 @@ export const imports = {
   'docs/reducers/graph-reducer.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-reducers-graph-reducer" */ 'docs/reducers/graph-reducer.mdx'
-    ),
-  'docs/reducers/users-reducer.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-reducers-users-reducer" */ 'docs/reducers/users-reducer.mdx'
     ),
 }

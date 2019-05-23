@@ -43,46 +43,6 @@
       ]
     },
     {
-      "key": "src/components/graph/LevelThermometer.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "LevelThermometer",
-          "methods": [
-            {
-              "name": "rightRoundedRect",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "x",
-                  "type": null
-                },
-                {
-                  "name": "y",
-                  "type": null
-                },
-                {
-                  "name": "width",
-                  "type": null
-                },
-                {
-                  "name": "height",
-                  "type": null
-                },
-                {
-                  "name": "radius",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "LevelThermometer"
-        }
-      ]
-    },
-    {
       "key": "src/components/graph/NameInput.js",
       "value": [
         {
@@ -145,6 +105,116 @@
           "displayName": "TrackSelector",
           "methods": [],
           "actualName": "TrackSelector"
+        }
+      ]
+    },
+    {
+      "key": "src/components/layout/logo.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Logo",
+          "methods": [],
+          "actualName": "Logo"
+        }
+      ]
+    },
+    {
+      "key": "src/components/graph/LevelThermometer.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "LevelThermometer",
+          "methods": [
+            {
+              "name": "rightRoundedRect",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "x",
+                  "type": null
+                },
+                {
+                  "name": "y",
+                  "type": null
+                },
+                {
+                  "name": "width",
+                  "type": null
+                },
+                {
+                  "name": "height",
+                  "type": null
+                },
+                {
+                  "name": "radius",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "LevelThermometer"
+        }
+      ]
+    },
+    {
+      "key": "src/components/list/person-card.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "PersonCard",
+          "methods": [
+            {
+              "name": "onPersonFetched",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "person",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "PersonCard"
+        }
+      ]
+    },
+    {
+      "key": "src/components/list/index.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "List",
+          "methods": [
+            {
+              "name": "updateData",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "data",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "List"
+        }
+      ]
+    },
+    {
+      "key": "gatsby-browser.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "wrapRootElement",
+          "methods": [],
+          "actualName": "wrapRootElement"
         }
       ]
     }
@@ -544,6 +614,30 @@
       }
     },
     {
+      "key": "docs/reducers/users-reducer.mdx",
+      "value": {
+        "name": "Users Reducer",
+        "menu": "Redux Reducers",
+        "id": "b53804e77ab067b356d77b3acc844454",
+        "filepath": "docs/reducers/users-reducer.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/reducers/users-reducer.mdx",
+        "slug": "docs-reducers-users-reducer",
+        "route": "/docs-reducers-users-reducer",
+        "headings": [
+          {
+            "slug": "users-reducer",
+            "depth": 1,
+            "value": "Users Reducer"
+          },
+          {
+            "slug": "associated-actions",
+            "depth": 2,
+            "value": "Associated Actions"
+          }
+        ]
+      }
+    },
+    {
       "key": "docs/reducers/competencies-reducer.mdx",
       "value": {
         "name": "Competencies Reducer",
@@ -582,30 +676,6 @@
             "slug": "graph-reducer",
             "depth": 1,
             "value": "Graph Reducer"
-          },
-          {
-            "slug": "associated-actions",
-            "depth": 2,
-            "value": "Associated Actions"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/reducers/users-reducer.mdx",
-      "value": {
-        "name": "Users Reducer",
-        "menu": "Redux Reducers",
-        "id": "b53804e77ab067b356d77b3acc844454",
-        "filepath": "docs/reducers/users-reducer.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/reducers/users-reducer.mdx",
-        "slug": "docs-reducers-users-reducer",
-        "route": "/docs-reducers-users-reducer",
-        "headings": [
-          {
-            "slug": "users-reducer",
-            "depth": 1,
-            "value": "Users Reducer"
           },
           {
             "slug": "associated-actions",

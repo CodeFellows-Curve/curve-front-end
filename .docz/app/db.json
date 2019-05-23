@@ -149,6 +149,20 @@
       ]
     },
     {
+<<<<<<< Updated upstream
+=======
+      "key": "src/components/about/cards.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Cards",
+          "methods": [],
+          "actualName": "Cards"
+        }
+      ]
+    },
+    {
+>>>>>>> Stashed changes
       "key": "src/components/login.js",
       "value": [
         {
@@ -183,6 +197,7 @@
           "actualName": "Login"
         }
       ]
+<<<<<<< Updated upstream
     },
     {
       "key": "src/components/static-list.js",
@@ -194,6 +209,8 @@
           "actualName": "List"
         }
       ]
+=======
+>>>>>>> Stashed changes
     }
   ],
   "entries": [
@@ -313,6 +330,19 @@
             "slug": "keyboardlistener",
             "depth": 1,
             "value": "KeyboardListener"
+<<<<<<< Updated upstream
+=======
+          },
+          {
+            "slug": "srccomponentsgraphkeyboardlistenerjs",
+            "depth": 2,
+            "value": "./src/components/graph/KeyboardListener.js"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
+>>>>>>> Stashed changes
           }
         ]
       }
@@ -432,6 +462,16 @@
           {
             "slug": "component-example",
             "depth": 2,
+            "value": "./src/components/graph/TitleSelector.js"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
+          },
+          {
+            "slug": "component-example",
+            "depth": 2,
             "value": "Component Example"
           }
         ]
@@ -452,6 +492,14 @@
             "slug": "track",
             "depth": 1,
             "value": "Track"
+<<<<<<< Updated upstream
+=======
+          },
+          {
+            "slug": "srccomponentsgraphtrackjs",
+            "depth": 2,
+            "value": "./src/components/graph/Track.js"
+>>>>>>> Stashed changes
           },
           {
             "slug": "component-example",
@@ -481,6 +529,111 @@
             "slug": "component-example",
             "depth": 2,
             "value": "Component Example"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/header.mdx",
+      "value": {
+        "name": "Header",
+        "menu": "Components",
+        "id": "ac4155439b2ee0b7ee3eee0a30c97c80",
+        "filepath": "docs/components/header.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/header.mdx",
+        "slug": "docs-components-header",
+        "route": "/docs-components-header",
+        "headings": [
+          {
+            "slug": "header",
+            "depth": 1,
+            "value": "Header"
+          },
+          {
+            "slug": "sub-components",
+            "depth": 2,
+            "value": "Sub Components"
+          },
+          {
+            "slug": "mapped-functions",
+            "depth": 2,
+            "value": "Mapped Functions"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/list.mdx",
+      "value": {
+        "name": "List",
+        "menu": "Components",
+        "id": "db1fdf73c311ac8a7ea4258c13eb621a",
+        "filepath": "docs/components/list.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/list.mdx",
+        "slug": "docs-components-list",
+        "route": "/docs-components-list",
+        "headings": [
+          {
+            "slug": "list",
+            "depth": 1,
+            "value": "List"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/login.mdx",
+      "value": {
+        "name": "Login",
+        "menu": "Components",
+        "id": "a895f87183792efc9c80a19c0c7b9353",
+        "filepath": "docs/components/login.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/login.mdx",
+        "slug": "docs-components-login",
+        "route": "/docs-components-login",
+        "headings": [
+          {
+            "slug": "login",
+            "depth": 1,
+            "value": "Login"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/logo.mdx",
+      "value": {
+        "name": "Logo",
+        "menu": "Components",
+        "id": "946993d05cd7062d3aac137b909cf7e2",
+        "filepath": "docs/components/logo.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/logo.mdx",
+        "slug": "docs-components-logo",
+        "route": "/docs-components-logo",
+        "headings": [
+          {
+            "slug": "logo",
+            "depth": 1,
+            "value": "Logo"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/private-route.mdx",
+      "value": {
+        "name": "PrivateRoute",
+        "menu": "Components",
+        "id": "d37420e5738fbb110ecfd1cc68296879",
+        "filepath": "docs/components/private-route.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/private-route.mdx",
+        "slug": "docs-components-private-route",
+        "route": "/docs-components-private-route",
+        "headings": [
+          {
+            "slug": "privateroute",
+            "depth": 1,
+            "value": "PrivateRoute"
           }
         ]
       }
@@ -633,7 +786,77 @@
           {
             "slug": "associated-actions",
             "depth": 2,
-            "value": "Associated Actions"
+            "value": "./src/reducers/graph-reducer.js"
+          },
+          {
+            "slug": "setindividualsdata",
+            "depth": 2,
+            "value": "setIndividualsData"
+          },
+          {
+            "slug": "description",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "setfocusedtrackid",
+            "depth": 2,
+            "value": "setFocusedTrackId"
+          },
+          {
+            "slug": "description-1",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "handletrackmilestonechange",
+            "depth": 2,
+            "value": "handleTrackMilestoneChange"
+          },
+          {
+            "slug": "description-2",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "settitle",
+            "depth": 2,
+            "value": "setTitle"
+          },
+          {
+            "slug": "description-3",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "nameinputchange",
+            "depth": 2,
+            "value": "NameInputChange"
+          },
+          {
+            "slug": "description-4",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "shiftfocusedtrack",
+            "depth": 2,
+            "value": "shiftFocusedTrack"
+          },
+          {
+            "slug": "description-5",
+            "depth": 3,
+            "value": "Description"
+          },
+          {
+            "slug": "shiftfocusedtrackmilestone",
+            "depth": 2,
+            "value": "shiftFocusedTrackMilestone"
+          },
+          {
+            "slug": "description-6",
+            "depth": 3,
+            "value": "Description"
           }
         ]
       }
@@ -655,9 +878,23 @@
             "value": "Users Reducer"
           },
           {
+<<<<<<< Updated upstream
             "slug": "associated-actions",
+=======
+            "slug": "srcreducersusers-reducerjs",
+>>>>>>> Stashed changes
             "depth": 2,
-            "value": "Associated Actions"
+            "value": "./src/reducers/users-reducer.js"
+          },
+          {
+            "slug": "pull_competencies",
+            "depth": 2,
+            "value": "PULL_COMPETENCIES"
+          },
+          {
+            "slug": "description",
+            "depth": 3,
+            "value": "Description"
           }
         ]
       }

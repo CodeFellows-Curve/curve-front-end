@@ -241,7 +241,7 @@ body {
 
 /* @font-face {
   font-family: "markweb-light";
-  src: url("src/fonts/modified-MarkWeb-Light.woff") format('woff');
+  src: url("../../fonts/modified-MarkWeb-Light.woff") format('woff');
 }
 
 @font-face {
@@ -249,7 +249,7 @@ body {
   src: url("/fonts/modified-MarkWeb-Bold.woff") format('woff');
 } */
 
-/* 
+
 article,
 aside,
 details,
@@ -862,4 +862,4 @@ pre tt:after {
     font-size: 100%;
   }
 } 
-*/
+

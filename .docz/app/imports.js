@@ -3,6 +3,7 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-index" */ 'docs/index.mdx'
     ),
+
   'docs/actions/graph-actions.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-actions-graph-actions" */ 'docs/actions/graph-actions.mdx'
@@ -58,10 +59,6 @@ export const imports = {
   'docs/components/TitleSelector.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "docs-components-title-selector" */ 'docs/components/TitleSelector.mdx'
-    ),
-  'docs/components/Track.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-components-track" */ 'docs/components/Track.mdx'
     ),
   'docs/components/TrackSelector.mdx': () =>
     import(

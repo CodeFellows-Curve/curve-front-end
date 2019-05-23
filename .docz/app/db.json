@@ -96,9 +96,9 @@
       }
     },
     {
-      "key": "docs/actions/user-actions.mdx",
+      "key": "docs/actions/graph-actions.mdx",
       "value": {
-        "name": "Users Actions",
+        "name": "Graph Actions",
         "menu": "Redux Actions",
         "id": "f74a633afeeaf98302afba7214a6149e",
         "filepath": "docs/actions/user-actions.mdx",
@@ -107,14 +107,19 @@
         "route": "/docs-actions-user-actions",
         "headings": [
           {
-            "slug": "users-actions",
+            "slug": "graph-actions",
             "depth": 1,
-            "value": "Users Actions"
+            "value": "Graph Actions"
           },
           {
             "slug": "actions",
             "depth": 2,
             "value": "Actions"
+          },
+          {
+            "slug": "action-definitions",
+            "depth": 3,
+            "value": "Action Definitions"
           }
         ]
       }
@@ -163,6 +168,16 @@
             "slug": "keyboardlistener",
             "depth": 1,
             "value": "KeyboardListener"
+          },
+          {
+            "slug": "srccomponentsgraphkeyboardlistenerjs",
+            "depth": 2,
+            "value": "./src/components/graph/KeyboardListener.js"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
           }
         ]
       }
@@ -201,6 +216,11 @@
             "slug": "levelthermometer",
             "depth": 1,
             "value": "LevelThermometer"
+          },
+          {
+            "slug": "srccomponentsgraphlevelthermometerjs",
+            "depth": 2,
+            "value": "./src/components/graph/LevelThermometer.js"
           },
           {
             "slug": "component-example",
@@ -265,6 +285,16 @@
             "value": "NameInput"
           },
           {
+            "slug": "srccomponentsgraphnameinputjs",
+            "depth": 2,
+            "value": "./src/components/graph/NameInput.js"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
+          },
+          {
             "slug": "component-example",
             "depth": 2,
             "value": "Component Example"
@@ -308,6 +338,11 @@
             "value": "NightingaleChart"
           },
           {
+            "slug": "srccomponentsgraphnightingalechartjs",
+            "depth": 2,
+            "value": "./src/components/graph/NightingaleChart.js"
+          },
+          {
             "slug": "component-example",
             "depth": 2,
             "value": "Component Example"
@@ -330,6 +365,16 @@
             "slug": "pointsummaries",
             "depth": 1,
             "value": "PointSummaries"
+          },
+          {
+            "slug": "srccomponentsgraphpointsummariesjs",
+            "depth": 2,
+            "value": "./src/components/graph/PointSummaries.js"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
           },
           {
             "slug": "component-example",
@@ -356,7 +401,7 @@
             "value": "TitleSelector"
           },
           {
-            "slug": "component-example",
+            "slug": "srccomponentsgraphtitleselectorjs",
             "depth": 2,
             "value": "Component Example"
           }
@@ -375,9 +420,9 @@
         "route": "/docs-components-track",
         "headings": [
           {
-            "slug": "track",
-            "depth": 1,
-            "value": "Track"
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
           },
           {
             "slug": "component-example",
@@ -404,6 +449,11 @@
             "value": "TrackSelector"
           },
           {
+            "slug": "srccomponentsgraphtrackselectorjs",
+            "depth": 2,
+            "value": "./src/components/graph/TrackSelector.js"
+          },
+          {
             "slug": "component-example",
             "depth": 2,
             "value": "Component Example"
@@ -428,9 +478,19 @@
             "value": "Competencies Reducer"
           },
           {
-            "slug": "associated-actions",
+            "slug": "srcreducerscompetencies-reducerjs",
             "depth": 2,
-            "value": "Associated Actions"
+            "value": "./src/reducers/competencies-reducer.js"
+          },
+          {
+            "slug": "pull_competencies",
+            "depth": 2,
+            "value": "PULL_COMPETENCIES"
+          },
+          {
+            "slug": "description",
+            "depth": 3,
+            "value": "Description"
           }
         ]
       }
@@ -452,7 +512,7 @@
             "value": "Graph Reducer"
           },
           {
-            "slug": "associated-actions",
+            "slug": "srcreducersgraph-reducerjs",
             "depth": 2,
             "value": "Associated Actions"
           }
@@ -476,7 +536,7 @@
             "value": "Users Reducer"
           },
           {
-            "slug": "associated-actions",
+            "slug": "setindividualsdata",
             "depth": 2,
             "value": "Associated Actions"
           }

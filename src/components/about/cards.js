@@ -3,8 +3,6 @@ import people from './people.js'
 import "./cards.css"
 import github from './assets/team-pics/other_logos/github_50x50.png'
 import pictures from './assets/team-pics'
-// import js from '.assets/js.png'
-// import c from '.assets/c.png'
 import linkedin from './assets/team-pics/other_logos/linkedin_50x50.png'
 import js from './assets/team-pics/other_logos/javaScript.png'
 import c from './assets/team-pics/other_logos/c.png'

@@ -1,0 +1,85 @@
+---
+name: Developer Cards and Decks
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+
+
+# Developer Cards and Decks
+---
+## ```./src/components/about/cards.js```
+## Description
+
+Cards is the component that makes up the majority of the 'About' page. It takes an object that maps the input information about each of the contributors, maps it, and uses a second object in order to grab the pictures for each.
+
+## Mapped Objects
+- ** pictures: ** an object with each of the developer's headshots
+- ** people: ** an object with the information about each of the people, and the corresponding key for their picture in pictures
+
+## Instructions
+- To add a team of members
+  - Add a team with a name and a members array
+  - Each team and   member's shape should follow the component below
+  - Ensure to add a picture into the assets file, require it in people, and add it into the people array, as shown below
+
+## Examples
+
+### Pictures
+
+```./src/components/about/assets/team-pics/index.js```
+
+```
+import aaron_ferris from './aaron_ferris.png'
+import alex_white from './alex_white.png'
+...
+
+const pictures = {
+   aaron_ferris : aaron_ferris,
+   alex_white : alex_white,
+   ...
+   ...
+}
+
+export default pictures
+```
+
+
+### People
+
+```./src/components/about/people.js```
+
+```
+const people = { 
+  teams:[
+    {
+      name: 'Project Manager',
+      members:[
+        {
+          name:'Erin Trainor',
+          logo: 'js',
+          picture:'erin_trainor',
+          github: 'etrainor', 
+          linkedin: 'https://www.linkedin.com/in/erin-trainor-357301a1/',
+        },
+      ]
+    },
+    {
+      name: 'Integrations',
+      members:[
+        {
+          name:'Jason Burns',
+          logo: 'c',
+          picture:'jason_burns',
+          github: 'jasonb315', 
+          linkedin: 'https://www.linkedin.com/in/jasonburns315/',
+        },
+        ...
+      ],
+    },
+    ...
+  ]
+}
+
+export default people
+```

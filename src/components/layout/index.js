@@ -13,6 +13,9 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 
+import {Provider} from 'react-redux';
+import store from "../../store/"
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -26,6 +29,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+      <Provider store={store}>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
@@ -38,6 +42,7 @@ const Layout = ({ children }) => (
           <main>{children}</main>
         </div>
         <Footer />
+        </Provider>
       </>
     )}
   />

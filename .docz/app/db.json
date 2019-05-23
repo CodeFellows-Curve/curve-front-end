@@ -446,35 +446,6 @@
       }
     },
     {
-      "key": "docs/components/list.mdx",
-      "value": {
-        "name": "List",
-        "menu": "Components",
-        "id": "db1fdf73c311ac8a7ea4258c13eb621a",
-        "filepath": "docs/components/list.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/list.mdx",
-        "slug": "docs-components-list",
-        "route": "/docs-components-list",
-        "headings": [
-          {
-            "slug": "list",
-            "depth": 1,
-            "value": "List"
-          },
-          {
-            "slug": "srccomponentsstatic-listjs",
-            "depth": 2,
-            "value": "./src/components/static-list.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          }
-        ]
-      }
-    },
-    {
       "key": "docs/components/login.mdx",
       "value": {
         "name": "Login",
@@ -494,6 +465,35 @@
             "slug": "srccomponentsloginjs",
             "depth": 2,
             "value": "./src/components/login.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/components/list.mdx",
+      "value": {
+        "name": "List",
+        "menu": "Components",
+        "id": "db1fdf73c311ac8a7ea4258c13eb621a",
+        "filepath": "docs/components/list.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/components/list.mdx",
+        "slug": "docs-components-list",
+        "route": "/docs-components-list",
+        "headings": [
+          {
+            "slug": "list",
+            "depth": 1,
+            "value": "List"
+          },
+          {
+            "slug": "srccomponentsstatic-listjs",
+            "depth": 2,
+            "value": "./src/components/static-list.js"
           },
           {
             "slug": "description",
@@ -596,6 +596,45 @@
       }
     },
     {
+      "key": "docs/reducers/competencies-reducer.mdx",
+      "value": {
+        "name": "Competencies Reducer",
+        "menu": "Redux Reducers",
+        "id": "b2880853643548f87a72394b2a38f66e",
+        "filepath": "docs/reducers/competencies-reducer.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/reducers/competencies-reducer.mdx",
+        "slug": "docs-reducers-competencies-reducer",
+        "route": "/docs-reducers-competencies-reducer",
+        "headings": [
+          {
+            "slug": "competencies-reducer",
+            "depth": 1,
+            "value": "Competencies Reducer"
+          },
+          {
+            "slug": "srcreducerscompetencies-reducerjs",
+            "depth": 2,
+            "value": "./src/reducers/competencies-reducer.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "pull_competencies",
+            "depth": 2,
+            "value": "PULL_COMPETENCIES"
+          },
+          {
+            "slug": "description-1",
+            "depth": 3,
+            "value": "Description"
+          }
+        ]
+      }
+    },
+    {
       "key": "docs/reducers/graph-reducer.mdx",
       "value": {
         "name": "Graph Reducer",
@@ -688,45 +727,6 @@
           },
           {
             "slug": "description-7",
-            "depth": 3,
-            "value": "Description"
-          }
-        ]
-      }
-    },
-    {
-      "key": "docs/reducers/competencies-reducer.mdx",
-      "value": {
-        "name": "Competencies Reducer",
-        "menu": "Redux Reducers",
-        "id": "b2880853643548f87a72394b2a38f66e",
-        "filepath": "docs/reducers/competencies-reducer.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/reducers/competencies-reducer.mdx",
-        "slug": "docs-reducers-competencies-reducer",
-        "route": "/docs-reducers-competencies-reducer",
-        "headings": [
-          {
-            "slug": "competencies-reducer",
-            "depth": 1,
-            "value": "Competencies Reducer"
-          },
-          {
-            "slug": "srcreducerscompetencies-reducerjs",
-            "depth": 2,
-            "value": "./src/reducers/competencies-reducer.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          },
-          {
-            "slug": "pull_competencies",
-            "depth": 2,
-            "value": "PULL_COMPETENCIES"
-          },
-          {
-            "slug": "description-1",
             "depth": 3,
             "value": "Description"
           }
@@ -928,17 +928,6 @@
       ]
     },
     {
-      "key": "src/components/graph/TrackSelector.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "TrackSelector",
-          "methods": [],
-          "actualName": "TrackSelector"
-        }
-      ]
-    },
-    {
       "key": "src/components/graph/Track.js",
       "value": [
         {
@@ -946,6 +935,17 @@
           "displayName": "Track",
           "methods": [],
           "actualName": "Track"
+        }
+      ]
+    },
+    {
+      "key": "src/components/graph/TrackSelector.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TrackSelector",
+          "methods": [],
+          "actualName": "TrackSelector"
         }
       ]
     }

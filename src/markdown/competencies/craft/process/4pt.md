@@ -1,18 +1,18 @@
 ---
 category: 'Craft'
-proficiency: 'Process'
-summary: 'Prioritizes and completes assigned tasks according to team's process. Consults with more senior teammates on how and when to ask for help. Aligns with team’s management style, best practices and processes. Addresses issues on-demand as a standard rule.'
+proficiency: 'Innovation'
+summary: 'Generates new ideas for meeting customer needs by effectively using customer interaction and research. Proactively identifies and manages risks within scope and resolves issues via an established process or with coaching. Develops multiple options for fulfilling customer needs.'
 milestone: 4
----                
+---        
 
-### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
+### Milestone 3 summary. Collaboratively administrate empowered markets via plug-and-play networks.
 
 #### Example Behaviors
-+ Signal 1. Credibly reintermediate backend ideas for cross-platform models.
-+ Signal 2. Quickly drive clicks-and-mortar catalysts for change before vertical architectures.
-+ Signal 3. Globally incubate standards compliant channels before scalable benefits
++ Signal 1. Synergistically evolve 2.0 technologies rather than just in time initiatives.
++ Signal 2. Seamlessly underwhelm optimal testing procedures whereas bricks-and-clicks processes.
++ Signal 3. Quickly coordinate e-business applications through revolutionary catalysts for change.
 
 #### Example Tasks
-+ Example 1. Completely iterate covalent strategic theme areas via accurate e-markets.
-+ Example 2. Interactively procrastinate high-payoff content without backward-compatible data.
-+ Example 3. Energistically scale future-proof core competencies vis-a-vis impactful experiences.
++ Example 1. Distinctively exploit optimal alignments for intuitive bandwidth.
++ Example 2. Holistically foster superior methodologies without market-driven best practices.
++ Example 3. Continually reintermediate integrated processes through technically sound intellectual capital.

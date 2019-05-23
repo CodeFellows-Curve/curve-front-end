@@ -1,5 +1,5 @@
 export default {
-    title: 'Curve App',
+    title: 'Back to Curve App',
     description: 'Curve application - Joint project by jS and C#',
     propsParser: true,
     __experimentalThemes: [`gatsby-theme-docz`],

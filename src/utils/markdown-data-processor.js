@@ -3,19 +3,56 @@ import exDataJSON from './ex-mardown-data'
 
 // exDataJSON.data.allMarkdownRemark.edges[0] //?
 
+// Helper function to get a capital letter from each competency ("category" or group of proficiencies/subcategories)
+const letterFromCompetency = competency => {
+  switch (competency) {
+    case 'Business Acumen':
+      return 'A'
+
+    case 'Growth Mindset':
+      return 'B'
+
+    case 'Leadership':
+      return 'C'
+
+    case 'Craft':
+      return 'D'
+
+    case 'Quality':
+      return 'E'
+
+    case 'Communication':
+      return 'F'
+
+    case 'Teamwork':
+      return 'G'
+
+    case 'Results':
+      return 'H'
+
+    default:
+      return 'not found-----------------------------------------'
+  }
+}
+
 export default function formatMarkdownData(mdData) {
   let formattedData = mdData.data.allMarkdownRemark.edges.reduce(
     (acc, curr, idx) => {
-      let competency = curr.node.frontmatter.category
-      let proficiency = curr.node.frontmatter.displayName.toUpperCase().replace(/ /g, '_')
+      let category = letterFromCompetency(curr.node.frontmatter.category)
+      let proficiency = curr.node.frontmatter.displayName
+      let proficiencyAllCaps = curr.node.frontmatter.displayName
+        .toUpperCase()
+        .replace(/ /g, '_')
       let milestone = curr.node.frontmatter.milestone
       let description = curr.node.frontmatter.summary
 
-      acc[proficiency] = {}
+      acc[proficiencyAllCaps] = {
+        displayName: proficiency,
+        category,
+      }
       // acc[competency]= {}
 
-      return acc;
-      
+      return acc
     },
     {}
   )
@@ -24,8 +61,8 @@ export default function formatMarkdownData(mdData) {
 }
 
 // formatMarkdownData(exDataJSON) //?
-let results =  formatMarkdownData(exDataJSON)//?
-Object.keys(results).length; //?
+let results = formatMarkdownData(exDataJSON) //?
+Object.keys(results).length //?
 // Shape of output
 const tracks = {
   // BUSINESS ACUMEN COMPETENCY --------------------

@@ -23,7 +23,7 @@ const User = styled.div`
 
   }
   ul>li{
-    font-size: 1em;
+    font-size: 1.2em;
     color: purple;
     border-bottom: 1px solid #ccc;
   }

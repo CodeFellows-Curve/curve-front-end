@@ -1,3 +1,5 @@
+import graphDataProcessor from '../utils/graph-data-processor.js'
+
 // CONSTANTS ----------------------------------------------------------------
 import tracks from '../components/graph/tracks.js'
 const trackIds = Object.keys(tracks)
@@ -166,7 +168,11 @@ export default (state = initialState, action) => {
   switch (type) {
     // This case adds all the raw graphQL data for a single indidual to state
     case 'setIndividualsData':
+      console.log('FORMATTED DATA ----------------')
+
       let graphQLRawData = payload
+      let formattedData = graphDataProcessor(graphQLRawData)
+      console.log('FORMATTED DATA ----------------', formattedData)
       return { ...state, graphQLRawData }
 
     case 'setFocusedTrackId':

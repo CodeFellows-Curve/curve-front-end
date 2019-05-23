@@ -8,6 +8,7 @@ function toLetters(num) {
 }
 
 export default function formatGraphQLData(graphQLData) {
+  console.log('called ---------------')
   let allSubcategoriesArray = graphQLData.review[0].category.reduce(
     (acc, category, idx) => {
       return (acc = [...acc, ...category.subcategory])

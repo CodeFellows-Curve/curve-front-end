@@ -6,7 +6,7 @@ import If from 'react-ifs'
 // import AuthService from '../utils/auth-service'
 import * as a from '../actions/auth-actions'
 
-className Login extends Component {
+class Login extends Component {
   constructor(props) {
     super(props)
     this.state = { username: ``, password: `` }

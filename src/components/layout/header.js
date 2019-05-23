@@ -103,9 +103,10 @@ const HeaderEl = styled.div`
     }
 
     > nav {
-      height: 100vh;
+      
       left: -200px;
       overflow-x: visible;
+      overflow: visible;
       position: absolute;
       top: 0;
       transition: left 0.2s ease, box-shadow 0.3s ease;
@@ -136,7 +137,6 @@ const HeaderEl = styled.div`
         background: #fff;
         list-style: none;
         margin: 0;
-        min-height: calc(100vh - 2.5em);
         padding: 2.5em 0 0;
         width: 200px;
 
@@ -146,7 +146,7 @@ const HeaderEl = styled.div`
             display: block;
             padding: 0.75em 15px;
             line-height: 1em;
-            font-size: 1em;
+            font-size: .9em;
             color: #000;
             text-decoration: none;
             &:hover,
@@ -157,21 +157,27 @@ const HeaderEl = styled.div`
           /* Rainbow background colors on hover */
           &:nth-child(1) > a:hover {
             background: #fe9959;
+            color: #fff;
           }
           &:nth-child(2) > a:hover {
             background: #fcd859;
+            color: #fff;
           }
           &:nth-child(3) > a:hover {
             background: #9ef657;
+            color: #fff;
           }
           &:nth-child(4) > a:hover {
             background: #5ecddd;
+            color: #fff;
           }
           &:nth-child(5) > a:hover {
             background: #4655c7;
+            color: #fff;
           }
           &:nth-child(6) > a:hover {
             background: #883dad;
+            color: #fff;
           }
           &:last-child {
             > a {
@@ -224,7 +230,7 @@ const HeaderEl = styled.div`
         height: 50px;
         width: 100%;
         ${'' /* for MS Edge scrollbar issue  */}
-        overflow-y: auto;
+        overflow-y: hidden;
 
         /* "close menu" button */
         > label {
@@ -243,6 +249,7 @@ const HeaderEl = styled.div`
           padding: 0;
           width: auto;
           > li {
+            height:50px;
             align-items: center;
             display: flex;
             flex-flow: column nowrap;

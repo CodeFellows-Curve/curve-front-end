@@ -1,9 +1,5 @@
 // Example markdown data to process
 import exDataJSON from './ex-mardown-data'
-// exDataJSON.data.allMarkdownRemark.edges[0] //?
-// exDataJSON.data.allMarkdownRemark.edges[0].node.milestones //?
-
-// exDataJSON.data.allMarkdownRemark.edges[0] //?
 
 // Helper function to get a capital letter from each competency ("category" or group of proficiencies/subcategories)
 const letterFromCompetency = competency => {
@@ -37,18 +33,35 @@ const letterFromCompetency = competency => {
   }
 }
 
-// Helper function to parse through raw markdown
-const milestonesArrMaker = (milestoneNum, node) => {
+// Helper function to parse through raw markdown and output a "milestones" array
+const milestonesProcessor = milestonesDataArr => {
   let milestonesArr = []
-  // node
 
-  // let summaryMd = milestoneMd.indexOf('###'); //?
+  for (let i = 0; i < milestonesDataArr.length; i++) {
+    // summary
+    let startOfSummary = milestonesDataArr[i].indexOf('###')
+    let endOfSummary = milestonesDataArr[i].indexOf('####')
+    let summary = milestonesDataArr[i].substring(startOfSummary, endOfSummary)
+    // console.log(summary)
 
-  for (let i = 0; i < 5; i++) {
-    // let start = milestoneMd.indexOf('###');
-    // let end = milestoneMd.indexOf('####');
-    // let summary = milestoneMd.substring(start, end);
-    // milestonesArr.push({summary, signals: [], examples:[]})
+    // signals (array)
+    let startOfSignals = milestonesDataArr[i].indexOf('+ Signal 1')
+    let endOfSignals = milestonesDataArr[i].indexOf('#### Example Tasks')
+    let signals = milestonesDataArr[i]
+      .substring(startOfSignals, endOfSignals)
+      .split('\n')
+      .slice(0, 3)
+    // console.log(signals)
+
+    // examples (array)
+    let startOfExamples = milestonesDataArr[i].indexOf('+ Example 1')
+    let examples = milestonesDataArr[i]
+      .substring(startOfExamples)
+      .split('\n')
+      .slice(0, 3)
+    // console.log(examples)
+
+    milestonesArr.push({ summary, signals, examples })
   }
 
   return milestonesArr
@@ -66,18 +79,11 @@ export default function formatMarkdownData(mdData) {
         .replace(/ /g, '_')
       let description = curr.node.frontmatter.summary // description of proficiency
 
-      let milestones = milestonesArrMaker(
-        curr.node.frontmatter.milestone,
-        curr.node
-      )
-    
       !milestonesData.hasOwnProperty(proficiencyAllCaps)
-        ? milestonesData[proficiencyAllCaps] = [curr.node.milestones]
-        : console.log('GETTIN IT --- ')
-        
-      // console.log('already has it')
-      // milestonesData[proficiencyAllCaps] = 'push(curr.node.milestones)'
-      // console.log(milestonesData)
+        ? (milestonesData[proficiencyAllCaps] = [curr.node.milestones])
+        : milestonesData[proficiencyAllCaps].push(curr.node.milestones)
+
+      let milestones = milestonesProcessor(milestonesData[proficiencyAllCaps])
 
       acc[proficiencyAllCaps] = {
         displayName,
@@ -94,8 +100,11 @@ export default function formatMarkdownData(mdData) {
 }
 
 // formatMarkdownData(exDataJSON) //?
-let results = formatMarkdownData(exDataJSON).JUDGEMENT //?
-Object.keys(results).length //?
+// let results = formatMarkdownData(exDataJSON) //?
+// let results = formatMarkdownData(exDataJSON).JUDGEMENT.milestones //?
+
+// let results = formatMarkdownData(exDataJSON).JUDGEMENT //?
+
 // Shape of output
 const tracks = {
   // BUSINESS ACUMEN COMPETENCY --------------------

@@ -1,18 +1,18 @@
 ---
 category: 'Craft'
-proficiency: 'Process'
-summary: 'Prioritizes and completes assigned tasks according to team's process. Consults with more senior teammates on how and when to ask for help. Aligns with team’s management style, best practices and processes. Addresses issues on-demand as a standard rule.'
+proficiency: 'Innovation'
+summary: 'Generates new ideas for meeting customer needs by effectively using customer interaction and research. Proactively identifies and manages risks within scope and resolves issues via an established process or with coaching. Develops multiple options for fulfilling customer needs.'
 milestone: 1
----     
+---                
 
-### Milestone 1 summary. Collaboratively administrate turnkey channels whereas virtual e-tailers. 
+### Milestone 4 summary. Override the digital divide with additional clickthroughs from DevOps.  
 
 #### Example Behaviors
-+ Signal 1. Leverage agile frameworks to provide a robust synopsis for high level overviews.
-+ Signal 2. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
-+ Signal 3. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
++ Signal 1. Credibly reintermediate backend ideas for cross-platform models.
++ Signal 2. Quickly drive clicks-and-mortar catalysts for change before vertical architectures.
++ Signal 3. Globally incubate standards compliant channels before scalable benefits
 
 #### Example Tasks
-+ Example 1. Bring to the table win-win survival strategies to ensure proactive domination.
-+ Example 2. Capitalize on low hanging fruit to identify a ballpark value added activity to beta test.
-+ Example 3. Dramatically engage top-line web services vis-a-vis cutting-edge deliverables.
++ Example 1. Completely iterate covalent strategic theme areas via accurate e-markets.
++ Example 2. Interactively procrastinate high-payoff content without backward-compatible data.
++ Example 3. Energistically scale future-proof core competencies vis-a-vis impactful experiences.

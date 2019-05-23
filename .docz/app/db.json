@@ -158,17 +158,6 @@
           "actualName": "TrackSelector"
         }
       ]
-    },
-    {
-      "key": "src/components/private-route.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "PrivateRoute",
-          "methods": [],
-          "actualName": "PrivateRoute"
-        }
-      ]
     }
   ],
   "entries": [
@@ -789,40 +778,6 @@
       }
     },
     {
-      "key": "docs/reducers/index.mdx",
-      "value": {
-        "name": "Index",
-        "menu": "Redux Reducers",
-        "id": "0cecf163e66620acaf45ab7ade8c6a1d",
-        "filepath": "docs/reducers/index.mdx",
-        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/reducers/index.mdx",
-        "slug": "docs-reducers-index",
-        "route": "/docs-reducers-index",
-        "headings": [
-          {
-            "slug": "index",
-            "depth": 1,
-            "value": "Index"
-          },
-          {
-            "slug": "srcreducersindexjs",
-            "depth": 2,
-            "value": "./src/reducers/index.js"
-          },
-          {
-            "slug": "description",
-            "depth": 2,
-            "value": "Description"
-          },
-          {
-            "slug": "code-snippet",
-            "depth": 2,
-            "value": "Code Snippet"
-          }
-        ]
-      }
-    },
-    {
       "key": "docs/reducers/graph-reducer.mdx",
       "value": {
         "name": "Graph Reducer",
@@ -917,6 +872,40 @@
             "slug": "description-7",
             "depth": 3,
             "value": "Description"
+          }
+        ]
+      }
+    },
+    {
+      "key": "docs/reducers/index.mdx",
+      "value": {
+        "name": "Index",
+        "menu": "Redux Reducers",
+        "id": "0cecf163e66620acaf45ab7ade8c6a1d",
+        "filepath": "docs/reducers/index.mdx",
+        "link": "https://github.com/gatsbyjs/gatsby-starter-default/edit/master/docs/reducers/index.mdx",
+        "slug": "docs-reducers-index",
+        "route": "/docs-reducers-index",
+        "headings": [
+          {
+            "slug": "index",
+            "depth": 1,
+            "value": "Index"
+          },
+          {
+            "slug": "srcreducersindexjs",
+            "depth": 2,
+            "value": "./src/reducers/index.js"
+          },
+          {
+            "slug": "description",
+            "depth": 2,
+            "value": "Description"
+          },
+          {
+            "slug": "code-snippet",
+            "depth": 2,
+            "value": "Code Snippet"
           }
         ]
       }

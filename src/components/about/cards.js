@@ -14,7 +14,7 @@ const Cards = () => {
   const gitbase='http://github.com/'
   return (
   <div id='teams'>
-    <h2>Meet The Teams</h2>
+    <h2>Meet the Teams</h2>
     
     {
       people.teams.map(team => {

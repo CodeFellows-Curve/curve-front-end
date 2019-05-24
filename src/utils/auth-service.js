@@ -155,7 +155,10 @@ class AuthService {
     // in case the user refreshed their browser.
     if (loggedIn) {
       const user = JSON.parse(localStorage.getItem('curve_user'))
-      store.dispatch(a.login(user))
+
+      if (!store.getState().auth.user.email) {
+        store.dispatch(a.login(user))
+      }
       return true
     }
     return false

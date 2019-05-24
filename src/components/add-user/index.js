@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { navigate } from 'gatsby'
 import gql from 'graphql-tag'
 import { Mutation } from 'react-apollo'
 
@@ -31,6 +32,7 @@ const SubmitButton = ({ name, email }) => {
           onClick={e => {
             PostMutation(e)
             e.preventDefault()
+            navigate('/app/list')
           }}
         >
           Submit

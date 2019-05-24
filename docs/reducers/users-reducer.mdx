@@ -1,0 +1,29 @@
+---
+name: Users Reducer
+menu: Redux Reducers
+---
+
+# Users Reducer
+---
+## ```./src/reducers/users-reducer.js```
+## Description
+The users reducer returns a given data set based on specified actions defined in the users-actions.js file. 
+
+## PULL_COMPETENCIES
+
+### Description
+Returns results for individual user's comptency database query.
+
+```
+const initialState = {}
+
+export default (state = initialState, action) => {
+  const { data, type } = action
+  switch (type) {
+    case 'PULL_USERS':
+      return data
+    default:
+      return state
+  }
+}
+```

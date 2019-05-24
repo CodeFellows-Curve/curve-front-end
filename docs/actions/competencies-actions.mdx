@@ -1,0 +1,40 @@
+---
+name: Competencies Actions
+menu: Redux Actions
+---
+
+# Competencies Actions
+
+---
+## `./src/actions/competencies-actions.js`
+## Description
+This is the action for our competencies
+
+## PULL_COMPETENCIES
+### Description
+//TODO
+
+```js
+export const pullMarkdown = data => {
+  const competencies = {}
+  data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const { category } = node.frontmatter
+    if (competencies[category]) {
+      const { proficiency } = node.frontmatter
+      if (competencies[category][proficiency]) {
+        competencies[category][proficiency].push(node)
+      } else {
+        competencies[category][proficiency] = [node]
+      }
+    } else {
+      competencies[category] = {}
+      const { proficiency } = node.frontmatter
+      competencies[category][proficiency] = [node]
+    }
+  })
+  return {
+    data: competencies,
+    type: 'PULL_COMPETENCIES',
+  }
+}
+```

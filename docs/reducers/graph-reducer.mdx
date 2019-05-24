@@ -1,0 +1,120 @@
+---
+name: Graph Reducer
+menu: Redux Reducers
+---
+
+# Graph Reducer
+---
+## ```./src/reducers/graph-reducer.js```
+## Description
+The graph reducer implements app functionality based on the action definitions in the graph-actions.js file.
+
+
+## setIndividualsData
+
+### Description
+Adds raw GraphQL data for a single user to state
+
+```
+    case 'setIndividualsData':
+      let graphQLRawData = payload
+      return { ...state, graphQLRawData }
+```
+
+## setFocusedTrackId
+
+### Description
+Updates state with the user selected track which is displayed in detail below the graph, i.e. "Mission and Vision" or "Adaptibility"
+
+```
+    case 'setFocusedTrackId':
+      let index = trackIds.indexOf(payload)
+      const focusedTrackId = trackIds[index]
+      return { ...state, focusedTrackId }
+```
+
+## handleTrackMilestoneChange
+
+### Description
+Updates changes in a given milestone and eligible titles, i.e. total points, sub categories, selected title.
+
+```
+    case 'handleTrackMilestoneChange':
+      let [trackId, milestone] = payload
+      const milestoneByTrack = state.milestoneByTrack
+      milestoneByTrack[trackId] = milestone
+
+      const titles = eligibleTitles(milestoneByTrack)
+      const title = titles.indexOf(state.title) === -1 ? titles[0] : state.title
+
+      // Update total points
+      const totalPoints = totalPointsFromMilestoneMap(state.milestoneByTrack)
+
+      // Update category points
+      const categoryPoints = categoryPointsFromMilestoneMap(
+        state.milestoneByTrack
+      )
+
+      return {
+        ...state,
+        focusedTrackId: trackId,
+        title,
+        totalPoints,
+        categoryPoints,
+      }
+```
+
+## setTitle
+
+### Description
+Sets state with a new title in the eligible job titles.
+
+```
+   case 'setTitle':
+      let newTitle = payload
+      let availableTitles = eligibleTitles(state.milestoneByTrack)
+      newTitle =
+        availableTitles.indexOf(newTitle) == -1 ? availableTitles[0] : newTitle
+
+      return { ...state, title: newTitle }
+```
+
+## NameInputChange
+
+### Description
+Sets state with a new user name.
+
+```
+    case 'NameInputChange':
+      return { ...state, name: payload }
+```
+
+## shiftFocusedTrack
+
+### Description
+
+```
+  case 'shiftFocusedTrack':
+      let delta = payload
+      let idx = trackIds.indexOf(state.focusedTrackId)
+      idx = (idx + delta + trackIds.length) % trackIds.length
+      let newFocusedTrackId = trackIds[idx]
+      return { ...state, focusedTrackId: newFocusedTrackId }
+```
+
+## shiftFocusedTrackMilestone
+
+### Description
+
+```
+    case 'shiftFocusedTrackMilestone':
+      let change = payload
+      let prevMilestone = state.milestoneByTrack[state.focusedTrackId]
+      let newMilestoneValue = prevMilestone + change
+      if (newMilestoneValue < 0) newMilestoneValue = 0
+      if (newMilestoneValue > 5) newMilestoneValue = 5
+      // Somehow Dispatch 'handleTrackMilestoneChange' somehow with parameters (state.focusedTrackId, newMilestone)
+
+      // TODO: fix this anti-pattern. We're calling an action within a reducer. There are better ways to do this, like with an event listener or some middleware to allow "asyncDispatch". Google "calling an action within a reducer, redux"
+      return {}
+```

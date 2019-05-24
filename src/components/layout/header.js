@@ -75,10 +75,13 @@ const HeaderEl = styled.div`
     > label.menu-toggle {
       align-items: center;
       background: #53ec86;
+      color: #fff;
       cursor: pointer;
       display: flex;
       flex-direction: column;
+      font-weight: bold;
       justify-content: center;
+      text-transform: uppercase;
       width: 20vw;
     }
 
@@ -101,7 +104,7 @@ const HeaderEl = styled.div`
         margin: 0;
         padding: 0;
         > a {
-          color: #000;
+          color: #fff;
           margin: none;
           text-decoration: none;
         }
@@ -262,6 +265,7 @@ const HeaderEl = styled.div`
             justify-content: center;
             > a {
               border: none;
+              color: #fff;
               &:hover,
               &:focus {
               }

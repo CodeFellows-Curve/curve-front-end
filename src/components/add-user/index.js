@@ -27,6 +27,7 @@ const SubmitButton = ({ name, email }) => {
     <Mutation mutation={POST_MUTATION} variables={individual}>
       {PostMutation => (
         <button
+          id="submit"
           onClick={e => {
             PostMutation(e)
             console.log('going')
@@ -54,16 +55,19 @@ class AddUser extends Component {
   render() {
     const { name, email } = this.state
     return (
-      <form>
-        <label>
-          Name:
-          <input type="text" name="name" onChange={this.handleChange} />
-        </label>
-        <label>
-          Email:
-          <input type="text" name="email" onChange={this.handleChange} />
-        </label>
-        <SubmitButton name={name} email={email} />
+      <form id="add">
+        <div>
+          <h1>Add a New User</h1>
+          <label>
+            Name:
+            <input type="text" name="name" onChange={this.handleChange} />
+          </label>
+          <label>
+            Email:
+            <input type="text" name="email" onChange={this.handleChange} />
+          </label>
+          <SubmitButton name={name} email={email} />
+        </div>
       </form>
     )
   }

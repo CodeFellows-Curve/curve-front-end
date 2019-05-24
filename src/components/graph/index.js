@@ -1,7 +1,6 @@
 import React from 'react'
 import NameInput from './NameInput'
 import TitleSelector from './TitleSelector'
-import SubmitButton from './submit-button'
 import DateSelector from './DateSelector'
 
 import // eligibleTitles,
@@ -62,7 +61,6 @@ class Graph extends React.Component {
         <div style={{ display: 'flex' }}>
           <div style={{ flex: 1 }}>
             <form>
-              <SubmitButton />
               <NameInput />
               <TitleSelector />
               <DateSelector />

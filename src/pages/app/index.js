@@ -6,8 +6,9 @@ import { Router } from '@reach/router'
 import * as a from '../../actions/competencies-actions'
 import Layout from '../../components/layout/'
 import PrivateRoute from '../../components/private-route'
-import Graph from '../../components/graph'
-import List from '../../components/list/index.js'
+import Graph from '../../components/graph/'
+import List from '../../components/list/'
+import AddUser from '../../components/add-user/'
 import authService from '../../utils/auth-service'
 
 import { Provider } from 'react-redux'
@@ -15,7 +16,7 @@ import store from '../../store/'
 
 class App extends Component {
   //TODO: move {connect} to a component within the app root
-  
+
   // componentDidMount() {
   //   const { data, pullMarkdown } = this.props
   //   if (authService.isAuthenticated()) {
@@ -31,6 +32,7 @@ class App extends Component {
           <Router>
             <PrivateRoute path="/app/graph" component={Graph} />
             <PrivateRoute path="/app/list" component={List} />
+            <PrivateRoute path="/app/add-user" component={AddUser} />
           </Router>
           {/* <DoStoreStuff data={data} /> */}
         </Layout>
@@ -67,4 +69,4 @@ export const query = graphql`
   }
 `
 
-export default App;
+export default App

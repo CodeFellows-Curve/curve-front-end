@@ -100,7 +100,7 @@ If logged in, the user can also navigate to the `/app/list` page by clicking on 
 - Clicking a different "milestone" (circle in the pie) of the "focused" proficiency on the nightingale chart will not update the proficiency points _until_ another milestone is clicked/focused on.
 - The stripe of proficiencies at the bottom of the graph page overflows the page to the right.
 - Navigation of each proficiency through the arrow keys is not fully functional. Up/down arrow events aren't handled correctly.
-- All text/copy for the proficiencies, milestones, examples, etc. is imported from a large object literal (`components/constants.js`) instead of the existing markdown files for each proficiency and milestone.
+- All text/copy for the proficiencies, milestones, examples, etc. is imported from a large object literal (`components/constants.js`) instead of the existing markdown files for each proficiency and milestone. Work was started on this, but not completed; see the [`markdwon-data`](https://github.com/CodeFellows-Curve/curve-front-end/tree/markdown-data) branch and the logic within [`utils/mardown-data-processor.js`](https://github.com/CodeFellows-Curve/curve-front-end/blob/markdown-data/src/utils/markdown-data-processor.js) (it attempts to reshape the data from [this query](https://cfcurve.azurewebsites.net/graphql/?query=%7B%0A%20%20individual(name%3A%20%22Hannah%22)%20%7B%0A%20%20%20%20name%0A%20%20%20%20review%20%7B%0A%20%20%20%20%20%20category%20%7B%0A%20%20%20%20%20%20%20%20categoryName%0A%20%20%20%20%20%20%20%20overallScore%0A%20%20%20%20%20%20%20%20subcategory%20%7B%0A%20%20%20%20%20%20%20%20%20%20subCategoryName%0A%20%20%20%20%20%20%20%20%20%20score%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A) into the shape of initial state within the `graph-reducer.js`).
 
 ## Tasks remaining
 
@@ -119,7 +119,23 @@ the quick brown fox the quick brown fox the quick brown fox the quick brown fox 
 
 ## Docs Referenced (links)
 
-- [Here's a link](http://someurl.link)
+#### Client's Inspiration Material
+- [Medium's Snowflake App - Live Site](https://snowflake.medium.com/)
+- [Medium's Snowflake App - GitHub Repo](https://github.com/Medium/snowflake)
+- [CircleCI blog about engineering matrixes](https://circleci.com/blog/why-we-re-designed-our-engineering-career-paths-at-circleci/)
+- [Engineering Competency Matrix](https://docs.google.com/spreadsheets/d/131XZCEb8LoXqy79WWrhCX4sBnGhCM1nAIz4feFZJsEo/edit#gid=0)
+- [Code Fellow's Professional Competencies](https://codefellows.github.io/common_curriculum/career_coaching/Professional_Competencies)
+
+
+#### UI/UX
+- [Side-drawer mobile navigation menu](https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793)
+- [d3 Tutorials](https://scrimba.com/g/gd3js)
+
+
+#### Other Configuration 
+- [Apollo Client (for graphQL queries to Apollo Server back-end)](https://www.apollographql.com/docs/react/)
+- [Gatsby docs](https://www.gatsbyjs.org/docs/)
+- [Gatsby "Link"](https://www.gatsbyjs.org/docs/gatsby-link/)
 - [And another link](http://someurl.link)
 
 <!-- ##### SUB HEADERS -->

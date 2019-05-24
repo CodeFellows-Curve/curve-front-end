@@ -20,7 +20,7 @@ class Login extends Component {
             <div className="login">
               <div className="login__form">
                 <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459.95 482">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459.95 482" className="svgLogo">
                     <defs>
                     </defs>
                     <title>CURVE</title>

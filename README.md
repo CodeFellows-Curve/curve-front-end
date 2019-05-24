@@ -116,7 +116,7 @@ If logged in, the user can also navigate to the `/app/list` page by clicking on 
 
 ## Recommendations for future development
 
-the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox
+Ideally, the medium data visualization functions should be refactored to work with the data from the graphQL Query without having to reshape the data. This would make it easier to change the data, store it in the redux store, then post it back to the database. There should be more granular access control, and should be possile to show content depending on the role of a user. The data needs to be dynamically rendered, and since Gatsby needs to be build on deployment, it might be better to use a different front end framework. There should be a defined and robust admin panel, that will allow the superuser/admin to change the roles of other users or see employees/students in their team.
 
 ## Docs Referenced (links)
 

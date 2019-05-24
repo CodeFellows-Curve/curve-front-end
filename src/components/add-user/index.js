@@ -27,16 +27,19 @@ class AddUser extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" name="name" onChange={this.handleChange} />
-        </label>
-        <label>
-          Email:
-          <input type="text" name="email" onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
+      <form id="add" onSubmit={this.handleSubmit}>
+        <div>
+          <h1> Add a New User</h1>
+          <label>
+            Name:
+            <input type="text" name="name" onChange={this.handleChange} />
+          </label>
+          <label>
+            Email:
+            <input type="text" name="email" onChange={this.handleChange} />
+          </label>
+          <button id="submit" type="submit" value="Submit"> Submit </button>
+        </div>
       </form>
     )
   }

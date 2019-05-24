@@ -99,11 +99,47 @@ class AuthService {
       localStorage.setItem('curve_user', curve_user)
       store.dispatch(a.login(user))
 
+      // Fetch the user's capabilities
+      this.fetchCapabilities(user)
+
       // Authenticated users are redirected to an authorized route.
       // This redirect should not be hardcoded in a larger application.
       navigate('/app/graph')
       return cb()
     }
+  }
+
+  /***
+   * For the purposes of the Curve project, we can fetch a token
+   * from the project back end that includes an access control list.
+   ***/
+  fetchCapabilities(user) {
+    // This URL should be in an environmental variable.
+    const url = `https://cfcurve.azurewebsites.net/api/authorization/${
+      user.email
+    }`
+
+    fetch(url, {
+      headers: new Headers({
+        Accept: 'application/json',
+        Authorization: `Bearer ${this.tokens.accessToken}`,
+        // mode: 'cors',
+      }),
+    })
+      .then(response => {
+        console.log('Response:', response)
+        return response.json()
+      })
+      .then(token => {
+        /***
+         * Here, we can parse the JWT token with the server secret
+         * to access the users' permissions, if more robust
+         * access control were implemented. The capabilities could
+         * be added to the existing user object.
+         ***/
+        console.log('Token available:', token)
+      })
+      .catch(error => console.error(error))
   }
 
   isAuthenticated() {

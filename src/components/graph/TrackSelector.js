@@ -10,18 +10,11 @@ class TrackSelector extends React.Component {
   render() {
     return (
       <>
-      <ul>
-      {categoryIds.forEach((category,i)=>(
-        <li key={i}>{console.log(category)}</li>
-        ))}
-        <li>{categoryIds}</li>
-      </ul>
       <table>
         <style jsx>{`
           table {
             width: 100%;
             border-spacing: 3px;
-            border-bottom: 2px solid #ccc;
             padding-bottom: 20px;
             margin-bottom: 20px;
             margin-left: -3px;

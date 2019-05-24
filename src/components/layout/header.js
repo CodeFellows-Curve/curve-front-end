@@ -56,7 +56,6 @@ const HeaderEl = styled.div`
     }
   }
 
-
   header {
     background: #9053c7;
     background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
@@ -76,10 +75,13 @@ const HeaderEl = styled.div`
     > label.menu-toggle {
       align-items: center;
       background: #53ec86;
+      color: #fff;
       cursor: pointer;
       display: flex;
       flex-direction: column;
+      font-weight: bold;
       justify-content: center;
+      text-transform: uppercase;
       width: 20vw;
     }
 
@@ -102,7 +104,7 @@ const HeaderEl = styled.div`
         margin: 0;
         padding: 0;
         > a {
-          color: #000;
+          color: #fff;
           margin: none;
           text-decoration: none;
         }
@@ -110,7 +112,6 @@ const HeaderEl = styled.div`
     }
 
     > nav {
-      
       left: -200px;
       overflow-x: visible;
       overflow: visible;
@@ -153,7 +154,7 @@ const HeaderEl = styled.div`
             display: block;
             padding: 0.75em 15px;
             line-height: 1em;
-            font-size: .9em;
+            font-size: 0.9em;
             color: #000;
             text-decoration: none;
             &:hover,
@@ -211,7 +212,7 @@ const HeaderEl = styled.div`
 
     > header {
       margin: 0;
-      width:100%;
+      width: 100%;
       > label.menu-toggle {
         display: none;
         > span {
@@ -256,7 +257,7 @@ const HeaderEl = styled.div`
           padding: 0;
           width: auto;
           > li {
-            height:50px;
+            height: 50px;
             align-items: center;
             display: flex;
             flex-flow: column nowrap;
@@ -264,6 +265,7 @@ const HeaderEl = styled.div`
             justify-content: center;
             > a {
               border: none;
+              color: #fff;
               &:hover,
               &:focus {
               }

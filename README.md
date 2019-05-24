@@ -37,7 +37,7 @@ The client had several requirements for us to try to achieve with the front end 
 ## Deployment Link
 
 
-* [Here's a link](http://someurl.link)
+* [Curve: Your growth, visualized](https://codefellows-curve.netlify.com)
 
 
 ## How to run locally
@@ -67,7 +67,7 @@ We choose Node because we wanted to write this in JavaScript and Node is the pre
 
 ## UML
 
-![a-neat-pic](http://someurl.link)
+![frontEnd UML](.\team-pics\CurveFrontEnd.jpg)
 
 
 ## Process flow

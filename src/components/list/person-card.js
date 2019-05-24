@@ -41,6 +41,7 @@ class PersonCard extends React.Component {
       <ApolloConsumer>
         {client => (
           <button
+            id="gql-button"
             onClick={async () => {
               const { data } = await client.query({
                 query: PERSON,

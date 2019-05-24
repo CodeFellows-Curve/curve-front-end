@@ -255,7 +255,7 @@ export default (state = initialState, action) => {
       let newMilestoneValue = prevMilestone + change
       if (newMilestoneValue < 0) newMilestoneValue = 0
       if (newMilestoneValue > 5) newMilestoneValue = 5
-      // Somehow Dispatch 'handleTrackMilestoneChange' somehow with parameters (state.focusedTrackId, newMilestone)
+      // TODO: Somehow Dispatch 'handleTrackMilestoneChange' somehow with parameters (state.focusedTrackId, newMilestone)
 
       // TODO: fix this anti-pattern. We're calling an action within a reducer. There are better ways to do this, like with an event listener or some middleware to allow "asyncDispatch". Google "calling an action within a reducer, redux"
       return {}

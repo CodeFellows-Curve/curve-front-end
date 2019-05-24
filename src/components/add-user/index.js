@@ -30,7 +30,6 @@ const SubmitButton = ({ name, email }) => {
           id="submit"
           onClick={e => {
             PostMutation(e)
-            console.log('going')
             e.preventDefault()
           }}
         >
@@ -48,7 +47,6 @@ class AddUser extends Component {
   }
 
   handleChange = e => {
-    console.log(this.state)
     this.setState({ [e.target.name]: e.target.value })
   }
 

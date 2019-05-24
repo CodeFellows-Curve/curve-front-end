@@ -336,6 +336,10 @@ const Header = ({ logout, siteTitle }) => (
 
           <If condition={authService.isAuthenticated()}>
             <li>
+              <Link to="/app/add-user">Add User</Link>
+            </li>
+
+            <li>
               <Link to="/app/list/">All Users</Link>
             </li>
           </If>

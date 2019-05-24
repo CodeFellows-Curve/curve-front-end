@@ -1,33 +1,16 @@
-import React /*, { Component } */ from 'react'
+import React from 'react'
 import { Provider } from 'react-redux'
-// import If from 'react-ifs'
-
 import fetch from 'node-fetch'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { ApolloProvider } from 'react-apollo'
 import { ApolloClient } from 'apollo-client'
 import { createHttpLink } from 'apollo-link-http'
 import { onError } from 'apollo-link-error'
-import { HttpLink } from 'apollo-link-http'
-import { ApolloLink } from 'apollo-link'
 
 import store from './src/store/'
 
-// const client = new ApolloClient({
-//   link: createHttpLink({
-//     uri: 'https://graphql.org/swapi-graphql/',
-//     fetch: fetch,
-//     fetchOptions:{mode:'no-cors'}
-//   }),
-//   cache: new InMemoryCache(),
-// })
-
-// const URL = "https://graphql-wrap-rest.herokuapp.com/";
-const URL = 'https://cfcurve.azurewebsites.net/graphql'
-
-const httpLink = createHttpLink({
-  uri: URL,
-})
+// const uri = 'https://bazaarapi.herokuapp.com/graphql'
+const uri = 'https://cfcurve.azurewebsites.net/graphql'
 
 const errorLink = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors) {
@@ -42,12 +25,13 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
   }
 })
 
-const link = ApolloLink.from([errorLink, httpLink])
-const cache = new InMemoryCache()
 const client = new ApolloClient({
-  link,
-  cache,
-  // fetchOptions:{mode:'no-cors'}
+  link: createHttpLink({
+    uri,
+    fetch,
+  }),
+  errorLink,
+  cache: new InMemoryCache(),
 })
 
 export const wrapRootElement = ({ element }) => (

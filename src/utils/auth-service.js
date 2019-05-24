@@ -20,10 +20,10 @@ class AuthService {
      ***/
     this.auth = isBrowser
       ? new auth0.WebAuth({
-          domain: process.env.GATSBY_AUTH0_DOMAIN || 'curveauth.auth0.com',
-          clientID: process.env.GATSBY_AUTH0_CLIENT_ID || '55raOQGzHseKnRVzxilQgClt7xL3oFAB',
-          redirectUri: process.env.GATSBY_AUTH0_REDIRECT_URI || 'http://localhost:8000/callback',
-          audience: process.env.GATSBY_AUTH0_AUDIENCE || 'https://curveauth/api',
+          domain: process.env.GATSBY_AUTH0_DOMAIN,
+          clientID: process.env.GATSBY_AUTH0_CLIENT_ID,
+          redirectUri: process.env.GATSBY_AUTH0_REDIRECT_URI,
+          audience: process.env.GATSBY_AUTH0_AUDIENCE,
           responseType: 'token id_token',
           scope: 'openid profile email',
         })
@@ -99,11 +99,47 @@ class AuthService {
       localStorage.setItem('curve_user', curve_user)
       store.dispatch(a.login(user))
 
+      // Fetch the user's capabilities
+      this.fetchCapabilities(user)
+
       // Authenticated users are redirected to an authorized route.
       // This redirect should not be hardcoded in a larger application.
       navigate('/app/graph')
       return cb()
     }
+  }
+
+  /***
+   * For the purposes of the Curve project, we can fetch a token
+   * from the project back end that includes an access control list.
+   ***/
+  fetchCapabilities(user) {
+    // This URL should be in an environmental variable.
+    const url = `https://cfcurve.azurewebsites.net/api/authorization/${
+      user.email
+    }`
+
+    fetch(url, {
+      headers: new Headers({
+        Accept: 'application/json',
+        Authorization: `Bearer ${this.tokens.accessToken}`,
+        // mode: 'cors',
+      }),
+    })
+      .then(response => {
+        console.log('Response:', response)
+        return response.json()
+      })
+      .then(token => {
+        /***
+         * Here, we can parse the JWT token with the server secret
+         * to access the users' permissions, if more robust
+         * access control were implemented. The capabilities could
+         * be added to the existing user object.
+         ***/
+        console.log('Token available:', token)
+      })
+      .catch(error => console.error(error))
   }
 
   isAuthenticated() {

@@ -112,6 +112,7 @@ If logged in, the user can also navigate to the `/app/list` page by clicking on 
 - [ ] `src/pages/app/index.js`: Move {connect} to a component within the app root
 - [ ] `src/reducers/graph-reducer.js`: Dispatch 'handleTrackMilestoneChange' somehow with parameters (state.focusedTrackId, newMilestone)
 - [ ] `src/utils/auth-service.js`: Silent auth will not work with Google test key Auth0 provides for development; generate Google keys and add them to the Auth0 configuration.
+- [ ] GraphQL query and mutations testing.
 
 ## Recommendations for future development
 

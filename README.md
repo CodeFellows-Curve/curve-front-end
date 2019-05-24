@@ -67,7 +67,7 @@ We choose Node because we wanted to write this in JavaScript and Node is the pre
 
 ## UML
 
-![frontEnd UML](.\team-pics\CurveFrontEnd.jpg)
+![frontEnd UML](https://github.com/CodeFellows-Curve/curve-front-end/blob/staging/team-pics/CurveFrontEnd.jpg)
 
 
 ## Process flow

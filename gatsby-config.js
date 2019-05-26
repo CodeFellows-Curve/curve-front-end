@@ -1,16 +1,31 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Curve`,
+    description: `Competency visualization`,
+    author: `Code Fellows JavaScript 401d29`,
   },
+  __experimentalThemes: [`gatsby-theme-docz`],
   plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/app/*`] },
+    },
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: 'Curve',
+        fieldName: 'curve_users',
+        url: 'https://cfcurve.azurewebsites.net/graphql',
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/`,
       },
     },
     `gatsby-transformer-sharp`,

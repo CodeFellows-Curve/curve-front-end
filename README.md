@@ -19,6 +19,7 @@
       <li>Billy Bunn</li>
       <li>Alex White</li>
       <li>Aaron Ferris</li>
+      <li>Erin Trainor</li>
     </ul>
 </details>
 
@@ -123,6 +124,7 @@ Ideally, the medium data visualization functions should be refactored to work wi
 
 #### Client's Inspiration Material
 - [Medium's Snowflake App - Live Site](https://snowflake.medium.com/)
+- [Visual of Client Requirements](https://github.com/CodeFellows-Curve/project-resources/blob/master/assets/client_functionality_guidance.pdf)
 - [Medium's Snowflake App - GitHub Repo](https://github.com/Medium/snowflake)
 - [CircleCI blog about engineering matrixes](https://circleci.com/blog/why-we-re-designed-our-engineering-career-paths-at-circleci/)
 - [Engineering Competency Matrix](https://docs.google.com/spreadsheets/d/131XZCEb8LoXqy79WWrhCX4sBnGhCM1nAIz4feFZJsEo/edit#gid=0)
